@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=2, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- --------------------SEO-------------------- -->
+    <link rel="canonical" href="Canonical URL">
+
+    <meta name="description" content="검색 결과에 표시되는 문자">
+    <meta name="author" content="저작자">
+    <meta name="keywords" content="검색 키워드">
+
+    <meta property="og:title" content="...">
+    <meta property="og:url" content="...">
+    <meta property="og:type" content="...">
+    <meta property="og:image" content="...">
+    <meta property="og:site_name" content="...">
+    <meta property="og:description" content="...">
+
+    <meta name="twitter:card" content="...">
+    <meta name="twitter:title" content="...">
+    <meta name="twitter:description" content="...">
+    <meta name="twitter:image" content="...">
+    <!-- --------------------SEO-------------------- -->
+
+
+    <!-- --------------------CSS-------------------- -->
+    <link rel="stylesheet" href="../css/aos.css">
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <!-- --------------------CSS-------------------- -->
+
+
+    <!-- --------------------Script-------------------- -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../js/aos.js"></script>
+    <!-- --------------------Script-------------------- -->
+</head>
+
+<body>
+
+    <!-- ========================new_header======================== -->
+    <header id="header">
+        <nav class="header_wrap">
+
+            <h1 class="header_left">
+                <a href="../main/index.html">
+                    <img src="../images/ico/logo.png" alt="엠펙플러스 로고">
+                </a>
+            </h1>
+
+            <ul class="header_center">
+                <li>
+                    <a href="../about/ceo.html">ABOUT US</a>
+                    <ul class="depth_01 h_2depth_color">
+                        <li><a href="../about/ceo.html">CEO 인사말</a></li>
+                        <li><a href="../about/history.html">연혁</a></li>
+                        <li><a href="../about/certifi.html">인증/특허</a></li>
+                        <li><a href="../about/direction.html">오시는&nbsp;길</a></li>
+                    </ul>
+                </li>
+
+
+
+                <li>
+                    <a href="../product/mpac.html">PRODUCT</a>
+                    <ul class="depth_01">
+                        <li><a href="../product/mpac.html">MPAC+</a></li>
+                        <li><a href="../product/jellyfarm.html">JELLY FARM+</a></li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="../shop/shop.html">SHOP</a>
+                    <ul class="depth_01">
+                        <li><a href="#none">스마트스토어</a></li>
+                        <li><a href="#none">조달청</a></li>
+                        <li><a href="#none">아마존</a></li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="../community/notice.html">COMMUNITY</a>
+                    <ul class="depth_01">
+                        <li><a href="../community/notice.html">공지사항</a></li>
+                        <li><a href="../community/news.html">보도자료</a></li>
+                        <li><a href="../community/sns.html">SNS</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="../contact/contact.html">CONTACT</a>
+                    <ul class="depth_01">
+                        <li><a href="../contact/contact.html">1:1 문의</a></li>
+                    </ul>
+                </li>
+
+
+
+
+
+                <div class="header_bg">
+                    <!-- <p>Seoulreits</p> -->
+                </div>
+            </ul>
+
+            <nav class="header_right">
+
+                <div class="header_lang">
+                    <ul>
+                        <a class="fixed_lang" href="#none">
+                            ENG
+                            <i class="lang_arrow"></i>
+                        </a>
+                        <li class="depth_lang">
+                            <a href="#none">KOR</a>
+                            <a href="#none">Sub_01</a>
+                            <a href="#none">Sub_02</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="header_sns">
+                    <ul>
+                        <li><a href="#none"><img src="../images/ico/ico_sns_facebook.png" alt="페이스북 아이콘"></a></li>
+                        <li><a href="#none"><img src="../images/ico/ico_sns_insta.png" alt="인스타그램 아이콘"></a></li>
+                        <li><a href="#none"><img src="../images/ico/ico_sns_naver.png" alt="네이버 아이콘"></a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="header_ham">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </nav>
+
+            <nav class="header_full">
+                <div class="header_full_wrap">
+                    <ul class="header_full_list">
+                        <li class="depth_01"><a href="#none">ABOUT US</a>
+                            <ul class="depth_02">
+                                <li><a href="../about/ceo.html">CEO 인사말</a></li>
+                                <li><a href="../about/history.html">연혁</a></li>
+                                <li><a href="../about/certifi.html">인증/특허</a></li>
+                                <li><a href="../about/direction.html">오시는&nbsp;길</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="depth_01"><a href="#none">PRODUCT</a>
+                            <ul class="depth_02">
+                                <li><a href="../product/mpac.html">MPAC+</a>
+                                    <ul class="depth_03">
+                                        <li><a href="#none">방수팩</a></li>
+                                        <li><a href="#none">드라이팩</a></li>
+                                        <li><a href="#none">생존가방</a></li>
+                                        <li><a href="#none">쿨링 어플리케이터</a></li>
+                                        <li><a href="#none">방향제</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../product/jellyfarm.html">JELLY FARM+</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="depth_01"><a href="#none">SHOP</a>
+                            <ul class="depth_02">
+                                <li><a href="#none">스마트스토어</a></li>
+                                <li><a href="#none">조달청</a></li>
+                                <li><a href="#none">공지사항</a></li>
+                                <li><a href="#none">아마존</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="depth_01"><a href="#none">COMMUNITY</a>
+                            <ul class="depth_02">
+                                <li><a href="../community/notice.html">공지사항</a></li>
+                                <li><a href="../community/news.html">보도자료</a></li>
+                                <li><a href="../community/sns.html">SNS</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="depth_01"><a href="../contact/contact.html">CONTACT</a>
+                            <ul class="depth_02">
+                                <li><a href="../contact/contact.html">1:1 문의</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </nav>
+    </header>
+    <!-- ========================main======================== -->
+
+
+    <main class="sub about history">
+        <section class="sub_section visual">
+
+            <?php
+            $about_page = "about us";
+            $product_page = "product";
+            $shop = "shop";
+            $contact = "contact";
+            ?>
+
+            <figure class="visual_img">
+                <figcaption class="visual_title">about us</figcaption>
+            </figure>
+
+
+            <div class="sub_depth" id="sub_depth">
+                <div class="sub_ico">
+                    <a href="../main/index.html">
+                        <img src="../images/ico/ico_sub_home.png" alt="집모양 아이콘(메인으로 돌아가기)">
+                    </a>
+                </div>
+
+                <div class="sub_nav sub_nav_01">
+                    <ul class="depth_01">
+                        <li class="depth_01_list">
+                            <a href="">ABOUT US</a>
+                            <i><img src="../images/ico/ico_sub_arrow.png" alt="메뉴1 네비게이션 화살표"> </i>
+                        </li>
+
+                        <ul class="depth_02">
+                            <li class="depth_02_list"><a href="">product</a></li>
+                            <li class="depth_02_list"><a href="">shop</a></li>
+                            <li class="depth_02_list"><a href="">community</a></li>
+                            <li class="depth_02_list"><a href="">contact</a></li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <div class="sub_nav sub_nav_02">
+                    <ul class="depth_01">
+                        <li class="depth_01_list">
+                            <a href="#none">연혁</a>
+                            <i><img src="../images/ico/ico_sub_arrow.png" alt="메뉴2 네비게이션 화살표"> </i>
+                        </li>
+
+                        <ul class="depth_02">
+                            <li class="depth_02_list"><a href="../about/ceo.html">CEO 인사말</a></li>
+                            <li class="depth_02_list"><a href="../about/history.html">연혁</a></li>
+                            <li class="depth_02_list"><a href="../about/certifi.html">인증/특허</a></li>
+                            <li class="depth_02_list"><a href="../about/direction.html">오시는 길</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="sub_page_layout sub_section_01">
+            <h2 class="sub_page_title">
+                연혁
+            </h2>
+
+
+            <article class="content content_01 history_line">
+                <div class="history_wrap">
+                    <div class="after_bar"></div>
+                    <div class="before_bar"></div>
+
+                    <!-- 2021 -->
+                    <ul class="history_ul first">
+
+                        <!-- 2021 -->
+                        <li class="history_year">
+                            <p>
+                                2021
+                            </p>
+                        </li>
+                        <li class="history_text_wrap">
+                            <p class="history_list">
+                                <span class="text_01">10</span>
+                                <span class="text_02">제19차 세계한상대회 참가</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">06</span>
+                                <span class="text_02">젤리팜 마이크로셀 실리콘퍼프 ‘브랜드K’ 선정</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">04</span>
+                                <span class="text_02">미국 아마존 입점</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">04</span>
+                                <span class="text_02">스마트폰 쿨링패치 개발</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">03</span>
+                                <span class="text_02">다회용 스포츠용 마스크 (액티브핏 마스크) 개발</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">03</span>
+                                <span class="text_02">쿨링패드 개발</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">03</span>
+                                <span class="text_02">아이스조끼(cooling vest) 개발 및 양산 시설 구축</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">01</span>
+                                <span class="text_02">조달청 벤처나라 넥쿨링튜브 등 8개 품목 추가 등록</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">01</span>
+                                <span class="text_02">넥쿨링튜브 특허등록</span>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <!-- 2020 -->
+                    <ul class="history_ul"  data-aos="fade-up">
+                        <li class="history_year">
+                            <p>
+                                2020
+                            </p>
+                        </li>
+                        <li class="history_text_wrap">
+                            <p class="history_list">
+                                <span class="text_01">11</span>
+                                <span class="text_02">전국장애경제인대회 중소벤처기업부장관 표창</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">11</span>
+                                <span class="text_02">이너숨 케어 다회용 마스크 개발</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">11</span>
+                                <span class="text_02">마스크 스트랩(단추형, 자석형) 개발</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">10</span>
+                                <span class="text_02">다회용 마스크 60회 및 100회 세탁 후 액체저항성 시험</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">10</span>
+                                <span class="text_02">네이버 쇼핑라이브 첫 방송 진행</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">09</span>
+                                <span class="text_02">성수동 공장 임대(공장등록증 발급)</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">08</span>
+                                <span class="text_02">다회용 마스크 특허등록</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">08</span>
+                                <span class="text_02">조달청 벤처나라 넥쿨링튜브 등 8개 품목 추가 등록</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">05</span>
+                                <span class="text_02">조달청 벤처나라 다회용 마스크 등 16개 품목 등록</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">04</span>
+                                <span class="text_02">화장용 마이크로셀 실리콘퍼프 미국, 일본, 중국 특허출원</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">04</span>
+                                <span class="text_02">YTN 사이언스 황금나침반 방송 출연</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">02</span>
+                                <span class="text_02">다회용 마스크 개발</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">02</span>
+                                <span class="text_02">항바이러스 패치 개발</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">02</span>
+                                <span class="text_02">폴드 앤 버클형 스마트폰 방수팩 개발</span>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <!-- 2019  -->
+                    <ul class="history_ul"  data-aos="fade-up">
+                        <li class="history_year">
+                            <p>
+                                2019
+                            </p>
+                        </li>
+                        <li class="history_text_wrap">
+                            <p class="history_list">
+                                <span class="text_01">12</span>
+                                <span class="text_02">화장용 마이크로셀 실리콘퍼프 특허등록</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">11</span>
+                                <span class="text_02">조달청 나라장터 소지품케이스 직접생산확인서 등록</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">09</span>
+                                <span class="text_02">조달청 경쟁입찰참가자격등록</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">09</span>
+                                <span class="text_02">학교장터(S2B) 생존수영가방 등 30개 제조품목 등록</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">09</span>
+                                <span class="text_02">보급형 드라이백 겸 레스큐 튜브 개발</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">07</span>
+                                <span class="text_02">방수가방 겸 생존수영가방 와디즈 크라우드 펀딩</span>
+                            </p>
+
+                            <p class="history_list">
+                                <span class="text_01">07</span>
+                                <span class="text_02">방수가방 겸 생존수영가방 신제품 발표(exco)</span>
+                            </p>
+
+                            <p class="history_list">
+                                <span class="text_01">07</span>
+                                <span class="text_02">인도네시아 K-스타드업 멘토링 참가</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">07</span>
+                                <span class="text_02">중국 Jelly Farm 상표등록</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">06</span>
+                                <span class="text_02">방수가방 겸 생존수영가방(3L, 6L, 9L) 개발</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">05</span>
+                                <span class="text_02">중국 Jelly Farm 상표등록</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">05</span>
+                                <span class="text_02">방수가방 겸 생존수영가방 수심 10미터 / 3시간 국제공인방수시험(IPX8)
+                                </span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">04</span>
+                                <span class="text_02">드라이백 겸 레스큐 튜브 KC 안전인증(국내 최초)</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">04</span>
+                                <span class="text_02"> 두바이 무역사절단(UAE) 참가</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">02</span>
+                                <span class="text_02">화장용 마이크로셀 실리콘퍼프 리뉴얼</span>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <!-- 2018  -->
+                    <ul class="history_ul"  data-aos="fade-up">
+                        <li class="history_year">
+                            <p>
+                                2018
+                            </p>
+                        </li>
+                        <li class="history_text_wrap">
+                            <p class="history_list">
+                                <span class="text_01">11</span>
+                                <span class="text_02">화장용 마이크로셀 실리콘퍼프 PCT 국제특허출원</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">11</span>
+                                <span class="text_02">DEMA SHOW 2018(USA) 참가</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">10</span>
+                                <span class="text_02">스마트폰 수중터치 방수팩 특허등록</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">10</span>
+                                <span class="text_02">스마트폰 방수팩 수심 500미터/72시간 국제공인방수시험(IP68)</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">07</span>
+                                <span class="text_02">드라이백 겸 레스큐 튜브 수심 100미터/ 2시간 국제공인방수시험(IPX8)</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">07</span>
+                                <span class="text_02">드라이백 겸 레스큐 튜브 개발(세계 최초)</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">07</span>
+                                <span class="text_02">하이서울 우수 상품 어워드 인증</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">05</span>
+                                <span class="text_02">넥쿨링튜브 개발(세계 최초)</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">05</span>
+                                <span class="text_02">화장용 마이크로셀 메이크업 퍼프 신제품 발표(COEX)</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">03</span>
+                                <span class="text_02">드라이백 수영가방 10L 개발</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">02</span>
+                                <span class="text_02">우수체육용구 생산업체 지정 고시(문화체육관광부)</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">02</span>
+                                <span class="text_02">나이스 및 한국기업데이터 기술평가 우수기업 인증서(T-4)</span>
+                            </p>
+
+                        </li>
+                    </ul>
+
+                    <!-- 2017  -->
+                    <ul class="history_ul"  data-aos="fade-up">
+                        <li class="history_year">
+                            <p>
+                                2017
+                            </p>
+                        </li>
+                        <li class="history_text_wrap">
+                            <p class="history_list">
+                                <span class="text_01">12</span>
+                                <span class="text_02">미국 mpac+ 상표등록</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">11</span>
+                                <span class="text_02">중국 mpac+ 상표등록</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">11</span>
+                                <span class="text_02">화장용 실리콘 퍼프 국산화 개발 성공(국내 최초)</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">11</span>
+                                <span class="text_02">DEMA SHOW 2017(USA) 참가</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">09</span>
+                                <span class="text_02">ISO 9001 인증</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">06</span>
+                                <span class="text_02">제52회 발명의 날 특허청장 표창</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">05</span>
+                                <span class="text_02">동아전람 기프트쇼 참가</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">04</span>
+                                <span class="text_02">벤처기업확인서 발급</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">04</span>
+                                <span class="text_02">Marine Diving Fair(JAPAN) 참가</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">03</span>
+                                <span class="text_02">Japan Fishing Show(JAPAN) 참관</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">03</span>
+                                <span class="text_02">한국국제낚시박람회 참가</span>
+                            </p>
+
+                            <p class="history_list">
+                                <span class="text_01">02</span>
+                                <span class="text_02">신세계이마트 입점</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">02</span>
+                                <span class="text_02">SPOEX 서울국제스포츠레저산업전 참가</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">01</span>
+                                <span class="text_02">소재·부품 전문기업확인서 발급</span>
+                            </p>
+
+
+                        </li>
+                    </ul>
+
+                    <!-- 2016 -->
+                    <ul class="history_ul"  data-aos="fade-up">
+                        <li class="history_year">
+                            <p>
+                                2016
+                            </p>
+                        </li>
+                        <li class="history_text_wrap">
+                            <p class="history_list">
+                                <span class="text_01">11</span>
+                                <span class="text_02">장애인기업확인서 발급</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">11</span>
+                                <span class="text_02">하이서울 우수상품 어워드 혁신브랜드 선정</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">11</span>
+                                <span class="text_02">DEMA SHOW 2016(USA) 참가</span>
+                            </p>
+
+                            <p class="history_list">
+                                <span class="text_01">10</span>
+                                <span class="text_02">스마트폰 방수팩 수심 200미터/2시간 국제공인방수시험(IPX8)</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">09</span>
+                                <span class="text_02">연구개발전담부서 인정</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">09</span>
+                                <span class="text_02">공장등록증 발급</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">08</span>
+                                <span class="text_02">중소기업 확인서 등록</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">07</span>
+                                <span class="text_02">해외영업부 신설</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">05</span>
+                                <span class="text_02">네이버 스토어팜 쇼핑몰 개설</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">05</span>
+                                <span class="text_02">경기국제보트쇼 참가</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">02</span>
+                                <span class="text_02">SPOEX 서울국제스포츠레저산업전 참가</span>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <!-- 2015 -->
+                    <ul class="history_ul"  data-aos="fade-up">
+                        <li class="history_year">
+                            <p>
+                                2015
+                            </p>
+                        </li>
+                        <li class="history_text_wrap">
+                            <p class="history_list">
+                                <span class="text_01">11</span>
+                                <span class="text_02">세계 최초 스마트폰 수중터치 방수팩 개발</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">08</span>
+                                <span class="text_02">KITAS-IT 참가</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">05</span>
+                                <span class="text_02">서울리빙디자인페어 참가</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">05</span>
+                                <span class="text_02">다이소 입점</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">03</span>
+                                <span class="text_02">홈페이지 개설</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">03</span>
+                                <span class="text_02">주식회사 엠팩플러스 법인 전환</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">03</span>
+                                <span class="text_02">차량용 방향제 겸용 스마트폰 거치대 개발(굿디자인 수상)</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">03</span>
+                                <span class="text_02">차량용 에어 블래더 개발</span>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <!-- 2013 -->
+                    <ul class="history_ul"  data-aos="fade-up">
+                        <li class="history_year">
+                            <p>
+                                2013
+                            </p>
+                        </li>
+                        <li class="history_text_wrap">
+                            <p class="history_list">
+                                <span class="text_01">06</span>
+                                <span class="text_02">스마트폰 방수팩 수심 50미터/2시간 국제공인방수시험(IP68)</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">03</span>
+                                <span class="text_02">서울리빙디자인페어 참가</span>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <!-- 2012 -->
+                    <ul class="history_ul"  data-aos="fade-up">
+                        <li class="history_year">
+                            <p>
+                                2012
+                            </p>
+                        </li>
+                        <li class="history_text_wrap">
+                            <p class="history_list">
+                                <span class="text_01">02</span>
+                                <span class="text_02">서울국제판촉물전 참가</span>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <!-- 2011 -->
+                    <ul class="history_ul"  data-aos="fade-up">
+                        <li class="history_year">
+                            <p>
+                                2011
+                            </p>
+                        </li>
+                        <li class="history_text_wrap">
+                            <p class="history_list">
+                                <span class="text_01">11</span>
+                                <span class="text_02">세계 최초 지퍼 없는 요철 맞물림 방수 방식 스마트폰 방수팩 개발</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">11</span>
+                                <span class="text_02">스마트폰용 거치대 개발</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">07</span>
+                                <span class="text_02">해양경찰청 공동 선박 던짐줄용 던짐추(히빙라인) 개발</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">06</span>
+                                <span class="text_02">모기퇴치 방향제 개발</span>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <!-- 2010 -->
+                    <ul class="history_ul"  data-aos="fade-up">
+                        <li class="history_year">
+                            <p>
+                                2010
+                            </p>
+                        </li>
+                        <li class="history_text_wrap">
+                            <p class="history_list">
+                                <span class="text_01">11</span>
+                                <span class="text_02">독일 쾰른 제31회 포토키나(PhotoKina) 참가</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">05</span>
+                                <span class="text_02">향 테스트 제품 개발</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">05</span>
+                                <span class="text_02">서울국제사진영상기자재전 참가</span>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <!-- 2009 -->
+                    <ul class="history_ul"  data-aos="fade-up">
+                        <li class="history_year">
+                            <p>
+                                2009
+                            </p>
+                        </li>
+                        <li class="history_text_wrap">
+                            <p class="history_list">
+                                <span class="text_01">12</span>
+                                <span class="text_02">서울국제발명전 금상 수상</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">11</span>
+                                <span class="text_02">서울기프트쇼 참가</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">04</span>
+                                <span class="text_02">해충퇴치용 손목밴드 개발</span>
+                            </p>
+                            <p class="history_list">
+                                <span class="text_01">01</span>
+                                <span class="text_02">서울국제사진영상기자재전 참가</span>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <!-- 2008 -->
+                    <ul class="history_ul"  data-aos="fade-up">
+                        <li class="history_year">
+                            <p>
+                                2008
+                            </p>
+                        </li>
+                        <li class="history_text_wrap">
+                            <p class="history_list">
+                                <span class="text_01">08</span>
+                                <span class="text_02">휴대폰용 미니앨범 및 앨범시트지 개발</span>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <!-- 2002 -->
+                    <ul class="history_ul"  data-aos="fade-up">
+                        <li class="history_year">
+                            <p>
+                                2002
+                            </p>
+                        </li>
+                        <li class="history_text_wrap">
+                            <p class="history_list">
+                                <span class="text_01">02</span>
+                                <span class="text_02">친환경 낚시 봉돌 개발</span>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <!-- 1985 -->
+                    <ul class="history_ul"  data-aos="fade-up">
+                        <li class="history_year">
+                            <p>
+                                1985
+                            </p>
+                        </li>
+                        <li class="history_text_wrap">
+                            <p class="history_list">
+                                <span class="text_01">02</span>
+                                <span class="text_02">대상테크 설립(비닐류 접합제품 제조업)</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+
+            <article class="content content_02"></article>
+
+        </section>
+
+    </main>
+
+
+
+
+    <script>
+        $(function() {
+
+
+
+            $(window).scroll(function() {
+                let scroll = $(window).scrollTop(),
+                    dh = $(document).height() - $('.footer_wrap').height(),
+                    wh = $(window).height();
+                let before_bar = document.querySelector('.before_bar');
+
+                scrollPercent = (scroll / (dh - wh)) * 100 ;
+                $(".before_bar").css("height", scrollPercent + "%");
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ========================main======================== -->
+    <!-- ========================footer======================== -->
+    <footer id="footer">
+        <div class="footer_wrap">
+            <div class="content_01">
+                <ul class="link_wrap">
+                    <li class="footer_link"><a href="#none">로그인</a></li>
+                    <li class="footer_link"><a href="#none">서비스이용약관</a></li>
+                    <li class="footer_link"><a href="#none">개인정보처리방침</a></li>
+                    <li class="footer_link"><a href="#none">영상정보처리방침</a></li>
+                </ul>
+                <ul class="info_wrap">
+                    <li class="footer_info">
+                        <a href="tel:1811-7320">
+                            T. 1811-7320
+                        </a>
+                        <a href="tel:02-2274-8890">
+                            F. 02-2274-8890
+                        </a>
+                        <a href="mailto:mp@mpacplus.com">
+                            E. mp@mpacplus.com /
+                        </a>
+                        <a href="mailto:info@mpacplus.com">info@mpacplus.com</a>
+                    </li>
+                    <li class="footer_info direction">
+                        <a href="http://naver.me/x7cocJtm" target="_blank">
+                            02565 서울특별시 동대문구 왕산로28길 55 102호 (용두동)
+                        </a>
+                    </li>
+                    <li class="footer_info copyright">
+                        Copyright © 2021 (주)엠팩플러스 All rights reserved.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content_02">
+                <img src="../images/ico/logo.png" alt="">
+            </div>
+        </div>
+    </footer>
+    <script src="../js/common.js"></script>
