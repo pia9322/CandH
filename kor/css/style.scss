@@ -139,9 +139,28 @@
         }
     }
 }
+.btn_white_border {
+    border: 1px solid #fff;
+    width: 160px; height: 43px;
+    border-radius: 20px;
+    display: inline-block;
+    @include transition(.15s);
+    &:hover {
+        border-color: #f5821f;
+        span {
+            color: #f5821f;
+        }
+    }
+    span {
+        display: flex; align-items: center; justify-content: center;
+        width: 100%; height: 100%;
+        font-size: 18px; color: #fff;
+        @include font-M();
+        @include transition(.15s);
+    }
+}
 
 .table_wrap {
-
     .table_header {
         margin: 0 auto 2rem;
         // border: 1px solid #F00;
@@ -839,6 +858,38 @@ main {
         overflow: hidden;
 
         .main_section {
+            .section_title {
+                color: #fff;
+                text-align: center;
+                padding-top: 240px;
+
+                .text_01 {
+                    span {
+                        @include font-M();
+                        display: inline-block;
+                        font-size: 2.2rem;
+                        font-weight: bold;
+                        letter-spacing: normal;
+                        line-height: 1;
+                        padding-bottom: 12px;
+                        border-bottom: 2px solid #fff;
+                    }
+                }
+
+                .text_02 {
+                    margin-top: 35px;
+                    font-size: 6rem;
+                    font-weight: bold;
+                    line-height: 0.92;
+                    letter-spacing: -2.4px;
+                }
+
+                .text_03 {
+                    margin-top: 30px;
+                    font-size: 18px;
+                    letter-spacing: -0.72px;
+                }
+            }
 
             &:not(:first-child) {}
 
@@ -921,44 +972,11 @@ main {
 
                 .main_wrap {
 
-                    .section_title {
-                        color: #fff;
-                        text-align: center;
-                        padding-top: 240px;
-
-                        .text_01 {
-                            span {
-                                @include font-M();
-                                display: inline-block;
-                                font-size: 2.2rem;
-                                font-weight: bold;
-                                letter-spacing: normal;
-                                line-height: 1;
-                                padding-bottom: 12px;
-                                border-bottom: 2px solid #fff;
-                            }
-                        }
-
-                        .text_02 {
-                            margin-top: 35px;
-                            font-size: 6rem;
-                            font-weight: bold;
-                            line-height: 0.92;
-                            letter-spacing: -2.4px;
-                        }
-
-                        .text_03 {
-                            margin-top: 30px;
-                            font-size: 18px;
-                            letter-spacing: -0.72px;
-                        }
-                    }
 
                     .business_tabcon {
                         position: relative;
                         width: 100%; height: 305px;
-                        margin: 60px auto 80px;
-    
+                        margin: 100px auto 0;
                         &::before {
                             content: ""; display: block;
                             width: 100%; height: 2px;
@@ -999,21 +1017,9 @@ main {
                             margin: -11px 0 0 0;
                         }
     
-                        .tabcon {
-                            position: relative;
-                            width: 100%;
-                            margin: 0 auto; padding: 0 5%;
-    
-                            .business {
-                                position: relative; 
-                                display: flex; flex-wrap: wrap; align-items: center;
-                                width: 100%; height: 305px;
-                                margin: 0 auto; padding: 0 30px;
+                        .tabcon.swiper-container {
+                            .business.swiper-wrapper {
                                 .swiper-slide {
-                                    position: relative;
-                                    width: calc(20% - 28.8px);
-
-
                                     // hover, active effect business
                                     &:hover {
                                         a {
@@ -1029,44 +1035,7 @@ main {
                                                 .ico {
                                                     svg {
                                                         line, path, g {
-                                                            fill: transparent;
-                                                            animation: dash 3s linear forwards; 
-                                                            stroke: #f5821f;
-                                                            stroke-width: 2;
-                                                        }
-                                                    }
-                                                    img {}
-                                                    &.ico_01 {
-                                                        svg {
-                                                            line, path, g {
-                                                                stroke-dashoffset: 200;
-                                                                stroke-dasharray: 200;
-                                                            }
-                                                        }
-                                                    }
-                                                    &.ico_02 { 
-                                                        svg {
-                                                            line, path, g {
-                                                                stroke-dashoffset: 500;
-                                                                stroke-dasharray: 500;
-                                                            }
-                                                        }
-                                                    }
-                                                    &.ico_03 {
-                                                        svg {
-                                                            line, path, g {
-                                                                stroke-dashoffset: 500;
-                                                                stroke-dasharray: 500;
-                                                            }
-                                                        }
-                                                    }
-                                                    &.ico_04 { }
-                                                    &.ico_05 {
-                                                        svg {
-                                                            line, path, g {
-                                                                stroke-dashoffset: 700;
-                                                                stroke-dasharray: 700;
-                                                            }
+                                                            fill: #f5821f;
                                                         }
                                                     }
                                                 }
@@ -1075,10 +1044,8 @@ main {
                                         }
                                     }
                                     
-    
-                                    a {
+                                    > a {
                                         display: block; width: 100%; height: 100%;
-    
                                         .boxwrap {
                                             position: relative;
                                             width: 100%;
@@ -1124,7 +1091,7 @@ main {
                                                     margin-bottom: 30px;
                                                     height: 55px;
                                                     line, path, g {
-                                                        @include transition(.15s);
+                                                        @include transition(.3s);
                                                         fill: #fff;
                                                     }
                                                 }
@@ -1155,6 +1122,32 @@ main {
                 }
             }
 
+            &.main_section_02 {
+                background: url('../images/main/section_03.png')no-repeat center/cover;
+                position: relative;
+                height: 100vh;
+                .main_wrap {
+                    .section_title {
+                        .text_04 {
+                            margin-top: 70px;
+                        }
+                    }
+
+
+                    .wave_container {
+              
+                        svg {
+                            width: 100%; height: 200px;
+                            position: absolute; bottom: 0; left: 0; 
+                            border: 1px solid #f00;
+                            #main_wave {}
+                        }
+                    }
+                }
+
+
+            }
+
 
         }
     }
@@ -1170,10 +1163,6 @@ main {
 }
 
 @keyframes dash {
-    90% {
-      stroke-dashoffset: 0;
-    }
-    100% {
-        fill: #f5821f;
-    }
-  }
+    90% {stroke-dashoffset: 0;}
+    100% {fill: #f5821f;}
+}

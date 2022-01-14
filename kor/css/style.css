@@ -8,6 +8,49 @@
   height: 40px;
 }
 
+.btn_white_border {
+  border: 1px solid #fff;
+  width: 160px;
+  height: 43px;
+  border-radius: 20px;
+  display: inline-block;
+  transition: 0.15s;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
+}
+
+.btn_white_border:hover {
+  border-color: #f5821f;
+}
+
+.btn_white_border:hover span {
+  color: #f5821f;
+}
+
+.btn_white_border span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  color: #fff;
+  font-family: 'Montserrat';
+  transition: 0.15s;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
+}
+
 .table_wrap .table_header {
   margin: 0 auto 2rem;
   display: -webkit-box;
@@ -725,6 +768,37 @@ main.main_wrap {
   overflow: hidden;
 }
 
+main.main_wrap .main_section .section_title {
+  color: #fff;
+  text-align: center;
+  padding-top: 240px;
+}
+
+main.main_wrap .main_section .section_title .text_01 span {
+  font-family: 'Montserrat';
+  display: inline-block;
+  font-size: 2.2rem;
+  font-weight: bold;
+  letter-spacing: normal;
+  line-height: 1;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #fff;
+}
+
+main.main_wrap .main_section .section_title .text_02 {
+  margin-top: 35px;
+  font-size: 6rem;
+  font-weight: bold;
+  line-height: 0.92;
+  letter-spacing: -2.4px;
+}
+
+main.main_wrap .main_section .section_title .text_03 {
+  margin-top: 30px;
+  font-size: 18px;
+  letter-spacing: -0.72px;
+}
+
 main.main_wrap .main_section.main_visual {
   height: 100vh;
 }
@@ -804,42 +878,11 @@ main.main_wrap .main_section.main_section_01 {
   height: 100vh;
 }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .section_title {
-  color: #fff;
-  text-align: center;
-  padding-top: 240px;
-}
-
-main.main_wrap .main_section.main_section_01 .main_wrap .section_title .text_01 span {
-  font-family: 'Montserrat';
-  display: inline-block;
-  font-size: 2.2rem;
-  font-weight: bold;
-  letter-spacing: normal;
-  line-height: 1;
-  padding-bottom: 12px;
-  border-bottom: 2px solid #fff;
-}
-
-main.main_wrap .main_section.main_section_01 .main_wrap .section_title .text_02 {
-  margin-top: 35px;
-  font-size: 6rem;
-  font-weight: bold;
-  line-height: 0.92;
-  letter-spacing: -2.4px;
-}
-
-main.main_wrap .main_section.main_section_01 .main_wrap .section_title .text_03 {
-  margin-top: 30px;
-  font-size: 18px;
-  letter-spacing: -0.72px;
-}
-
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon {
   position: relative;
   width: 100%;
   height: 305px;
-  margin: 60px auto 80px;
+  margin: 100px auto 0;
 }
 
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon::before {
@@ -887,85 +930,33 @@ main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .swiper
   margin: -11px 0 0 0;
 }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 5%;
-}
-
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 305px;
-  margin: 0 auto;
-  padding: 0 30px;
-}
-
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide {
-  position: relative;
-  width: calc(20% - 28.8px);
-}
-
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .bg {
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide:hover a .boxwrap .bg {
   -webkit-animation: business_ani 5s linear infinite;
           animation: business_ani 5s linear infinite;
 }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .bg svg path {
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide:hover a .boxwrap .bg svg path {
   stroke: #f5821f;
 }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .ico svg line, main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .ico svg path, main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .ico svg g {
-  fill: transparent;
-  -webkit-animation: dash 3s linear forwards;
-          animation: dash 3s linear forwards;
-  stroke: #f5821f;
-  stroke-width: 2;
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide:hover a .boxwrap .ico svg line, main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide:hover a .boxwrap .ico svg path, main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide:hover a .boxwrap .ico svg g {
+  fill: #f5821f;
 }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .ico.ico_01 svg line, main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .ico.ico_01 svg path, main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .ico.ico_01 svg g {
-  stroke-dashoffset: 200;
-  stroke-dasharray: 200;
-}
-
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .ico.ico_02 svg line, main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .ico.ico_02 svg path, main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .ico.ico_02 svg g {
-  stroke-dashoffset: 500;
-  stroke-dasharray: 500;
-}
-
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .ico.ico_03 svg line, main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .ico.ico_03 svg path, main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .ico.ico_03 svg g {
-  stroke-dashoffset: 500;
-  stroke-dasharray: 500;
-}
-
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .ico.ico_05 svg line, main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .ico.ico_05 svg path, main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .ico.ico_05 svg g {
-  stroke-dashoffset: 700;
-  stroke-dasharray: 700;
-}
-
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide a {
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide a .boxwrap {
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap {
   position: relative;
   width: 100%;
   height: 303px;
   margin: 0 auto;
 }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide a .boxwrap::before {
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap::before {
   display: block;
   content: "";
   width: 9px;
@@ -979,7 +970,7 @@ main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon
           transform: translate(-50%, -50%);
 }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide a .boxwrap .bg {
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .bg {
   position: absolute;
   left: 0;
   top: 0;
@@ -995,14 +986,14 @@ main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon
   -o-transition: 3s;
 }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide a .boxwrap .bg svg {
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .bg svg {
   width: 100%;
   height: 100%;
   -webkit-filter: drop-shadow(10px -3px 12px rgba(255, 255, 255, 0.8) inset);
           filter: drop-shadow(10px -3px 12px rgba(255, 255, 255, 0.8) inset);
 }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide a .boxwrap .bg svg path {
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .bg svg path {
   transition: 0.3s;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -1010,7 +1001,7 @@ main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon
   -o-transition: 0.3s;
 }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide a .boxwrap .ico {
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .ico {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1023,32 +1014,51 @@ main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon
   height: 50%;
 }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide a .boxwrap .ico svg {
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .ico svg {
   margin-bottom: 30px;
   height: 55px;
 }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide a .boxwrap .ico svg line, main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide a .boxwrap .ico svg path, main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide a .boxwrap .ico svg g {
-  transition: 0.15s;
-  -webkit-transition: 0.15s;
-  -moz-transition: 0.15s;
-  -ms-transition: 0.15s;
-  -o-transition: 0.15s;
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .ico svg line, main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .ico svg path, main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .ico svg g {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
   fill: #fff;
 }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide a .boxwrap .ico img {
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .ico img {
   margin-bottom: 30px;
   height: 55px;
 }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide a .boxwrap .ico_text {
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .ico_text {
   margin-top: 30px;
   color: #fff;
   font-size: 2.2rem;
   font-weight: bold;
   letter-spacing: -0.88px;
   text-align: center;
+}
+
+main.main_wrap .main_section.main_section_02 {
+  background: url("../images/main/section_03.png") no-repeat center/cover;
+  position: relative;
+  height: 100vh;
+}
+
+main.main_wrap .main_section.main_section_02 .main_wrap .section_title .text_04 {
+  margin-top: 70px;
+}
+
+main.main_wrap .main_section.main_section_02 .main_wrap .wave_container svg {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 1px solid #f00;
 }
 
 @-webkit-keyframes business_ani {
