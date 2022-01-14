@@ -929,6 +929,7 @@ main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon
   -webkit-animation: dash 3s linear forwards;
           animation: dash 3s linear forwards;
   stroke: #f5821f;
+  stroke-width: 2;
 }
 
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .ico.ico_01 svg line, main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .ico.ico_01 svg path, main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon .business .swiper-slide:hover a .boxwrap .ico.ico_01 svg g {
