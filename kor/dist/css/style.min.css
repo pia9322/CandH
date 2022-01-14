@@ -119,15 +119,11 @@ body .table_wrap_more .table_notice_more > a:hover { color: #fff; background: rg
 
 #header > .header_wrap:hover .header_center > li > a { color: #000; }
 
-#header > .header_wrap:hover .header_center .depth_01 { display: block; }
-
-#header > .header_wrap:hover .header_center .header_bg { display: block; }
-
-#header > .header_wrap:hover .header_right .header_search { background: url("../images/ico/ico_search_c.png") no-repeat center/cover; }
+#header > .header_wrap:hover .header_right .header_search { cursor: pointer; background: url("../images/ico/ico_search_c.png") no-repeat center/cover; }
 
 #header > .header_wrap:hover .header_right .header_ham span { border-color: #666; }
 
-#header > .header_wrap .header_left { z-index: 1; margin-top: 5px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+#header > .header_wrap .header_left { max-width: 103px; z-index: 1; margin-top: 5px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 #header > .header_wrap .header_left a { display: block; width: 120px; }
 
@@ -160,6 +156,10 @@ body .table_wrap_more .table_notice_more > a:hover { color: #fff; background: rg
 #header > .header_wrap .header_center > li .depth_01 li a:hover { color: #f5821f; }
 
 #header > .header_wrap .header_center .depth_01 { display: none; }
+
+#header > .header_wrap .header_center .depth_01.active { display: block; }
+
+#header > .header_wrap .header_center .header_bg.active { display: block; }
 
 #header > .header_wrap .header_right { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; z-index: 1; }
 
@@ -228,10 +228,6 @@ body .table_wrap_more .table_notice_more > a:hover { color: #fff; background: rg
 #footer .footer_wrap .footer_left > ul .footer_select { margin-top: 30px; }
 
 #footer .footer_wrap .footer_left > ul .footer_select select { border-color: #ddd; background: transparent; padding: 13px 19px; font-size: 16px; font-weight: 500; line-height: 1.5; }
-
-#footer .footer_wrap .footer_left > ul .footer_select select::-moz-selection { display: none; }
-
-#footer .footer_wrap .footer_left > ul .footer_select select::selection { display: none; }
 
 #footer .footer_wrap .footer_left > ul .footer_info { margin-top: 45px; }
 

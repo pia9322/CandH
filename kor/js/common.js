@@ -83,8 +83,16 @@ $(document).ready(function(){
     let header = document.querySelector('#header'),
     header_ham = document.querySelector('.header_ham'),
     header_full = document.querySelector('.header_full'),
-    depth_01 = document.querySelectorAll('.header_full_list .depth_01');
+    depth_01 = document.querySelectorAll('.header_full_list .depth_01')
     
+    
+
+
+    $('.header_center > li').hover(function(){
+        $('.depth_01, .header_bg').addClass('active');
+    },function(){
+        $('.depth_01, .header_bg').removeClass('active');
+    })
     
     for(let i=0; i<depth_01.length; i++){
         depth_01[i].addEventListener('click', function(){

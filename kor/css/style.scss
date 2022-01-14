@@ -435,18 +435,11 @@ body {
                         color: #000;
                     }
                 }
-
-                .depth_01 {
-                    display: block;
-                }
-
-                .header_bg {
-                    display: block;
-                }
             }
 
             .header_right {
                 .header_search {
+                    cursor: pointer;
                     background: url("../images/ico/ico_search_c.png") no-repeat center/cover;
                 }
 
@@ -460,6 +453,7 @@ body {
 
         // logo
         .header_left {
+            max-width: 103px;
             z-index: 1;
             margin-top: 5px;
             display: flex;
@@ -591,6 +585,10 @@ body {
             .depth_01 {
                 display: none;
             }
+            
+            // active, hover 
+            .depth_01.active {display: block;}
+            .header_bg.active {display: block;}
         }
 
         // header_right 
@@ -794,9 +792,7 @@ body {
                 .footer_select {
                     @include marginTop-30();
                     select {
-                        &::selection {
-                            display: none;
-                        }
+                  
                         border-color: #ddd;
                         background: transparent;
                         padding: 13px 19px; 
