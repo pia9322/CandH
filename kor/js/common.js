@@ -70,6 +70,14 @@ $(document).ready(function(){
     });
 
 
+    var top_wave = new Wavify('#main_wave', {
+        height: 30,
+        bones: 3,
+        amplitude: 80,
+        speed: .15,
+        color: '#fff'
+    });
+
 
     // header_default 
     let header = document.querySelector('#header'),
