@@ -14,7 +14,47 @@ $(document).ready(function(){
 
     
 
-    var Mainswiper = new Swiper('.main_section_01', {
+    var Mainswiper = new Swiper('.main_visual.swiper-container', {
+        effect: "fade",
+        slidesPerView: 1,
+        centeredSlides: true,
+        loop: true,
+        loopAdditionalSlides : 1,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        
+        touchMoveStopPropagation : true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        // on: {
+        //     init: function () {
+        //         $('.swiper-progress-bar').removeClass('animate');
+        //         $('.swiper-progress-bar').removeClass('active');
+        //         $('.swiper-progress-bar').eq(0).addClass('animate');
+        //         $('.swiper-progress-bar').eq(0).addClass('active');
+        //     },
+        //     slideChangeTransitionStart: function () {
+        //         $('.swiper-progress-bar').removeClass('animate');
+        //         $('.swiper-progress-bar').removeClass('active');
+        //         $('.swiper-progress-bar').eq(0).addClass('active');
+        //     },
+        //     slideChangeTransitionEnd: function () {
+        //         $('.swiper-progress-bar').eq(0).addClass('animate');
+        //     },
+        // }
+    });
+
+    
+
+    var businessswiper = new Swiper('.business_tabcon.swiper-container', {
         effect: "fade",
         slidesPerView: 1,
         centeredSlides: true,
@@ -51,98 +91,6 @@ $(document).ready(function(){
         //         $('.swiper-progress-bar').eq(0).addClass('animate');
         //     },
         // }
-    });
-
-
-    
-    var mainProduct_01 = new Swiper('.main_product_slide_01', {
-        slidesPerView: 4,
-        // centeredSlides: true,
-        loop: true,
-        loopAdditionalSlides : 1,
-        // autoplay: {
-        //     delay: 3000,
-        //     disableOnInteraction: false,
-        // },
-        spaceBetween : 40, 
-        touchMoveStopPropagation : true,
-
-        navigation: {
-            nextEl: '.swiper_next_02',
-            prevEl: '.swiper_prev_02',
-        },
-        breakpoints : {
-            "1100" :{
-                slidesPerView: 3,
-                spaceBetween : 20, 
-            },
-            "767" : {
-                slidesPerView: 2,
-            }
-        }
-
-    });
-
-
-        
-    let mainProduct_02 = new Swiper('.main_product_slide_02', {
-        slidesPerView: 1,
-        // centeredSlides: true,
-        loop: true,
-        loopAdditionalSlides : 1,
-        // autoplay: {
-        //     delay: 3000,
-        //     disableOnInteraction: false,
-        // },
-        touchMoveStopPropagation : true,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'fraction',
-        },
-
-        navigation: {
-            nextEl: '.swiper_next_03',
-            prevEl: '.swiper_prev_03',
-        },
-    });
-    
-
-            
-    let mainevent_01 = new Swiper('.main_event_01', {
-        slidesPerView: 1,
-        centeredSlides: true,
-        loop: true,
-        loopAdditionalSlides : 1,
-        // autoplay: {
-        //     delay: 3000,
-        //     disableOnInteraction: false,
-        // },
-        touchMoveStopPropagation : true,
-
-        navigation: {
-            nextEl: '.swiper_next_04',
-            prevEl: '.swiper_prev_04',
-        },
-        breakpoints : {
-            "1100" :{
-                spaceBetween:5,
-            }
-        }
-    });
-    
-    let company_slide = new Swiper('.company_slide', {
-        slidesPerView: 1,
-        centeredSlides: true,
-        // autoplay: {
-        //     delay: 3000,
-        //     disableOnInteraction: false,
-        // },
-        touchMoveStopPropagation : true,
-
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-        },
     });
     
 
