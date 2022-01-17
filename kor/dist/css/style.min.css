@@ -311,13 +311,19 @@ main.main_wrap .main_section.main_visual .mv_wrap .mv figcaption .mv_text .swipe
 
 main.main_wrap .main_section.main_section_01 { background: url("../images/main/section_02.png") no-repeat center/cover; height: 100vh; }
 
+main.main_wrap .main_section.main_section_01.active .business_tabcon::before { -webkit-animation: barload 3s 1s ease forwards; animation: barload 3s 1s ease forwards; }
+
+main.main_wrap .main_section.main_section_01.active .business_tabcon .tabcon.swiper-container { transition: 1s 3s; -webkit-transition: 1s 3s; -moz-transition: 1s 3s; -ms-transition: 1s 3s; -o-transition: 1s 3s; opacity: 1 !important; }
+
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon { position: relative; width: 100%; height: 305px; margin: 100px auto 0; padding: 0 100px; }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon::before { content: ""; display: block; width: 100%; height: 2px; background: rgba(255, 255, 255, 0.6); position: absolute; left: 0; top: 50%; margin-top: -1px; }
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon::before { content: ""; display: block; width: 0; height: 2px; background: rgba(255, 255, 255, 0.6); position: absolute; left: 0; top: 50%; margin-top: -1px; }
 
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .swiper-button-prev { display: inline-block; cursor: pointer; width: 22px; height: 22px; border-left: 1px solid #fff; border-bottom: 1px solid #fff; background: 0; outline: 0; -webkit-transform: rotate(45deg); transform: rotate(45deg); left: -110px; top: 50%; margin: -11px 0 0 0; display: none; }
 
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .swiper-button-next { display: inline-block; cursor: pointer; width: 22px; height: 22px; border-left: 1px solid #fff; border-bottom: 1px solid #fff; background: 0; outline: 0; -webkit-transform: rotate(-135deg); transform: rotate(-135deg); right: -110px; top: 50%; margin: -11px 0 0 0; }
+
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container { opacity: 0; }
 
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide:hover a .boxwrap::before { background-color: #f5821f; }
 
@@ -450,4 +456,10 @@ main.main_wrap .main_section.main_section_03 .main_wrap > div.right_box .content
   50% { background: yellow; }
   70% { background: green; }
   100% { background: blue; } }
+
+@-webkit-keyframes barload { 0% { width: 0; }
+  100% { width: 100%; } }
+
+@keyframes barload { 0% { width: 0; }
+  100% { width: 100%; } }
 /*# sourceMappingURL=style.min.css.map */

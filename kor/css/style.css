@@ -1043,6 +1043,20 @@ main.main_wrap .main_section.main_section_01 {
   height: 100vh;
 }
 
+main.main_wrap .main_section.main_section_01.active .business_tabcon::before {
+  -webkit-animation: barload 3s 1s ease forwards;
+          animation: barload 3s 1s ease forwards;
+}
+
+main.main_wrap .main_section.main_section_01.active .business_tabcon .tabcon.swiper-container {
+  transition: 1s 3s;
+  -webkit-transition: 1s 3s;
+  -moz-transition: 1s 3s;
+  -ms-transition: 1s 3s;
+  -o-transition: 1s 3s;
+  opacity: 1 !important;
+}
+
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon {
   position: relative;
   width: 100%;
@@ -1054,7 +1068,7 @@ main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon {
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon::before {
   content: "";
   display: block;
-  width: 100%;
+  width: 0;
   height: 2px;
   background: rgba(255, 255, 255, 0.6);
   position: absolute;
@@ -1094,6 +1108,10 @@ main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .swiper
   right: -110px;
   top: 50%;
   margin: -11px 0 0 0;
+}
+
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container {
+  opacity: 0;
 }
 
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide:hover a .boxwrap::before {
@@ -1526,6 +1544,24 @@ main.main_wrap .main_section.main_section_03 .main_wrap > div.right_box .content
   }
   100% {
     background: blue;
+  }
+}
+
+@-webkit-keyframes barload {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes barload {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
