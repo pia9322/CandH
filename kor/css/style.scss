@@ -425,6 +425,8 @@ body {
         padding: 0 40px;
         // max-width: 2560px;
 
+
+        // header_wrap hover,active 
         &:hover {
             background: rgba($color: #fff, $alpha: 1);
             border-bottom: 1px solid #ddd;
@@ -472,12 +474,11 @@ body {
         // center_menu
         .header_center {
             @include header-height();
-            width: 80%;
-            margin: 0 auto;
-            transition: all .3s;
+            @include transition(.3s);
+            display: flex; justify-content: center;
+            width: 80%; max-width: 800px; margin: 0 auto;
             visibility: visible;
-            max-width: 800px;
-            display: flex;
+            
 
             a {
                 display: block;

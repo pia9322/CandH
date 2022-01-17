@@ -129,7 +129,7 @@ body .table_wrap_more .table_notice_more > a:hover { color: #fff; background: rg
 
 #header > .header_wrap .header_left a img { width: 100%; }
 
-#header > .header_wrap .header_center { height: 110px; width: 80%; margin: 0 auto; -webkit-transition: all .3s; transition: all .3s; visibility: visible; max-width: 800px; display: -webkit-box; display: -ms-flexbox; display: flex; }
+#header > .header_wrap .header_center { height: 110px; transition: 0.3s; -webkit-transition: 0.3s; -moz-transition: 0.3s; -ms-transition: 0.3s; -o-transition: 0.3s; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 80%; max-width: 800px; margin: 0 auto; visibility: visible; }
 
 #header > .header_wrap .header_center a { display: block; word-break: keep-all; }
 
