@@ -807,7 +807,7 @@ body {
                             margin-left: 20px;
                             &:first-child{margin-left: 0;}
                             &.a_link {
-                                @include transition(.15s)
+                                @include transition(.15s);
                                 &:hover {
                                     color: #f5821f;
                                 }
@@ -852,6 +852,9 @@ body {
 
 main {
     position: relative;
+    &.active {
+        width: 100vw; height: 100vh; overflow: hidden;
+    }
 
     &.main_wrap {
         overflow: hidden;
@@ -891,6 +894,7 @@ main {
             }
 
             &:not(:first-child) {}
+
 
             &.main_visual {
                 height: 100vh;
@@ -986,6 +990,7 @@ main {
                         position: relative;
                         width: 100%; height: 305px;
                         margin: 100px auto 0;
+                        padding: 0 100px;
                         &::before {
                             content: ""; display: block;
                             width: 100%; height: 2px;
@@ -1033,6 +1038,9 @@ main {
                                     &:hover {
                                         a {
                                             .boxwrap {
+                                                &::before {
+                                                    background-color: #f5821f;
+                                                }
                                                 .bg {
                                                     animation: business_ani 5s linear infinite;
                                                     svg {
@@ -1064,35 +1072,30 @@ main {
                                             &::before {
                                                 display: block;
                                                 content: "";
-                                                width: 9px;
-                                                height: 9px;
+                                                width: 9px; height: 9px;
                                                 background: #fff;
                                                 border-radius: 50%;
-                                                position: absolute;
-                                                left: 50%;
-                                                top: 50%;
+                                                position: absolute; left: 50%; top: 50%;
                                                 transform: translate(-50%, -50%);
+                                                @include transition(.15s)
                                             }
     
                                             .bg {
-                                                position: absolute;
-                                                left: 0;
-                                                top: 0;
-                                                width: 100%;
-                                                height: 100%;
+                                                position: absolute; left: 0; top: 0;
+                                                width: 100%; height: 100%;
                                                 /*background:url(/images/main/sec2_guide_bg.png) no-repeat;*/
                                                 transform: rotate(0);
                                                 @include transition(3s);
     
                                                 svg {
                                                     width: 100%; height: 100%;
-                                                    filter: drop-shadow(10px -3px 12px rgba(255, 255, 255, 0.8) inset);
                                                     path {
                                                         @include transition(.3s)
                                                     }
                                                 }
     
                                             }
+
                                             .ico {
                                                 display: flex; align-items: flex-end; justify-content: center;
                                                 height: 50%;
@@ -1232,8 +1235,11 @@ main {
                                         a {
                                             width: 100%; height: 100%;
                                             max-width: 164px; max-height: 104px;
-
-                                            img {}
+                                            img {
+                                                @include transition(.3s);
+                                            }
+                                            // hover, active
+                                            &:hover img{opacity: .5;}
                                         }
                                     }
                                 }
@@ -1315,8 +1321,8 @@ main {
 @keyframes dotscolor {
     10% {background: red;}
     30% {background: orange;}
-    50% {background: yellow}
-    70% {background: green}
-    100% {background: blue}
+    50% {background: yellow;}
+    70% {background: green;}
+    100% {background: blue;}
 }
 // ==========================keyframs==========================

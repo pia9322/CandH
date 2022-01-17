@@ -259,6 +259,8 @@ body .table_wrap_more .table_notice_more > a:hover { color: #fff; background: rg
 
 main { position: relative; }
 
+main.active { width: 100vw; height: 100vh; overflow: hidden; }
+
 main.main_wrap { overflow: hidden; }
 
 main.main_wrap .main_section .section_title { color: #fff; text-align: center; padding-top: 240px; }
@@ -309,13 +311,15 @@ main.main_wrap .main_section.main_visual .mv_wrap .mv figcaption .mv_text .swipe
 
 main.main_wrap .main_section.main_section_01 { background: url("../images/main/section_02.png") no-repeat center/cover; height: 100vh; }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon { position: relative; width: 100%; height: 305px; margin: 100px auto 0; }
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon { position: relative; width: 100%; height: 305px; margin: 100px auto 0; padding: 0 100px; }
 
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon::before { content: ""; display: block; width: 100%; height: 2px; background: rgba(255, 255, 255, 0.6); position: absolute; left: 0; top: 50%; margin-top: -1px; }
 
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .swiper-button-prev { display: inline-block; cursor: pointer; width: 22px; height: 22px; border-left: 1px solid #fff; border-bottom: 1px solid #fff; background: 0; outline: 0; -webkit-transform: rotate(45deg); transform: rotate(45deg); left: -110px; top: 50%; margin: -11px 0 0 0; display: none; }
 
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .swiper-button-next { display: inline-block; cursor: pointer; width: 22px; height: 22px; border-left: 1px solid #fff; border-bottom: 1px solid #fff; background: 0; outline: 0; -webkit-transform: rotate(-135deg); transform: rotate(-135deg); right: -110px; top: 50%; margin: -11px 0 0 0; }
+
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide:hover a .boxwrap::before { background-color: #f5821f; }
 
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide:hover a .boxwrap .bg { -webkit-animation: business_ani 5s linear infinite; animation: business_ani 5s linear infinite; }
 
@@ -327,11 +331,11 @@ main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon
 
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap { position: relative; width: 100%; height: 303px; margin: 0 auto; }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap::before { display: block; content: ""; width: 9px; height: 9px; background: #fff; border-radius: 50%; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap::before { display: block; content: ""; width: 9px; height: 9px; background: #fff; border-radius: 50%; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); transition: 0.15s; -webkit-transition: 0.15s; -moz-transition: 0.15s; -ms-transition: 0.15s; -o-transition: 0.15s; }
 
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .bg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; /*background:url(/images/main/sec2_guide_bg.png) no-repeat;*/ -webkit-transform: rotate(0); transform: rotate(0); transition: 3s; -webkit-transition: 3s; -moz-transition: 3s; -ms-transition: 3s; -o-transition: 3s; }
 
-main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .bg svg { width: 100%; height: 100%; -webkit-filter: drop-shadow(10px -3px 12px rgba(255, 255, 255, 0.8) inset); filter: drop-shadow(10px -3px 12px rgba(255, 255, 255, 0.8) inset); }
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .bg svg { width: 100%; height: 100%; }
 
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .bg svg path { transition: 0.3s; -webkit-transition: 0.3s; -moz-transition: 0.3s; -ms-transition: 0.3s; -o-transition: 0.3s; }
 
@@ -398,6 +402,10 @@ main.main_wrap .main_section.main_section_03 .main_wrap > div.right_box .content
 main.main_wrap .main_section.main_section_03 .main_wrap > div.right_box .content_box.box_01 .client_img { margin-top: 60px; display: -webkit-box; display: -ms-flexbox; display: flex; }
 
 main.main_wrap .main_section.main_section_03 .main_wrap > div.right_box .content_box.box_01 .client_img a { width: 100%; height: 100%; max-width: 164px; max-height: 104px; }
+
+main.main_wrap .main_section.main_section_03 .main_wrap > div.right_box .content_box.box_01 .client_img a img { transition: 0.3s; -webkit-transition: 0.3s; -moz-transition: 0.3s; -ms-transition: 0.3s; -o-transition: 0.3s; }
+
+main.main_wrap .main_section.main_section_03 .main_wrap > div.right_box .content_box.box_01 .client_img a:hover img { opacity: .5; }
 
 main.main_wrap .main_section.main_section_03 .main_wrap > div.right_box .content_box.box_02 { padding: 70px; border-top: 1px solid #ddd; }
 

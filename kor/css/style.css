@@ -879,6 +879,12 @@ main {
   position: relative;
 }
 
+main.active {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
 main.main_wrap {
   overflow: hidden;
 }
@@ -1036,6 +1042,7 @@ main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon {
   width: 100%;
   height: 305px;
   margin: 100px auto 0;
+  padding: 0 100px;
 }
 
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon::before {
@@ -1083,6 +1090,10 @@ main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .swiper
   margin: -11px 0 0 0;
 }
 
+main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide:hover a .boxwrap::before {
+  background-color: #f5821f;
+}
+
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide:hover a .boxwrap .bg {
   -webkit-animation: business_ani 5s linear infinite;
           animation: business_ani 5s linear infinite;
@@ -1121,6 +1132,11 @@ main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  transition: 0.15s;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
 }
 
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .bg {
@@ -1142,8 +1158,6 @@ main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .bg svg {
   width: 100%;
   height: 100%;
-  -webkit-filter: drop-shadow(10px -3px 12px rgba(255, 255, 255, 0.8) inset);
-          filter: drop-shadow(10px -3px 12px rgba(255, 255, 255, 0.8) inset);
 }
 
 main.main_wrap .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .bg svg path {
@@ -1354,6 +1368,18 @@ main.main_wrap .main_section.main_section_03 .main_wrap > div.right_box .content
   height: 100%;
   max-width: 164px;
   max-height: 104px;
+}
+
+main.main_wrap .main_section.main_section_03 .main_wrap > div.right_box .content_box.box_01 .client_img a img {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+main.main_wrap .main_section.main_section_03 .main_wrap > div.right_box .content_box.box_01 .client_img a:hover img {
+  opacity: .5;
 }
 
 main.main_wrap .main_section.main_section_03 .main_wrap > div.right_box .content_box.box_02 {

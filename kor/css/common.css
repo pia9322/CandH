@@ -59,20 +59,23 @@ p::first-letter {}
 strong {font-weight: bold;}
 
 .ponit_color_main {
-	color:#3bb0e2
+	color:#f5821f
 }
 .ponit_color_sub_01 {
 	color: #1e3c5a;
 }
 input:focus, textarea:focus {
-	outline: 2px solid #3bb0e2;
+	outline: 2px solid #f5821f;
 }
 
 /* scroll_bar */
+
+*::-webkit-scrollbar {display: none;}
+
 /* 
 *::-webkit-scrollbar {width: 5px;}
 *::-webkit-scrollbar-thumb {background-color: #005baa;}
-*::-webkit-scrollbar-track {background-color: transparent;}
+*::-webkit-scrollbar-track {background-color: transparent;} 
 */
 
 
