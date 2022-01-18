@@ -237,9 +237,9 @@ $(document).ready(function () {
 
 
     // resize reload
-    // window.addEventListener('resize',function(){
-    //     location.reload();
-    // })
+    window.addEventListener('resize',function(){
+        location.reload();
+    })
     // resize reload
 
 
