@@ -129,7 +129,6 @@ $(document).ready(function () {
         })
     }
 
-
     // headerRight()
     function headerRight() {
         header_ham.addEventListener('click', function () {
@@ -190,9 +189,10 @@ $(document).ready(function () {
 
 
     // jj fullpage
-    let delta, loop, num = 0, pos = [];
-    let mainLen = ($(".fullpage_wrap > section").length) - 1;
-
+    let delta, loop, num = 0, pos = [],
+        mainLen = ($(".fullpage_wrap > section").length),
+        y = {sy:0,ey:0}
+    
 
 
     function mainWrap() {
@@ -200,9 +200,16 @@ $(document).ready(function () {
             pos.push($(".fullpage_wrap > section").eq(i).offset().top)
         });
 
-        $(".fullpage_wrap").on('scroll touchmove mousewheel DOMMouseScroll', function (e) {
-            delta = e.originalEvent.wheelDelta || -e.originalEvent.detail;
-            console.log()
+        
+        $(".fullpage_wrap").on('scroll touchstart touchmove mousewheel DOMMouseScroll', function (e) {
+            if(e.type=='touchstart'){
+                y.sy=e.targetTouches[0].clientY;
+            }else if(e.type=='touchmove'){
+                y.ey=e.targetTouches[0].clientY;
+                delta = (y.sy > y.ey) ? -1 : 1 ;
+            }else{
+                delta = e.originalEvent.wheelDelta || -e.originalEvent.detail
+            }
 
             clearTimeout(loop);
             loop = setTimeout(function () {
@@ -216,11 +223,11 @@ $(document).ready(function () {
             }, 300);
 
             (num <= 2) ? $('.main_wrap').addClass('active') : null;
-            (num == 0 ) ? $('.main_section_01').addClass('active') : $('.main_section_01').removeClass('active');
+            (num == 0 || num == 2 ) ? $('.main_section_01').addClass('active') : $('.main_section_01').removeClass('active');
             (num == 2 && delta <= 120) ? $('.main_wrap').removeClass('active') : null;
 
 
-            console.log(num, delta, e.targetTouches[0].clientY);
+            console.log(num, delta);
             // 터치위치까지 구함
         });
     };
