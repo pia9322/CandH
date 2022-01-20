@@ -113,7 +113,7 @@ $(document).ready(function () {
     let header = document.querySelector('#header'),
         header_ham = document.querySelector('.header_ham'),
         header_full = document.querySelector('.header_full'),
-        depth_01 = document.querySelectorAll('.header_full_list .depth_01')
+        depth_01 = document.querySelectorAll('.header_full_list > li')
 
     $('.header_center > li').hover(function () {
         $('.depth_01, .header_bg').addClass('active');
@@ -123,8 +123,8 @@ $(document).ready(function () {
 
     for (let i = 0; i < depth_01.length; i++) {
         depth_01[i].addEventListener('click', function () {
-            $(this).children('.depth_02').slideToggle();
-            $(this).siblings().children('.depth_02').slideUp();
+            $(this).children('ul').slideToggle();
+            $(this).siblings().children('ul').slideUp();
             return;
         })
     }
@@ -184,10 +184,6 @@ $(document).ready(function () {
 
 
 
-
-
-
-
     // jj fullpage
     let delta, loop, num = 0, pos = [],
         mainLen = ($(".fullpage_wrap > section").length),
@@ -231,7 +227,7 @@ $(document).ready(function () {
             // 터치위치까지 구함
         });
     };
-    mainWrap()
+    // mainWrap()
     // jj fullpage
 
 
@@ -241,6 +237,14 @@ $(document).ready(function () {
         location.reload();
     })
     // resize reload
+
+    
+
+    $('#header_search_btn').click(function(){
+        $('#header_search_box').slideToggle(function(){
+            $(this).toggleClass('active');
+        });
+    })
 
 
 
