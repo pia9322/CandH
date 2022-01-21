@@ -265,6 +265,7 @@ $business_height_767 : 150px;
                                 .margin0 {margin-top: 0;}
                                 // default
                                 &.left_content {
+                                    border: none;
                                     .content_wrap {
                                         
                                         margin-top: 30px;
@@ -334,6 +335,8 @@ $business_height_767 : 150px;
         
 
 }
+
+
 
 
 
@@ -691,6 +694,39 @@ $business_height_767 : 150px;
 
 
 
+@media (max-height: 600px) {
+    body {
+    
+        main {
+
+            // main
+            &#main_page {
+                .main_section {
+                    
+    
+                    .section_title {
+                        padding-top: 75px;
+                        .text_01 {
+                            span {
+                                // font-size: 2.2rem;
+                            }
+                        }
+        
+                        .text_02 {
+                            @include marginTop-30();
+                        }
+        
+                        .text_03 {
+                            @include marginTop-30();
+                            // font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 // ====================================767====================================
 @media (max-width: 767px) {
@@ -797,6 +833,7 @@ $business_height_767 : 150px;
                             .business_tabcon {
                                 height: $business_height_767 ;
                                 .tabcon.swiper-container {
+                                    overflow: visible;
                                     .business.swiper-wrapper {
                                         .swiper-slide {
 
@@ -830,7 +867,7 @@ $business_height_767 : 150px;
                                 .text_wrap {}
                                 // default
                                 &.left_content {
-                                    border: none;
+                                    
                                     .content_wrap {
                                         .input_box {
                                             max-width: 100%;
