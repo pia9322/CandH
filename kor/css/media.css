@@ -399,6 +399,7 @@
   }
   body main#main_page .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .ico svg {
     height: 35px;
+    margin-bottom: 20px;
   }
   body main#main_page .main_section.main_section_03 {
     padding: 80px 0;
