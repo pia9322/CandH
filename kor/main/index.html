@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,14 +36,16 @@
     <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="../css/swiper.css">
     <link rel="stylesheet" href="../css/aos.css">
-    <link rel="stylesheet" href="../css/jquery.fullPage.css">
+    <link rel="stylesheet" href="../css/fullpage.min.css">
+
 
     <!-- --------------------CSS-------------------- -->
 
 
     <!-- --------------------Script-------------------- -->
     <script src="../js/jquery.js"></script>
-    <script src="../js/jquery.fullPage.js"></script>
+    <script src="../js/fullpage.min.js"></script>
+    <script src="../js/scrolloverflow.min.js.js"></script>
     <script src="../js/swiper.js"></script>
     <script src="../js/aos.js"></script>
     <script src="../js/gsap.min.js"></script>
@@ -141,7 +142,7 @@
                         <div>
                             <fieldset>
                                 <legend id="search_title_box" style="display:none;">검색</legend>
-                                <input  id="search_text_box" type="text" name="" placeholder="검색어를 입력해주세요">
+                                <input id="search_text_box" type="text" name="" placeholder="검색어를 입력해주세요">
                                 <button id="search_result_box"></button>
                             </fieldset>
                         </div>
@@ -226,9 +227,10 @@
 
 
     <!-- --------------------------- main --------------------------- -->
+    <div id="fullpage">
+
     <main class="main_page" id="main_page">
 
-        <div id="fullpage">
 
             <!-- 100vh -->
             <section class="main_section main_visual swiper-container fullpage section">
@@ -571,6 +573,7 @@
 
                         </div>
                     </div>
+                    
                     <div class="right_content">
                         <div class="content_box box_01">
                             <p class="text_wrap">
@@ -595,10 +598,12 @@
                             </p>
 
                             <div class="table_rec">
+                                <!-- 게시글 노출 -->
                                 <a href="">
                                     <p class="table_text_01"><em>[진행중]</em> 2021년 하반기 신입 및 경력사원 채용</p>
                                     <p class="table_text_02">View More <i class="ico_dots_01"></i></p>
                                 </a>
+                                <!-- 게시글 노출 -->
                             </div>
 
                         </div>
@@ -608,8 +613,7 @@
                 </div>
             </section>
 
-
-            <footer id="footer" class="footer section fp-auto-height">
+            <footer id="footer" class="footer section">
                 <div class="footer_wrap ">
                     <nav class="footer_left">
                         <ul>
@@ -712,8 +716,8 @@
                 </div>
             </footer>
 
-        </div>
-    </main>
+        </main>
+    </div>
 
     <!-- --------------------------- main --------------------------- -->
 
@@ -731,9 +735,10 @@
             $('#fullpage').fullpage({
                 // options here
                 // normalScrollElements: '.main_section_03, .footer',
+                
                 autoScrolling: true,
-                scrollHorizontally: true
-
+                scrollHorizontally: true,
+                scrollOverflow:true
             });
         });
     </script>

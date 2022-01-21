@@ -82,15 +82,11 @@ $(document).ready(function () {
                 slidesPerView: 4,
                 spaceBetween: 40
             },
-            1400: {
-                slidesPerView: 3,
-                spaceBetween: 30
-            },
             1200: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 20
             },
-            767: {
+            500: {
                 slidesPerView: 1,
                 spaceBetween: 0
             }

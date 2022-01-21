@@ -1,28 +1,27 @@
+
+// ====================================default var====================================
+$search-time: 800ms;
+$reset-time: 150ms;
+$header-heght : 80px;
+$header-height_767: 60px;
+$business_height_767 : 150px;
+// ====================================default var====================================
+
+
 // ====================================default mixin====================================
 @mixin absolute-center {position: absolute;left: -50%;top: -50%;transform: translate(-50%, -50%);}
-
-@mixin absolute-x($left, $top) {
-    position: absolute;left: $left;top: $top;transform: translateX(-$left);
-}
-
-@mixin absolute-y($left, $top) {
-    position: absolute;left: $left;top: $top;transform: translateY(-$top);
-}
-
-@mixin board_text {
-    white-space: nowrap;text-overflow: ellipsis;overflow: hidden;
-}
-
-@mixin transition($x) {
-    transition: $x;-webkit-transition: $x;-moz-transition: $x;-ms-transition: $x;-o-transition: $x;
-}
+@mixin absolute-x($left, $top) {position: absolute;left: $left;top: $top;transform: translateX(-$left);}
+@mixin absolute-y($left, $top) {position: absolute;left: $left;top: $top;transform: translateY(-$top);}
+@mixin board_text {white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+@mixin transition($x) {transition: $x;-webkit-transition: $x;-moz-transition: $x;-ms-transition: $x;-o-transition: $x;}
 // ====================================default mixin====================================
 
 
 // ====================================jj mixin====================================
 @mixin fixed-layout {max-width: 1480px;margin: 0 auto;width: 100%;}
 @mixin layoutBoxColor {border: 2px solid #f00;}
-@mixin header-height {height: 110px;}
+@mixin header-height {height: 80px;}
+
 
 
 // margin
@@ -36,6 +35,8 @@
 
 
 @mixin font-M {font-family: 'Montserrat';}
+
+@mixin padding_1480 {padding: 0 5%;}
 // ====================================jj mixin====================================
 
 
@@ -48,330 +49,621 @@
 
 
 
-// ====================================1440====================================
-@media (max-width: 1440px) {}
+// ====================================1480px====================================
+@media (max-width: 1480px) {
+
+
+    
+
+    // ========================== header, footer ==========================
+    body {
+        #header {
+            height: $header-heght;
+            >.header_wrap {
+                padding: 0 5%;
+
+                // logo
+                .header_left {
+                    max-width: 90px; margin-top: 0;
+                }
+
+                // center_menu
+                .header_center {
+                    height: $header-heght;
+                    .header_bg {
+                        margin-top: $header-heght;
+                    }
+
+
+                    >li {
+                        width: 15%;
+                        .depth_01 {
+                            padding-top: 30px;
+                        }
+                    }
+                }
+            }
+
+
+
+        }
+
+        #footer {
+            padding: 40px 0;
+            .footer_wrap {
+                @include padding_1480();
+                flex-direction: column;
+
+                .footer_left {
+                    > ul {
+                        > li {
+                            margin-top: 10px !important;
+                            &:first-child {margin-top: 0;}
+                        }
+                        .footer_logo {
+                            max-width: 150px;
+                        }
+                        .footer_select {
+                            select {
+                                padding: 5px 10px; font-size: 14px;
+                            }   
+                        }
+
+                        .footer_info {
+                            > p {
+                                a {
+                                    font-size: 15px; margin-left: 10px;
+                                    &:first-child{margin-left: 0;}
+                                    &.a_link {
+                                        @include transition(.15s);
+                                        &:hover {
+                                            color: #f5821f;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .footer_copy {
+                            p {
+                                font-size: 15px; line-height: 1.6; letter-spacing: -0.6px; color: #aaa;
+                            }
+                        }
+                    }
+
+                }
+                .footer_right {
+                    flex-wrap: wrap;
+                    margin-top: 30px;
+                    > div {
+                        // margin: 20px 10px; height: 250px;
+                        margin: 15px;
+                        &:first-child {margin: 15px;}
+                    }
+                }
+            }
+        }
+    }
+    // ========================== header, footer ==========================
+
+
+    // ====================================padge css====================================
+    body {
+    
+        main {
+
+            // main
+            &#main_page {
+                .main_section {
+                    
+    
+                    .section_title {
+                        padding-top: 200px;
+                        .text_01 {
+                            span {
+                                // font-size: 2.2rem;
+                            }
+                        }
+        
+                        .text_02 {
+                            @include marginTop-30();
+                        }
+        
+                        .text_03 {
+                            @include marginTop-30();
+                            // font-size: 18px;
+                        }
+                    }
+                    &:not(:first-child) {}
+        
+                    &.main_visual {
+                        .mv_wrap {
+                            .mv {
+                                @include padding_1480();
+                                figcaption {
+                                    .mv_text {
+                                        .text_01 {}
+                                        .text_02 {margin-top: 10px;}
+        
+                                        .btn_white_border { margin-top: 40px; }
+
+                                        .swiper-pagination {
+                                            .swiper-pagination-bullet { margin: 0 0 20px 20px; }
+                                        }
+                                    }
+                                }
+        
+                            }
+                        }
+                    }
+
+                    // main_section_01 
+                    &.main_section_01 {
+                        .main_wrap {
+                            .business_tabcon {
+                                
+                                // width: 100%; height: 305px;
+                                // 나중에 수정
+                                margin: 50px auto 0;
+                                padding: 0;
+                                @include padding_1480();
+                                .tabcon.swiper-container {
+                                    .business.swiper-wrapper {
+                                        .swiper-slide {
+
+                                            > a {
+                                                .boxwrap {
+            
+                                                    .ico {
+                                                        svg {
+                                                            height: 50px;
+                                                        }
+
+                                                    }
+                                                    .ico_text {
+                                                        @include marginTop-30();
+                                                        // font-size: 2.2rem;
+                                                    }
+            
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+        
+                    // main_section_02 
+                    &.main_section_02 {
+                        .main_wrap {
+                            @include padding_1480();
+                            .section_title {
+                                .text_04 {
+                                    @include marginTop-40();
+                                }
+                            }
+                            .wave_container {
+                                svg { height: 150px; }
+                            }
+                        }
+
+                    }
+        
+
+                    // main_section_03 
+                    &.main_section_03 {
+                        margin-bottom: 80px;
+                        .main_wrap {
+                            @include padding_1480();
+                            flex-wrap: wrap;
+                            > div {
+                                width: 100%;
+                                .text_wrap {}
+                                // .text_01 {font-size: 4.6rem;}
+                                .text_02 {margin-top: 10px;/*  font-size: 18px; */}
+                                .margin0 {margin-top: 0;}
+                                // default
+                                &.left_content {
+                                    .content_wrap {
+                                        
+                                        margin-top: 30px;
+                                        display: flex; flex-wrap: wrap;
+                                        .input_box {
+                                            max-width: 45%;
+                                            padding-bottom: 15px;
+                                            margin: 0 0 20px 10px;
+                                            &:nth-child(odd) {margin: 0 0 20px 10px;}
+                                            &.full_size {margin-left: 10px; max-width: 100%;}
+                                            .text_02 {margin-top: 0;}
+                                        }
+            
+                                        .submit_box {
+                                            @include marginTop-30();
+                                        }
+                                    }
+                                }
+            
+                                &.right_content {
+                                    .content_box {
+                                        height: auto; padding: 0;
+                                        @include marginTop-70();
+                                        &.box_01 {
+                                            .client_img {
+                                                overflow: auto;
+                                                margin-top: 40px;
+                                            }
+                                        }
+                                        &.box_02 {
+                                            padding: 0; border-top: none;
+                                            .table_rec {
+                                                @include marginTop-40();
+                                                padding-bottom: 20px;
+                                                a {
+                                                    p {
+                                                        &.table_text_01 {
+                                                        }
+                                                        &.table_text_02 {
+                                                            i {
+                                                                margin-left: 5px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+        
+        
+        
+                }
+            }
+
+
+            
+        }
+    }
+    // ====================================padge css====================================
+
+    
+        
+
+}
+
+
 
 
 
 // ====================================1100====================================
 @media (max-width: 1100px) {
 
-    .view_more {
+    // ====================================default css====================================
+    body {
+        .view_more {
 
-        &::after {}
-
-        &:hover {
-            &::after {
-                height: 100%;
+            &::after {}
+    
+            &:hover {
+                &::after {
+                    height: 100%;
+                }
             }
         }
-    }
-
-    .table_wrap {
-        .table_header {
-            .table_company_select {
-                display: none;
-
-                .search_form {
-                    fieldset {
-                        legend {}
-
-                        .form_01_title {}
-
-                        .form_01_selectbox {
-                            select {}
+    
+        .table_wrap {
+            .table_header {
+                .table_company_select {
+                    display: none;
+    
+                    .search_form {
+                        fieldset {
+                            legend {}
+    
+                            .form_01_title {}
+    
+                            .form_01_selectbox {
+                                select {}
+                            }
                         }
                     }
                 }
-            }
-
-            .table_text_search {
-                margin-top: 3rem;
-                width: 100%;
-
-                .search_form {
+    
+                .table_text_search {
+                    margin-top: 3rem;
                     width: 100%;
-
-                    fieldset {
+    
+                    .search_form {
                         width: 100%;
-
-                        .form_02_selectbox {
-                            display: flex;
+    
+                        fieldset {
                             width: 100%;
-
-                            select {}
-
-                            input[type=text] {
-                                margin-left: 1.5rem;
-                                flex: 2;
-                            }
-
-                            input[type=submit] {
-                                margin-left: 1.5rem;
+    
+                            .form_02_selectbox {
+                                display: flex;
+                                width: 100%;
+    
+                                select {}
+    
+                                input[type=text] {
+                                    margin-left: 1.5rem;
+                                    flex: 2;
+                                }
+    
+                                input[type=submit] {
+                                    margin-left: 1.5rem;
+                                }
                             }
                         }
                     }
                 }
+    
             }
-
-        }
-
-        .table_notice {
-
-            thead {
-                font-size: 16px;
-                tr {
-                    th {
-                        &:nth-of-type(1) {}
-
-                        &:nth-of-type(1) {}
-
-                        &:nth-of-type(2) {}
-
-                        &:nth-of-type(3) {}
-
-                        &:nth-of-type(4),
-                        &:nth-of-type(5) {}
-                    }
-
-                }
-            }
-
-            tbody {
-                font-size: 15px;
-
-                tr {
-                    td {
-                        &:nth-child(2) {
-                            span {}
+    
+            .table_notice {
+    
+                thead {
+                    font-size: 16px;
+                    tr {
+                        th {
+                            &:nth-of-type(1) {}
+    
+                            &:nth-of-type(1) {}
+    
+                            &:nth-of-type(2) {}
+    
+                            &:nth-of-type(3) {}
+    
+                            &:nth-of-type(4),
+                            &:nth-of-type(5) {}
                         }
-
-                        &:nth-child(1) {}
-
-                        &:nth-child(3) {}
+    
                     }
-
-                    .notice_download {
-                        a {
-                            display: block;
-
+                }
+    
+                tbody {
+                    font-size: 15px;
+    
+                    tr {
+                        td {
+                            &:nth-child(2) {
+                                span {}
+                            }
+    
+                            &:nth-child(1) {}
+    
+                            &:nth-child(3) {}
+                        }
+    
+                        .notice_download {
+                            a {
+                                display: block;
+    
+                                img {
+                                    width: 15px;
+                                }
+                            }
+                        }
+                    }
+    
+                    &.active {}
+                }
+    
+    
+    
+    
+            }
+    
+            // table_news
+            .table_news {
+                .news_wrap {
+                    > a {
+                        width: calc(50% - 10px);
+                        margin-right: 10px;
+                        &:nth-child(2n) {
+                            margin-right: 0;
+                        }
+                        .news_item {
                             img {
-                                width: 15px;
+                            }
+                            figcaption {
+                                padding: 10px;
+                                > span {
+                                }
+                                .text_01 {
+                                }
+                                .text_02 {
+                                    font-size: 14px;
+                                    margin-top: 10px;
+                                }
                             }
                         }
-                    }
-                }
-
-                &.active {}
-            }
-
-
-
-
-        }
-
-        // table_news
-        .table_news {
-            .news_wrap {
-                > a {
-                    width: calc(50% - 10px);
-                    margin-right: 10px;
-                    &:nth-child(2n) {
-                        margin-right: 0;
-                    }
-                    .news_item {
-                        img {
-                        }
-                        figcaption {
-                            padding: 10px;
-                            > span {
-                            }
+                        // hover, active
+                        &:hover {
                             .text_01 {
                             }
-                            .text_02 {
-                                font-size: 14px;
-                                margin-top: 10px;
-                            }
-                        }
-                    }
-                    // hover, active
-                    &:hover {
-                        .text_01 {
                         }
                     }
                 }
             }
-        }
-
-        .table_notice_more {
-            >a {}
+    
+            .table_notice_more {
+                >a {}
+            }
         }
     }
-
-    // ==========================header==========================
-    #header {
-
-        &.active {}
-
-        a {}
-
-        .depth_01 {}
-
-        >.header_wrap {
-            padding: 0 2.5%;
-
-            &:hover {
-                background: transparent;
-            }
-
-            // logo
-            .header_left {
-                margin-top: 0;
-
-                a {}
-            }
-
-            // center_menu
-            .header_center {
-                opacity: 0;
-                visibility: hidden;
-            }
-
-            // header_right 
-            .header_right {
-
-                .header_lang {
-                    display: none;
-
+    // ====================================default css====================================
+    
+    // ========================== header, footer ==========================
+    body {
+        #header {
+    
+            &.active {}
+    
+            a {}
+    
+            .depth_01 {}
+    
+            >.header_wrap {
+                padding: 0 2.5%;
+    
+                &:hover {
+                    background: transparent;
+                }
+    
+                // logo
+                .header_left {
+                    margin-top: 0;
+    
+                    a {}
+                }
+    
+                // center_menu
+                .header_center {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+    
+                // header_right 
+                .header_right {
+    
+                    .header_lang {
+                        display: none;
+    
+                        &.active {
+                            display: block;
+                        }
+    
+                        .fixed_lang {
+                            .lang_arrow {}
+                        }
+    
+                        .depth_lang {
+                            a {
+                                &:hover {}
+                            }
+                        }
+    
+                        &:hover .depth_lang {}
+    
+                        &:hover .lang_arrow {}
+                    }
+    
+    
+    
+                    // header_sns
+                    .header_sns {
+                        display: none;
+    
+                        &.active {
+                            display: block;
+                        }
+    
+                        >ul {
+                            margin-left: 10px;
+    
+                            >li {
+    
+                                a {
+                                    img {}
+                                }
+    
+                                &:not(:first-child) {}
+    
+                                &:hover {}
+                            }
+                        }
+                    }
+    
+    
+                    // header_ham
+                    .header_ham {
+                        margin-left: 25px;
+    
+                        &.active {
+                            span {}
+                        }
+    
+                        span {
+                            &:nth-of-type(1) {}
+    
+                            &:nth-of-type(2) {}
+    
+                            &:nth-of-type(3) {}
+                        }
+                    }
+    
+    
                     &.active {
-                        display: block;
+                        span:nth-of-type(1) {}
+    
+                        span:nth-of-type(2) {}
+    
+                        span:nth-of-type(3) {}
                     }
-
-                    .fixed_lang {
-                        .lang_arrow {}
+                }
+    
+                &:hover {
+                    .header_center {
+                        .depth_01 {
+                            display: none;
+                        }
+    
+                        .header_bg {
+                            display: none;
+                        }
                     }
-
-                    .depth_lang {
+                }
+    
+                // full_header
+                .header_full {
+                    &.active {}
+    
+                    .header_full_wrap {
+                        margin-top: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+    
                         a {
                             &:hover {}
                         }
-                    }
-
-                    &:hover .depth_lang {}
-
-                    &:hover .lang_arrow {}
-                }
-
-
-
-                // header_sns
-                .header_sns {
-                    display: none;
-
-                    &.active {
-                        display: block;
-                    }
-
-                    >ul {
-                        margin-left: 10px;
-
-                        >li {
-
-                            a {
-                                img {}
-                            }
-
-                            &:not(:first-child) {}
-
-                            &:hover {}
-                        }
-                    }
-                }
-
-
-                // header_ham
-                .header_ham {
-                    margin-left: 25px;
-
-                    &.active {
-                        span {}
-                    }
-
-                    span {
-                        &:nth-of-type(1) {}
-
-                        &:nth-of-type(2) {}
-
-                        &:nth-of-type(3) {}
-                    }
-                }
-
-
-                &.active {
-                    span:nth-of-type(1) {}
-
-                    span:nth-of-type(2) {}
-
-                    span:nth-of-type(3) {}
-                }
-            }
-
-            &:hover {
-                .header_center {
-                    .depth_01 {
-                        display: none;
-                    }
-
-                    .header_bg {
-                        display: none;
-                    }
-                }
-            }
-
-            // full_header
-            .header_full {
-                &.active {}
-
-                .header_full_wrap {
-                    margin-top: 0;
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    a {
-                        &:hover {}
-                    }
-
-                    .header_full_list {
-                        .depth_01 {
-                            width: 100%;
-
-                            >a {
-                                padding-top: 15px;
-                            }
-
-                            &:nth-child(1) {
-                                >a {}
-                            }
-
-                            // depth_02
-                            .depth_02 {
-                                display: none;
-
-                                >li {
-                                    >a {
-                                        padding: 15px 0 0 15px;
-                                    }
-
-                                    // depth_03
-                                    .depth_03 {
-                                        >li {
-                                            >a {
-                                                padding: 15px 0 0 15px;
-
-                                                &:hover {}
+    
+                        .header_full_list {
+                            .depth_01 {
+                                width: 100%;
+    
+                                >a {
+                                    padding-top: 15px;
+                                }
+    
+                                &:nth-child(1) {
+                                    >a {}
+                                }
+    
+                                // depth_02
+                                .depth_02 {
+                                    display: none;
+    
+                                    >li {
+                                        >a {
+                                            padding: 15px 0 0 15px;
+                                        }
+    
+                                        // depth_03
+                                        .depth_03 {
+                                            >li {
+                                                >a {
+                                                    padding: 15px 0 0 15px;
+    
+                                                    &:hover {}
+                                                }
                                             }
                                         }
                                     }
@@ -381,97 +673,247 @@
                     }
                 }
             }
+    
+            &.active {
+                // background: transparent;
+            }
+    
+    
         }
-
-        &.active {
-            // background: transparent;
-        }
-
-
     }
-    // ==========================header==========================
+    // ========================== header, footer ==========================
 
 
-    // ==========================main==========================
-
-    // ==========================main==========================
 
 
-    // ==========================footer==========================
 
 }
 
 
-
-// ====================================900====================================
-@media (max-width: 900px) {}
 
 
 // ====================================767====================================
 @media (max-width: 767px) {
 
-    .header_center {
-        display: none !important;
+// margin
+@mixin marginTop-70 {margin-top: 50px;}
+@mixin marginTop-40 {margin-top: 20px;}
+@mixin marginTop-30 {margin-top: 10px;}
+
+    // ========================== header, footer ==========================
+    body {
+        #header {
+            height: $header-height_767;
+            >.header_wrap {
+                border-bottom: none;
+                &:hover { border-bottom: none; }
+                // logo
+                .header_left {
+                    max-width: 80px;
+                }
+
+                // center_menu
+                .header_center {
+                    display: none;
+                }
+
+                .header_right {
+                    .header_search_btn {
+                        width: 29px; height: 27px;
+                    }
+                }
+            }
+        }
+        
+        #footer {
+            .footer_wrap {
+
+                .footer_right {
+                    flex-wrap: wrap;
+                    margin-top: 30px;
+                    > div {
+                        width: calc(50% - 20px);
+                        // margin: 20px 10px; height: 250px;
+                        margin: 10px 10px 10px 0;
+                        &:first-child {margin: 10px 10px 10px 0;}
+                        h2 {font-size: 14px;}
+                        > ul {
+                            display: flex; flex-wrap: wrap;
+                            width: 100%;
+                            line-height: 1.5;
+                            > li {
+                                margin: 7px 7px 7px 0;
+                                a {
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-
-
-    // ==========================main==========================
-    main {
-
-        // ==========================main==========================
-        // ==========================main==========================
+    // ========================== header, footer ==========================
 
 
 
-        // ==========================sub_page==========================
 
-        // sub_page default (main visual / sub menu bar)
+    // ====================================padge css====================================
+    body {
+    
+        main {
+
+            // main
+            &#main_page {
+                .main_section {
+                    
+    
+                    .section_title {
+                        padding-top: 100px;
+                        .text_01 {
+                            span {
+                                // font-size: 2.2rem;
+                            }
+                        }
         
-        // sub_page default (main visual / sub menu bar)
-
-      
-
-
-        // about_ceo ============================================
+                        .text_02 {
+                            @include marginTop-30();
+                            font-size: 35px;
+                            line-height: 1.2;
+                        }
         
+                        .text_03 {
+                            @include marginTop-30();
+                            // font-size: 18px;
+                        }
+                    }
+                    &:not(:first-child) {}
 
-        // about_history ============================================
+                    // main_section_01 
+                    &.main_section_01 {
+                        .main_wrap {
+                            .section_title {
+                                padding-left: 5%; padding-right: 5%;
+                            }
+                            .business_tabcon {
+                                height: $business_height_767 ;
+                                .tabcon.swiper-container {
+                                    .business.swiper-wrapper {
+                                        .swiper-slide {
+
+                                            > a {
+                                                .boxwrap {
+                                                    height: $business_height_767;
+            
+                                                    .ico {
+                                                        svg {
+                                                            height: 35px;
+                                                        }
+
+                                                    }
+                                                    .ico_text {
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+
+                    // main_section_03 
+                    &.main_section_03 {
+                        padding: 80px 0;
+                        .main_wrap {
+                            > div {
+                                .text_wrap {}
+                                // default
+                                &.left_content {
+                                    border: none;
+                                    .content_wrap {
+                                        .input_box {
+                                            max-width: 100%;
+                                            width: 100%;
+                                            margin: 0;
+                                            padding: 10px 0;
+                                            &:nth-child(odd) {margin: 0;}
+                                            &.full_size {margin-left: 0; max-width: 100%;}
+                                            .text_02 {margin-top: 0;}
+                                            textarea, input { margin-left: 20px; }
+                                            label {vertical-align: top;}
+                                        }
+            
+                                        .submit_box {
+                                            @include marginTop-30();
+                                        }
+                                    }
+                                }
+            
+                                &.right_content {
+                                    .content_box {
+                                        height: auto; padding: 0;
+                                        @include marginTop-70();
+                                        &.box_01 {
+                                            .client_img {
+                                                overflow: auto;
+                                                margin-top: 40px;
+                                                a {
+                                                    max-width: 100px; max-height: 100px;
+                                                    img {
+                                                        width: 100%;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &.box_02 {
+                                            padding: 0; border-top: none;
+                                            .table_rec {
+                                                @include marginTop-40();
+                                                padding-bottom: 20px;
+                                                a {
+                                                    p {
+                                                        font-size: 14px;
+                                                        &.table_text_01 {
+                                                        }
+                                                        &.table_text_02 {
+                                                            i {
+                                                                margin-left: 5px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
         
-
-        // about_certifi ============================================
         
-
-        // about_direction ============================================
-
-        // shop ============================================
         
-        // product ============================================
-        
-        // product_more ============================================
-        
-        // contact.page_01 ============================================
-        
-   
-        // community.sns ============================================
-        
-        // ==========================sub_page==========================
+                }
+            }
 
 
-
-
+            
+        }
     }
+    // ====================================padge css====================================
 
-    // ==========================main==========================
+    
 
-
-    // ==========================footer==========================
 }
+
+
 
 
 // ====================================479====================================
 @media (max-width: 479px) {
 
-    // 479
+    // ====================================default css====================================
     .table_wrap {
         .table_header {
             .table_company_select {
@@ -600,49 +1042,13 @@
 
         }
     }
+    // ====================================default css====================================
 
 
+    // ========================== header, footer ==========================
+    body {
 
-
-
-    // ==========================footer==========================
-    #footer {
-        .footer_wrap {
-            flex-direction: column;
-
-            .content_01 {
-                order: 2;
-
-                .link_wrap {
-                    .footer_link {
-                        margin-right: 10px;
-                        &:not(:first-child) {
-                            margin-left: 0;
-                        }
-
-                        a {
-                        }
-                    }
-                }
-
-                .info_wrap {
-                    .footer_info {
-                        >a {
-                            display: inline-block;
-                            &:hover {}
-                        }
-
-                        &.direction {}
-
-                        &.copyright {}
-                    }
-                }
-            }
-
-            .content_02 {
-                order: 1;
-                margin-bottom: 20px;
-            }
-        }
     }
+    // ========================== header, footer ==========================
+
 }
