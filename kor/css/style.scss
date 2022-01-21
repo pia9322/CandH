@@ -385,9 +385,32 @@ body {
         @include transition(.3s);
 
         &.active {
-            background: rgba($color: #fff, $alpha: .85);
+            background: rgba($color: #fff, $alpha: .4);
+            backdrop-filter: saturate(180%) blur(20px);
 
             a {color: #000 !important;}
+            .header_wrap {
+                .header_center {
+                    >li {
+                        >a {
+                            color: #000;
+                        }
+                    }
+                }
+
+                .header_right {
+                    .header_search_btn {
+                        cursor: pointer;
+                        background: url("../images/ico/ico_search_c.png") no-repeat center/cover;
+                    }
+
+                    .header_ham {
+                        span {
+                            border-color: #666;
+                        }
+                    }
+                }
+            }
         }
 
         a {color: #000;}
@@ -399,6 +422,7 @@ body {
             align-items: center;
             margin: 0 auto;
             padding: 0 80px;
+            @include transition(.3s);
             // max-width: 2560px;
 
 
@@ -431,6 +455,7 @@ body {
 
             // logo
             .header_left {
+                @include transition(.3s);
                 max-width: 103px;
                 z-index: 1;
                 margin-top: 5px;
@@ -462,6 +487,7 @@ body {
                 }
 
                 .header_bg {
+                    @include transition(.3s);
                     position: absolute;
                     left: 0;
                     top: 0;
@@ -570,6 +596,7 @@ body {
 
             // header_right 
             .header_right {
+                @include transition(.3s);
                 display: flex;
                 align-items: center;
                 z-index: 1;
@@ -691,13 +718,12 @@ body {
             // full_header
             .header_full {
                 position: fixed;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                right: 0;
+                left: 0; top: 0; bottom: 0; right: 0;
+                width: 100vw; height: 100vh;
+                overflow: auto;
                 background: #18242e;
-                transition: all .3s;
                 transform: translateX(100%);
+                @include transition(.3s);
 
                 &.active {
                     transform: translateX(0);
@@ -1155,6 +1181,7 @@ body {
                     display: flex;
                     @include fixed-layout();
                     margin-bottom: 100px;
+                    padding: 100px 0;
                     .main_wrap {
                         display: flex;
                         > div {
@@ -1180,6 +1207,7 @@ body {
                                         &.full_size {width: 100%; max-width: 700px; margin-left: 0;}
                                         &:nth-child(odd) {margin-left: 0;}
                                         label {
+                                            vertical-align: top;
                                             display: inline-block; width: 50px;
                                         
                                         }

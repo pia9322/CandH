@@ -229,7 +229,7 @@
     <!-- --------------------------- main --------------------------- -->
     <div id="fullpage">
 
-    <main class="main_page" id="main_page">
+        <main class="main_page" id="main_page">
 
 
             <!-- 100vh -->
@@ -573,7 +573,7 @@
 
                         </div>
                     </div>
-                    
+
                     <div class="right_content">
                         <div class="content_box box_01">
                             <p class="text_wrap">
@@ -613,7 +613,7 @@
                 </div>
             </section>
 
-            <footer id="footer" class="footer section">
+            <footer id="footer" class="footer section fp-auto-height">
                 <div class="footer_wrap ">
                     <nav class="footer_left">
                         <ul>
@@ -735,11 +735,20 @@
             $('#fullpage').fullpage({
                 // options here
                 // normalScrollElements: '.main_section_03, .footer',
-                
+
                 autoScrolling: true,
                 scrollHorizontally: true,
-                scrollOverflow:true
+                scrollOverflow: true,
+                onLeave: function(anchorLink, index, direction) {
+                    if (index >= 3) {
+                        $('header').addClass('active')
+                    } else {
+                        $('header').removeClass('active')
+                    }
+                }
+
             });
+
         });
     </script>
 </body>

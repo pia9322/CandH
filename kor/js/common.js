@@ -69,6 +69,7 @@ $(document).ready(function () {
         //     },
         // }
     });
+    
 
     var swiper02 = new Swiper('.tabcon', {
         slidesPerView: 5,
@@ -139,8 +140,20 @@ $(document).ready(function () {
                 $('.header_lang').removeClass('active');
                 $('.header_sns').removeClass('active');
             }
+
+
+            if($('.header_full').hasClass('active')){
+                $('body').on('scroll touchmove mousewheel', function(event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    return false;
+                });
+            } else {
+                $('body').off('scroll touchmove mousewheel');
+            }
         })
     }
+
 
 
 
