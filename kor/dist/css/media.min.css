@@ -85,10 +85,6 @@
   body #header > .header_wrap .header_full .header_full_wrap .header_full_list .depth_01 .depth_02 > li > a { padding: 15px 0 0 15px; }
   body #header > .header_wrap .header_full .header_full_wrap .header_full_list .depth_01 .depth_02 > li .depth_03 > li > a { padding: 15px 0 0 15px; } }
 
-@media (max-height: 600px) { body main#main_page .main_section .section_title { padding-top: 75px; }
-  body main#main_page .main_section .section_title .text_02 { margin-top: 30px; }
-  body main#main_page .main_section .section_title .text_03 { margin-top: 30px; } }
-
 @media (max-width: 767px) { body #header { height: 60px; }
   body #header > .header_wrap { border-bottom: none; }
   body #header > .header_wrap:hover { border-bottom: none; }
@@ -137,4 +133,8 @@
   .table_wrap .table_rec thead tr th:nth-of-type(2) { width: auto; }
   .table_wrap .table_rec thead tr th:nth-of-type(3) { width: auto; }
   .table_wrap .table_rec tbody tr td { padding: 20px; } }
+
+@media (max-height: 600px) { body main#main_page .main_section .section_title { padding-top: 75px; }
+  body main#main_page .main_section .section_title .text_02 { margin-top: 30px; }
+  body main#main_page .main_section .section_title .text_03 { margin-top: 30px; } }
 /*# sourceMappingURL=media.min.css.map */

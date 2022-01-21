@@ -694,39 +694,6 @@ $business_height_767 : 150px;
 
 
 
-@media (max-height: 600px) {
-    body {
-    
-        main {
-
-            // main
-            &#main_page {
-                .main_section {
-                    
-    
-                    .section_title {
-                        padding-top: 75px;
-                        .text_01 {
-                            span {
-                                // font-size: 2.2rem;
-                            }
-                        }
-        
-                        .text_02 {
-                            @include marginTop-30();
-                        }
-        
-                        .text_03 {
-                            @include marginTop-30();
-                            // font-size: 18px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 
 // ====================================767====================================
 @media (max-width: 767px) {
@@ -1089,4 +1056,43 @@ $business_height_767 : 150px;
     }
     // ========================== header, footer ==========================
 
+}
+
+
+
+
+
+
+// ==================================== media-height ====================================
+@media (max-height: 600px) {
+    body {
+    
+        main {
+
+            // main
+            &#main_page {
+                .main_section {
+                    
+    
+                    .section_title {
+                        padding-top: 75px;
+                        .text_01 {
+                            span {
+                                // font-size: 2.2rem;
+                            }
+                        }
+        
+                        .text_02 {
+                            @include marginTop-30();
+                        }
+        
+                        .text_03 {
+                            @include marginTop-30();
+                            // font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
