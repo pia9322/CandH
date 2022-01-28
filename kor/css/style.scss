@@ -377,6 +377,7 @@ body {
 
 // ========================== header, footer ==========================
 body {
+    
     #header {
         @include header-height();
         position: fixed; left: 0;top: 0; z-index: 9999;
@@ -384,11 +385,14 @@ body {
         background: rgba($color: #fff, $alpha: 0);
         @include transition(.3s);
 
+
+
+        // active
         &.active {
             background: rgba($color: #fff, $alpha: .4);
-            backdrop-filter: saturate(180%) blur(20px);
-
+            backdrop-filter: blur(20px);
             a {color: #000 !important;}
+            
             .header_wrap {
                 .header_center {
                     >li {
@@ -401,7 +405,8 @@ body {
                 .header_right {
                     .header_search_btn {
                         cursor: pointer;
-                        background: url("../images/ico/ico_search_c.png") no-repeat center/cover;
+                        color: #666;
+                        // background: url("../images/ico/ico_search_c.png") no-repeat center/cover;
                     }
 
                     .header_ham {
@@ -413,7 +418,7 @@ body {
             }
         }
 
-        a {color: #000;}
+        a {color: rgba($color: #fff, $alpha: .8);}
 
         >.header_wrap {
             height: 100%;
@@ -422,6 +427,7 @@ body {
             align-items: center;
             margin: 0 auto;
             padding: 0 80px;
+            border-bottom: 1px solid transparent;
             @include transition(.3s);
             // max-width: 2560px;
 
@@ -441,8 +447,8 @@ body {
 
                 .header_right {
                     .header_search_btn {
-                        cursor: pointer;
-                        background: url("../images/ico/ico_search_c.png") no-repeat center/cover;
+                        color: #666;
+                        // background: url("../images/ico/ico_search_c.png") no-repeat center/cover;
                     }
 
                     .header_ham {
@@ -589,7 +595,7 @@ body {
                     display: none;
                 }
                 
-                // active, hover 
+                // header_center effect 
                 .depth_01.active {display: block;}
                 .header_bg.active {display: block;}
             }
@@ -602,8 +608,11 @@ body {
                 z-index: 1;
 
                 .header_search_btn {
-                    width: 34px; height: 32px;
-                    background: url('../images/ico/ico_search.png') no-repeat center/cover;
+                    cursor: pointer;
+                    width: 31px; height: 29px;
+                    // background: url('../images/ico/ico_search.png') no-repeat center/cover;
+                    @include transition(.15s);
+                    color: #fff;
                 }
 
                 .header_search_box {
@@ -627,14 +636,18 @@ body {
                                     border-bottom: 1px solid #999;
                                     background: transparent;
                                     margin-right: 20px;
+                                    &::placeholder {color: rgba($color: #f5821f, $alpha: .7);}
                                 }
                                 #search_result_box {
                                     cursor: pointer;
-                                    width: 34px; height: 32px;
-                                    background: url('../images/ico/ico_search_c.png') no-repeat ;
+                                    width: 31px; height: 29px;
                                     border: none;
                                     transform: translateY(10px);
+                                    background-color: transparent;
+                                    color: #f5821f;
                                     @include transition(.15s);
+
+                                    // search_result_box effect 
                                     &:hover {
                                         opacity: .5;
                                     }
@@ -654,55 +667,31 @@ body {
 
                     &.active {
                         span {
-                            &:nth-of-type(1) {
-                                top: calc(50% - 1px);
-                                transform: rotate(45deg);
-                            }
-
-                            &:nth-of-type(2) {
-                                opacity: 0;
-                                transform: translateX(100%);
-                            }
-
-                            &:nth-of-type(3) {
-                                bottom: calc(50% - 1px);
-                                transform: rotate(-45deg);
-                            }
+                            &:nth-of-type(1) { top: calc(50% - 1px); transform: rotate(45deg); }
+                            &:nth-of-type(2) { opacity: 0; transform: translateX(100%); }
+                            &:nth-of-type(3) { bottom: calc(50% - 1px); transform: rotate(-45deg); }
                         }
                     }
 
                     span {
                         // 햄벅
-                        position: absolute;
-                        left: 0;
-                        width: 22px;
-                        border-bottom: 2px solid #fff;
+                        position: absolute; left: 0; width: 22px; border-bottom: 2px solid #fff;
                         @include transition(.3s);
-
-                        &:nth-of-type(1) {
-                            top: 0;
-                        }
-
-                        &:nth-of-type(2) {
-                            top: calc(50% - 1px);
-                        }
-
-                        &:nth-of-type(3) {
-                            bottom: 0;
-                        }
+                        &:nth-of-type(1) { top: 0; }
+                        &:nth-of-type(2) { top: calc(50% - 1px); }
+                        &:nth-of-type(3) { bottom: 0; }
                     }
                 }
 
 
+                // header_right effect
                 &.active {
                     span:nth-of-type(1) {
                         transform: rotate(45deg);
                         top: calc(50% - 1px);
                     }
 
-                    span:nth-of-type(2) {
-                        opacity: 0;
-                    }
+                    span:nth-of-type(2) { opacity: 0; }
 
                     span:nth-of-type(3) {
                         transform: rotate(-45deg);
@@ -756,7 +745,7 @@ body {
                             >a {
                                 font-size: 5.5rem;
                                 color: #f5821f;
-                                padding-top: 50px;
+                                padding-top: 35px;
                                 text-align: left;
                                 transition: all .15s;
 
@@ -782,7 +771,7 @@ body {
                                     >a {
                                         text-align: left;
                                         font-size: 4rem;
-                                        padding: 30px 0 0 30px;
+                                        padding: 15px 0 0 15px;
                                     }
 
                                     // depth_03
@@ -796,7 +785,7 @@ body {
                                                 font-size: 2.4rem;
                                                 color: #939598;
                                                 transition: all .15s;
-                                                padding: 10px 0 0 30px;
+                                                padding: 15px 0 0 15px;
 
                                                 &:hover {
                                                     color: #f5821f;
@@ -810,6 +799,7 @@ body {
                     }
                 }
             }
+
         }
 
 
@@ -892,12 +882,33 @@ body {
 
 
 
+// #loading {
+//     width: 100vw; height: 100vh;
+//     padding: 5rem;
+//     svg {
+//         width: 100px; height: 100px;
+//         fill: none;
+//         .cls-1{stroke:none;}.cls-2{stroke:#f58220;}.cls-3{stroke:#1c3968;}
+//         stroke-width: 2;
+//         stroke-dasharray: 630;
+//         animation: loading 10s forwards;
+//     }
+// }
+// @keyframes loading {
+//     from {
+//         stroke-dashoffset: 630;
+//       }
+//       to {
+//         stroke-dashoffset: 0;
+//       }
+// }
 
 
 // ====================================padge css====================================
 // ====================================padge css====================================
 // ====================================padge css====================================
 body {
+    // opacity: 0;
     main {
         &#main_page {
             .main_section {
@@ -946,9 +957,7 @@ body {
                        
                                 .mv_text {
                                     position: relative;
-                                    max-width: 1480px; width: 100%;
-                                    color: #000;
-    
+                                    max-width: 1480px; width: 100%; color: #000;
                                     span { display: block; }
     
                                     .text_01 {

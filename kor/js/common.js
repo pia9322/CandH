@@ -2,6 +2,8 @@ $(document).ready(function () {
     console.log('common_js_start')
     // common_js_start
 
+
+
     AOS.init();
     // var mainScroll = new Swiper('.fullpage_wrap', {
     //     effect: "fade",
@@ -132,20 +134,16 @@ $(document).ready(function () {
             $(this).toggleClass('active');
             if ($(this).hasClass('active')) {
                 console.log(header_full);
-                header_full.classList.add('active');
-                $('.header_lang').addClass('active');
-                $('.header_sns').addClass('active');
+                $('.header_full, .header_lang, .header_sns').addClass('active');
             } else {
-                header_full.classList.remove('active');
-                $('.header_lang').removeClass('active');
-                $('.header_sns').removeClass('active');
+                $('.header_full, .header_lang, header_sns').removeClass('active');
             }
 
 
             if($('.header_full').hasClass('active')){
-                $('body').on('scroll touchmove mousewheel', function(event) {
-                    event.preventDefault();
-                    event.stopPropagation();
+                $('body').on('scroll touchmove mousewheel', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
                     return false;
                 });
             } else {

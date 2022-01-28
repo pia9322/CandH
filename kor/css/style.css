@@ -372,8 +372,8 @@ body #header {
 
 body #header.active {
   background: rgba(255, 255, 255, 0.4);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-          backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
 }
 
 body #header.active a {
@@ -386,7 +386,7 @@ body #header.active .header_wrap .header_center > li > a {
 
 body #header.active .header_wrap .header_right .header_search_btn {
   cursor: pointer;
-  background: url("../images/ico/ico_search_c.png") no-repeat center/cover;
+  color: #666;
 }
 
 body #header.active .header_wrap .header_right .header_ham span {
@@ -394,7 +394,7 @@ body #header.active .header_wrap .header_right .header_ham span {
 }
 
 body #header a {
-  color: #000;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 body #header > .header_wrap {
@@ -410,6 +410,7 @@ body #header > .header_wrap {
           align-items: center;
   margin: 0 auto;
   padding: 0 80px;
+  border-bottom: 1px solid transparent;
   transition: 0.3s;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -427,8 +428,7 @@ body #header > .header_wrap:hover .header_center > li > a {
 }
 
 body #header > .header_wrap:hover .header_right .header_search_btn {
-  cursor: pointer;
-  background: url("../images/ico/ico_search_c.png") no-repeat center/cover;
+  color: #666;
 }
 
 body #header > .header_wrap:hover .header_right .header_ham span {
@@ -637,9 +637,15 @@ body #header > .header_wrap .header_right {
 }
 
 body #header > .header_wrap .header_right .header_search_btn {
-  width: 34px;
-  height: 32px;
-  background: url("../images/ico/ico_search.png") no-repeat center/cover;
+  cursor: pointer;
+  width: 31px;
+  height: 29px;
+  transition: 0.15s;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
+  color: #fff;
 }
 
 body #header > .header_wrap .header_right .header_search_box {
@@ -684,14 +690,31 @@ body #header > .header_wrap .header_right .header_search_box form > div fieldset
   margin-right: 20px;
 }
 
+body #header > .header_wrap .header_right .header_search_box form > div fieldset #search_text_box::-webkit-input-placeholder {
+  color: rgba(245, 130, 31, 0.7);
+}
+
+body #header > .header_wrap .header_right .header_search_box form > div fieldset #search_text_box:-ms-input-placeholder {
+  color: rgba(245, 130, 31, 0.7);
+}
+
+body #header > .header_wrap .header_right .header_search_box form > div fieldset #search_text_box::-ms-input-placeholder {
+  color: rgba(245, 130, 31, 0.7);
+}
+
+body #header > .header_wrap .header_right .header_search_box form > div fieldset #search_text_box::placeholder {
+  color: rgba(245, 130, 31, 0.7);
+}
+
 body #header > .header_wrap .header_right .header_search_box form > div fieldset #search_result_box {
   cursor: pointer;
-  width: 34px;
-  height: 32px;
-  background: url("../images/ico/ico_search_c.png") no-repeat;
+  width: 31px;
+  height: 29px;
   border: none;
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
+  background-color: transparent;
+  color: #f5821f;
   transition: 0.15s;
   -webkit-transition: 0.15s;
   -moz-transition: 0.15s;
@@ -834,7 +857,7 @@ body #header > .header_wrap .header_full .header_full_wrap .header_full_list > l
 body #header > .header_wrap .header_full .header_full_wrap .header_full_list > li > a {
   font-size: 5.5rem;
   color: #f5821f;
-  padding-top: 50px;
+  padding-top: 35px;
   text-align: left;
   -webkit-transition: all .15s;
   transition: all .15s;
@@ -865,7 +888,7 @@ body #header > .header_wrap .header_full .header_full_wrap .header_full_list > l
 body #header > .header_wrap .header_full .header_full_wrap .header_full_list > li .depth_01 > li > a {
   text-align: left;
   font-size: 4rem;
-  padding: 30px 0 0 30px;
+  padding: 15px 0 0 15px;
 }
 
 body #header > .header_wrap .header_full .header_full_wrap .header_full_list > li .depth_01 > li .depth_02 {
@@ -884,7 +907,7 @@ body #header > .header_wrap .header_full .header_full_wrap .header_full_list > l
   color: #939598;
   -webkit-transition: all .15s;
   transition: all .15s;
-  padding: 10px 0 0 30px;
+  padding: 15px 0 0 15px;
 }
 
 body #header > .header_wrap .header_full .header_full_wrap .header_full_list > li .depth_01 > li .depth_02 > li > a:hover {
