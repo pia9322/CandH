@@ -113,6 +113,7 @@ $(document).ready(function () {
         header_full = document.querySelector('.header_full'),
         depth_01 = document.querySelectorAll('.header_full_list > li')
 
+        
     $('.header_center > li').hover(function () {
         $('.depth_01, .header_bg').addClass('active');
     }, function () {

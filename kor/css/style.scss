@@ -54,10 +54,15 @@ body {
         border-radius: 20px;
         display: inline-block;
         @include transition(.15s);
+        &.black { 
+            border: 1px solid #000;
+            span { color: #000; }
+        }
         &:hover {
-            border-color: #f5821f;
+            background: #f5821f;
+            border: 1px solid transparent;
             span {
-                color: #f5821f;
+                color: #fff;
             }
         }
         span {
@@ -428,7 +433,6 @@ body {
             margin: 0 auto;
             padding: 0 80px;
             border-bottom: 1px solid transparent;
-            @include transition(.3s);
             // max-width: 2560px;
 
 
@@ -494,10 +498,7 @@ body {
 
                 .header_bg {
                     @include transition(.3s);
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    z-index: -1;
+                    position: absolute; left: 0; top: 0; z-index: -1;
                     background: rgba($color: #fff, $alpha: 1);
                     width: 100%;
                     margin-top: 110px;
@@ -958,7 +959,7 @@ body {
                                 .mv_text {
                                     position: relative;
                                     max-width: 1480px; width: 100%; color: #000;
-                                    span { display: block; }
+                                    span { display: flex; }
     
                                     .text_01 {
                                         @include font-M();
@@ -966,6 +967,7 @@ body {
                                         font-weight: bold;
                                         line-height: 1.1;
                                         letter-spacing: normal;
+                                        color: #333;
                                     }
     
                                     .text_02 {
@@ -973,18 +975,11 @@ body {
                                         font-size: 18px;
                                         line-height: 1;
                                         letter-spacing: -0.72px;
+                                        color: #666;
                                     }
     
                                     .btn_white_border {
                                         margin-top: 60px;
-                                        background: #f5821f;
-                                        border: none;
-                                        // hover, active
-                                        &:hover {background: #000;}
-                                        span {
-                                            color: #fff;
-                                            display: flex; align-items: center; justify-self: center;
-                                        }
                                     }
                                     .swiper-pagination {
                                         left: 0; bottom: 100%;
@@ -1016,10 +1011,10 @@ body {
                     &.active {
                         .business_tabcon {
                             &::before {
-                                animation: barload 3s 1s ease forwards;
+                                animation: barload 3s ease forwards;
                             }
                             .tabcon.swiper-container {
-                                @include transition(1s 3s);
+                                @include transition(1s 2.5s);
                                 opacity: 1 !important;
                             }
     
@@ -1197,10 +1192,11 @@ body {
                             width: 50%;
                             .text_wrap {
                                 >span {display: block;}
+                                >.text_02 {margin-top: 20px;}
                             }
 
                             .text_01 {font-size: 4.6rem;font-weight: bold;line-height: 1.2;letter-spacing: -1.84px; color: #333;}
-                            .text_02 {margin-top: 28px; font-size: 18px;line-height: 1.33;letter-spacing: -0.72px; color: #666;}
+                            .text_02 {font-size: 18px;line-height: 1.33;letter-spacing: -0.72px; color: #666;}
                             .margin0 {margin-top: 0;}
                             // default
                             &.left_content {
@@ -1209,10 +1205,10 @@ body {
                                     margin-top: 60px;
                                     display: flex; flex-wrap: wrap;
                                     .input_box {
+                                        display: flex; align-items: center;
                                         width: 50%; max-width: 320px; 
-                                        padding-bottom: 25px;
+                                        padding: 28px 0 20px;
                                         border-bottom: 1px solid #ddd;
-                                        margin-left: 50px;
                                         &.full_size {width: 100%; max-width: 700px; margin-left: 0;}
                                         &:nth-child(odd) {margin-left: 0;}
                                         label {
@@ -1234,11 +1230,13 @@ body {
                                         button {
                                             cursor: pointer;
                                             width: 160px; height: 60px;
-                                            background: #f5821f; color: #fff; border: none;
+                                            background: transparent; 
+                                            border-radius: 50px; border: 1px solid #000; color: #000;
                                             font-size: 18px; letter-spacing: -0.72px;
                                             @include transition(.15s);
                                             &:hover, &:active {
-                                                background: rgba($color: #f5821f, $alpha: .7);
+                                                background: #f5821f; color: #fff;
+                                                border-color: transparent;
                                             }
                                         }
         
