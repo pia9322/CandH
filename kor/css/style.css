@@ -944,12 +944,18 @@ body #footer .footer_wrap .footer_left > ul .footer_select {
 }
 
 body #footer .footer_wrap .footer_left > ul .footer_select select {
+  width: 210px;
+  height: 40px;
   border-color: #ddd;
   background: transparent;
   padding: 13px 19px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
+}
+
+body #footer .footer_wrap .footer_left > ul .footer_select select::-ms-expand {
+  display: none;
 }
 
 body #footer .footer_wrap .footer_left > ul .footer_info {
@@ -1529,22 +1535,16 @@ body main#main_page .main_section.main_section_03 .main_wrap > div.right_content
 }
 
 body main#main_page .main_section.main_section_03 .main_wrap > div.right_content .content_box.box_01 .client_img a {
-  width: 100%;
-  height: 100%;
-  max-width: 164px;
-  max-height: 104px;
+  border: 1px solid transparent;
+  transition: 0.15s;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
 }
 
-body main#main_page .main_section.main_section_03 .main_wrap > div.right_content .content_box.box_01 .client_img a img {
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-}
-
-body main#main_page .main_section.main_section_03 .main_wrap > div.right_content .content_box.box_01 .client_img a:hover img {
-  opacity: .5;
+body main#main_page .main_section.main_section_03 .main_wrap > div.right_content .content_box.box_01 .client_img a:hover {
+  border: 1px solid #f5821f;
 }
 
 body main#main_page .main_section.main_section_03 .main_wrap > div.right_content .content_box.box_02 {

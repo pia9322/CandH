@@ -81,7 +81,7 @@ $(document).ready(function () {
         touchMoveStopPropagation: true,
         breakpoints: {
             1600: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 40,
             },
             1200: {

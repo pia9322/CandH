@@ -4,6 +4,8 @@
 $search-time: 800ms;
 $reset-time: 150ms;
 
+$color-100 : #f5821f;
+
 // ====================================default mixin====================================
 @mixin absolute-center {position: absolute;left: -50%;top: -50%;transform: translate(-50%, -50%);}
 @mixin absolute-x($left, $top) {position: absolute;left: $left;top: $top;transform: translateX(-$left);}
@@ -43,7 +45,7 @@ body {
             display: inline-block;
             border-radius: 100%;
             width: 8px; height: 8px;
-            background: #f5821f;
+            background: $color-100;
             vertical-align: middle;
         }
     }
@@ -59,7 +61,7 @@ body {
             span { color: #000; }
         }
         &:hover {
-            background: #f5821f;
+            background: $color-100;
             border: 1px solid transparent;
             span {
                 color: #fff;
@@ -530,7 +532,7 @@ body {
                         bottom: 0;
                         height: 1px;
                         width: 100%;
-                        background: #f5821f;
+                        background: $color-100;
                         opacity: 0;
                         @include transition(.3s);
                     }
@@ -547,7 +549,7 @@ body {
                         text-transform: uppercase;
 
                         &:hover {
-                            color: #f5821f;
+                            color: $color-100;
                         }
                     }
 
@@ -575,13 +577,13 @@ body {
                                     bottom: 0;
                                     height: 2px;
                                     width: 100%;
-                                    background: #f5821f;
+                                    background: $color-100;
                                     opacity: 0;
                                     @include transition(.3s);
                                 }
 
                                 &:hover {
-                                    color: #f5821f;
+                                    color: $color-100;
                                 }
 
                                 &:hover::after {
@@ -637,7 +639,7 @@ body {
                                     border-bottom: 1px solid #999;
                                     background: transparent;
                                     margin-right: 20px;
-                                    &::placeholder {color: rgba($color: #f5821f, $alpha: .7);}
+                                    &::placeholder {color: rgba($color: $color-100, $alpha: .7);}
                                 }
                                 #search_result_box {
                                     cursor: pointer;
@@ -645,7 +647,7 @@ body {
                                     border: none;
                                     transform: translateY(10px);
                                     background-color: transparent;
-                                    color: #f5821f;
+                                    color: $color-100;
                                     @include transition(.15s);
 
                                     // search_result_box effect 
@@ -729,7 +731,7 @@ body {
                         line-height: 1;
 
                         &:hover {
-                            color: #f5821f;
+                            color: $color-100;
                         }
                     }
 
@@ -745,7 +747,7 @@ body {
 
                             >a {
                                 font-size: 5.5rem;
-                                color: #f5821f;
+                                color: $color-100;
                                 padding-top: 35px;
                                 text-align: left;
                                 transition: all .15s;
@@ -789,7 +791,7 @@ body {
                                                 padding: 15px 0 0 15px;
 
                                                 &:hover {
-                                                    color: #f5821f;
+                                                    color: $color-100;
                                                 }
                                             }
                                         }
@@ -820,11 +822,14 @@ body {
                     .footer_select {
                         @include marginTop-30();
                         select {
-                    
+                            width: 210px; height: 40px;
                             border-color: #ddd;
                             background: transparent;
                             padding: 13px 19px; 
                             font-size: 16px; font-weight: 500; line-height: 1.5;
+                            &::-ms-expand {
+                                display: none;
+                            }
                         }   
                     }
                     .footer_info {
@@ -837,7 +842,7 @@ body {
                                 &.a_link {
                                     @include transition(.15s);
                                     &:hover {
-                                        color: #f5821f;
+                                        color: $color-100;
                                     }
                                 }
                             }
@@ -868,7 +873,7 @@ body {
                             a {
                                 @include transition(.15s);
                                 &:hover {
-                                    color: #f5821f;
+                                    color: $color-100;
                                 }
                             }
                         }
@@ -991,7 +996,7 @@ body {
                                             margin: 0 0 50px 20px;
                                             &:first-child {margin-left: 0;}
                                             &.swiper-pagination-bullet-active {
-                                                background: #f5821f;
+                                                background: $color-100;
                                             }
                                         }
                                     }
@@ -1074,20 +1079,20 @@ body {
                                         a {
                                             .boxwrap {
                                                 &::before {
-                                                    background-color: #f5821f;
+                                                    background-color: $color-100;
                                                 }
                                                 .bg {
                                                     animation: business_ani 5s linear infinite;
                                                     svg {
                                                         path {
-                                                            stroke: #f5821f;
+                                                            stroke: $color-100;
                                                         }
                                                     }
                                                 }
                                                 .ico {
                                                     svg {
                                                         line, path, g {
-                                                            fill: #f5821f;
+                                                            fill: $color-100;
                                                         }
                                                     }
                                                 }
@@ -1235,7 +1240,7 @@ body {
                                             font-size: 18px; letter-spacing: -0.72px;
                                             @include transition(.15s);
                                             &:hover, &:active {
-                                                background: #f5821f; color: #fff;
+                                                background: $color-100; color: #fff;
                                                 border-color: transparent;
                                             }
                                         }
@@ -1255,13 +1260,12 @@ body {
                                             display: flex;
         
                                             a {
-                                                width: 100%; height: 100%;
-                                                max-width: 164px; max-height: 104px;
-                                                img {
-                                                    @include transition(.3s);
-                                                }
+                                                border: 1px solid transparent;
+                                                @include transition(.15s);
                                                 // hover, active
-                                                &:hover img{opacity: .5;}
+                                                &:hover {
+                                                    border: 1px solid $color-100;
+                                                }
                                             }
                                         }
                                     }
@@ -1271,7 +1275,7 @@ body {
         
                                         .table_rec {
                                             margin-top: 60px;
-                                            padding-bottom: 25px; border-bottom: 1px solid #f5821f;
+                                            padding-bottom: 25px; border-bottom: 1px solid $color-100;
                                             > a {
                                                 display: flex; justify-content: space-between; align-items: center;
                                                 &:not(:first-child) {margin-top: 15px;}
@@ -1292,7 +1296,7 @@ body {
                                                 }
                                                 &:hover, &:active {
                                                     p {
-                                                        &.table_text_01 {color: #f5821f;}
+                                                        &.table_text_01 {color: $color-100;}
                                                         &.table_text_02 {color: #000;}
                                                         i {
                                                             animation: dotscolor 2s linear infinite;
@@ -1343,7 +1347,7 @@ body {
 
 @keyframes dash {
     90% {stroke-dashoffset: 0;}
-    100% {fill: #f5821f;}
+    100% {fill: $color-100;}
 }
 @keyframes dotscolor {
     10% {background: red;}
