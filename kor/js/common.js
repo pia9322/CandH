@@ -80,18 +80,17 @@ $(document).ready(function () {
 
         touchMoveStopPropagation: true,
         breakpoints: {
-            // when window width is >= 320px
             1600: {
                 slidesPerView: 4,
-                spaceBetween: 40
+                spaceBetween: 40,
             },
             1200: {
                 slidesPerView: 3,
-                spaceBetween: 20
+                spaceBetween: 20,
             },
             500: {
                 slidesPerView: 1,
-                spaceBetween: 0
+                spaceBetween: 0,
             }
         }
     });
@@ -240,9 +239,9 @@ $(document).ready(function () {
 
 
     // resize reload
-    window.addEventListener('resize',function(){
-        location.reload();
-    })
+    // window.addEventListener('resize',function(){
+    //     location.reload();
+    // })
     // resize reload
 
     

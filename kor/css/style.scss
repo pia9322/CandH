@@ -1071,7 +1071,7 @@ body {
                         }
     
                         .tabcon.swiper-container {
-                            opacity: 0;
+                            height: 100%; opacity: 0;
                             .business.swiper-wrapper {
                                 .swiper-slide {
                                     // hover, active effect business
@@ -1106,7 +1106,7 @@ body {
                                         .boxwrap {
                                             position: relative;
                                             width: 100%;
-                                            height: 303px;
+                                            height: 100%;
                                             margin: 0 auto;
     
                                             &::before {

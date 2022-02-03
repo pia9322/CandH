@@ -100,7 +100,6 @@
     margin: 0 0 20px 20px;
   }
   body main#main_page .main_section.main_section_01 .main_wrap .business_tabcon {
-    margin: 50px auto 0;
     padding: 0;
     padding: 0 5%;
   }
@@ -377,13 +376,10 @@
     padding-right: 5%;
   }
   body main#main_page .main_section.main_section_01 .main_wrap .business_tabcon {
-    height: 150px;
+    height: 200px;
   }
   body main#main_page .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container {
     overflow: visible;
-  }
-  body main#main_page .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap {
-    height: 150px;
   }
   body main#main_page .main_section.main_section_01 .main_wrap .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap .ico svg {
     height: 35px;
@@ -483,6 +479,15 @@
   }
   .table_wrap .table_rec tbody tr td {
     padding: 20px;
+  }
+  body main#main_page .main_section.main_visual .mv_wrap .mv figcaption .mv_text .text_01 {
+    font-size: 36px;
+  }
+  body main#main_page .main_section.main_visual .mv_wrap .mv figcaption .mv_text .btn_white_border {
+    margin-top: 40px;
+  }
+  body main#main_page .main_section.main_visual .mv_wrap .mv figcaption .mv_text .swiper-pagination .swiper-pagination-bullet {
+    margin: 0 0 20px 10px;
   }
 }
 

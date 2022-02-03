@@ -1245,6 +1245,7 @@ body main#main_page .main_section.main_section_01 .business_tabcon .swiper-butto
 }
 
 body main#main_page .main_section.main_section_01 .business_tabcon .tabcon.swiper-container {
+  height: 100%;
   opacity: 0;
 }
 
@@ -1274,7 +1275,7 @@ body main#main_page .main_section.main_section_01 .business_tabcon .tabcon.swipe
 body main#main_page .main_section.main_section_01 .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide > a .boxwrap {
   position: relative;
   width: 100%;
-  height: 303px;
+  height: 100%;
   margin: 0 auto;
 }
 

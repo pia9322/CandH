@@ -4,7 +4,7 @@ $search-time: 800ms;
 $reset-time: 150ms;
 $header-heght : 80px;
 $header-height_767: 60px;
-$business_height_767 : 150px;
+$business_height_767 : 200px;
 // ====================================default var====================================
 
 
@@ -200,10 +200,9 @@ $business_height_767 : 150px;
                     &.main_section_01 {
                         .main_wrap {
                             .business_tabcon {
-                                
                                 // width: 100%; height: 305px;
                                 // 나중에 수정
-                                margin: 50px auto 0;
+                                // margin: 50px auto 0;
                                 padding: 0;
                                 @include padding_1480();
                                 .tabcon.swiper-container {
@@ -806,7 +805,7 @@ $business_height_767 : 150px;
 
                                             > a {
                                                 .boxwrap {
-                                                    height: $business_height_767;
+                                                    // height: $business_height_767;
             
                                                     .ico {
                                                         svg {
@@ -1052,8 +1051,39 @@ $business_height_767 : 150px;
 
     // ========================== header, footer ==========================
     body {
-
+        main {
+            &#main_page {
+                .main_section {
+                    &.main_visual {
+                        .mv_wrap {
+                            .mv {
+            
+                                figcaption {
+                                    .mv_text {
+                                        .text_01 {
+                                            font-size: 36px;
+                                        }
+            
+                                        .text_02 {}
+            
+                                        .btn_white_border {margin-top: 40px;}
+                                        .swiper-pagination {
+                                            .swiper-pagination-bullet {
+                                                margin: 0 0 20px 10px;
+                                            }
+                                        }
+                                    }
+                                }
+            
+                            }
+                        }
+                    }
+            
+                }
+            }
+        }
     }
+
     // ========================== header, footer ==========================
 
 }

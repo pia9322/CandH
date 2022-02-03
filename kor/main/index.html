@@ -763,11 +763,8 @@
                 scrollHorizontally: true,
                 scrollOverflow: true,
                 onLeave: function(anchorLink, index, direction) {
-                    if (index >= 4) {
-                        $('header').addClass('active')
-                    } else {
-                        $('header').removeClass('active')
-                    }
+
+                    (index >= 4) ? $('header').addClass('active') : $('header').removeClass('active');
                 }
 
             });
