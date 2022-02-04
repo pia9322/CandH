@@ -18,7 +18,7 @@ $business_height_767 : 200px;
 
 
 // ====================================jj mixin====================================
-@mixin fixed-layout {max-width: 1480px;margin: 0 auto;width: 100%;}
+@mixin fixed-layout {max-width: 1480px; margin: 0 auto;width: 100%;}
 @mixin layoutBoxColor {border: 2px solid #f00;}
 @mixin header-height {height: 80px;}
 
@@ -334,10 +334,6 @@ $business_height_767 : 200px;
         
 
 }
-
-
-
-
 
 
 
@@ -692,8 +688,6 @@ $business_height_767 : 200px;
 }
 
 
-
-
 // ====================================767====================================
 @media (max-width: 767px) {
 
@@ -912,8 +906,6 @@ $business_height_767 : 200px;
 }
 
 
-
-
 // ====================================479====================================
 @media (max-width: 479px) {
 
@@ -1091,9 +1083,62 @@ $business_height_767 : 200px;
 
 
 
-
-
 // ==================================== media-height ====================================
+@media (max-height: 800px) {
+    body {
+    
+        main {
+
+            // main
+            &#main_page {
+                .main_section {
+                    .section_title {
+                        padding-top: 75px;
+                        .text_01 {
+                            span {
+                                // font-size: 2.2rem;
+                            }
+                        }
+        
+                        .text_02 {
+                            @include marginTop-30();
+                        }
+        
+                        .text_03 {
+                            @include marginTop-30();
+                            // font-size: 18px;
+                        }
+                    }
+
+                    
+                    // main_section_01 
+                    &.main_section_01 {
+        
+                        // main_section_01 active
+                        &.active {
+                            .business_tabcon {
+                                &::before {
+                                    animation: barload 3s ease forwards;
+                                }
+                                .tabcon.swiper-container {
+                                    @include transition(1s 2.5s);
+                                    opacity: 1 !important;
+                                }
+        
+                            }
+                        }
+        
+                        .business_tabcon {
+                            height: 200px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
 @media (max-height: 600px) {
     body {
     
@@ -1102,8 +1147,6 @@ $business_height_767 : 200px;
             // main
             &#main_page {
                 .main_section {
-                    
-    
                     .section_title {
                         padding-top: 75px;
                         .text_01 {
@@ -1126,3 +1169,5 @@ $business_height_767 : 200px;
         }
     }
 }
+
+

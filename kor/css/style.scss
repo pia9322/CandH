@@ -4,6 +4,7 @@
 $search-time: 800ms;
 $reset-time: 150ms;
 
+// color
 $color-100 : #f5821f;
 
 // ====================================default mixin====================================
@@ -21,7 +22,9 @@ $color-100 : #f5821f;
 @mixin header-height {height: 110px;}
 
 
-// margin
+// 
+@mixin marginTop-120 {margin-top: 120px;}
+@mixin marginTop-100 {margin-top: 100px;}
 @mixin marginTop-70 {margin-top: 70px;}
 @mixin marginTop-40 {margin-top: 40px;}
 @mixin marginTop-30 {margin-top: 30px;}
@@ -32,8 +35,15 @@ $color-100 : #f5821f;
 
 
 @mixin font-M {font-family: 'Montserrat';}
-// ====================================jj mixin====================================
 
+@mixin font-40 { font-size: 40px;}
+@mixin font-18 { font-size: 18px; letter-spacing: -0.72px;}
+
+
+@mixin section-Title-01 {font-size: 40px; font-weight: bold; line-height: 0.6; letter-spacing: -1.6px; color: #333;}
+@mixin section-Title-02 { font-size: 18px; line-height: 1.33; letter-spacing: -0.72px; color: #666; }
+
+// ====================================jj mixin====================================
 
 
 
@@ -392,19 +402,19 @@ body {
         background: rgba($color: #fff, $alpha: 0);
         @include transition(.3s);
 
-
-
         // active
         &.active {
             background: rgba($color: #fff, $alpha: .4);
             backdrop-filter: blur(20px);
-            a {color: #000 !important;}
+            a {
+                color: #333;
+            }
             
             .header_wrap {
                 .header_center {
                     >li {
                         >a {
-                            color: #000;
+                            color: #333;
                         }
                     }
                 }
@@ -811,6 +821,7 @@ body {
     #footer {
         background: #f4f4f4;
         padding: 60px 0;
+        margin-top: 160px;
         .footer_wrap {
             @include fixed-layout();
             display: flex; justify-content: space-between;
@@ -825,7 +836,7 @@ body {
                             width: 210px; height: 40px;
                             border-color: #ddd;
                             background: transparent;
-                            padding: 13px 19px; 
+                            padding: 0 20px; 
                             font-size: 16px; font-weight: 500; line-height: 1.5;
                             &::-ms-expand {
                                 display: none;
@@ -886,28 +897,6 @@ body {
 // ========================== header, footer ==========================
 
 
-
-
-// #loading {
-//     width: 100vw; height: 100vh;
-//     padding: 5rem;
-//     svg {
-//         width: 100px; height: 100px;
-//         fill: none;
-//         .cls-1{stroke:none;}.cls-2{stroke:#f58220;}.cls-3{stroke:#1c3968;}
-//         stroke-width: 2;
-//         stroke-dasharray: 630;
-//         animation: loading 10s forwards;
-//     }
-// }
-// @keyframes loading {
-//     from {
-//         stroke-dashoffset: 630;
-//       }
-//       to {
-//         stroke-dashoffset: 0;
-//       }
-// }
 
 
 // ====================================padge css====================================
@@ -1189,8 +1178,8 @@ body {
                 &.main_section_03 {
                     display: flex;
                     @include fixed-layout();
-                    margin-bottom: 100px;
-                    padding: 100px 0;
+                    // margin-bottom: 100px;
+                    // padding: 100px 0;
                     .main_wrap {
                         display: flex;
                         > div {
@@ -1319,6 +1308,245 @@ body {
     
             }
         }
+
+
+        // SUB_PAGE
+        &.sub_page {
+
+            // sub_navi
+            #sub_navi {
+                display: flex; align-items: flex-end;
+                position: relative;
+                overflow: hidden;
+                height: 300px;
+                background-image: linear-gradient(to top, #f9f9f9, #fff);
+
+                .content_wrap {
+                    @include fixed-layout();
+                    position: relative; z-index: 1;
+
+                    .text_wrap {
+                        display: flex; align-items: flex-end; line-height: 1;
+                        .text_01 {
+                            @include font-M(); @include font-40(); font-weight: 800; 
+                        }
+                        .text_02 {
+                            @include font-18();
+                            margin-left: 20px;
+                        }
+                    }
+
+                    .bar_wrap {
+                        margin: 30px 0;
+                        width: 20px; height: 4px;
+                                background: $color-100;
+                        
+                    }
+
+                    .link_wrap {
+                        @include font-18();
+                        margin-bottom: 30px;
+                        > a {
+                            margin-right: 40px;
+                            @include transition(.15s);
+
+                            // active, hover 
+                            &.active, &:hover {
+                                color: $color-100;
+                            }
+                        }
+                    }
+
+                }
+
+                .background_point {
+                    position: absolute; right: -65px; bottom: 0; 
+                    p {
+                        &.point_text {
+                            @include font-M();
+                            font-size: 19rem; font-weight: 900; color: #f1f1f1; line-height: .75;
+                        }
+                    }
+                }
+
+            }
+
+            .sub_section {
+                @include fixed-layout();
+                &.section_title {
+                    @include marginTop-120();
+                    .text_wrap {
+                        text-align: center;
+                        .text_01 {
+                            @include section-Title-01();
+                        }
+                        .text_02 {
+                            @include section-Title-02();
+                            margin-top: 22px;
+                        }
+                    }
+
+                }
+            }
+
+            // ABOUT sub_page
+            &.about {
+                &#company {
+                    .sub_section {
+        
+                        &.section_01 {
+                            @include marginTop-70();
+                            .content_wrap {
+                                > figure {
+                                    display: flex; align-items: center;
+        
+                                    figcaption { 
+                                        margin-left: 110px;
+                                        .text_01 {
+                                            font-size: 48px; font-weight: 300; line-height: 1.33; letter-spacing: -1.92px;
+                                            em {font-weight: normal;}
+                                        }
+                                        .text_02 {
+                                            @include font-18();
+                                            margin-top: 60px;
+                                            font-weight: 300; line-height: 1.67; color: #666;
+                                        }
+                                    
+                                    }
+                                }
+                            }
+                        }
+                        
+                        &.section_02 {
+                            @include marginTop-100();
+                            .content_wrap {
+                                .text_wrap {
+                                    .text_01 {
+                                        font-size: 24px;
+                                        font-weight: bold;
+                                        font-stretch: normal;
+                                        font-style: normal;
+                                        line-height: 1.25;
+                                        letter-spacing: -0.96px;
+                                    }
+                                }
+        
+                                .box_wrap {
+                                    margin-top: 40px;
+                                    display: flex; flex-wrap: wrap;
+                                    .box {
+                                        @include font-18();
+                                        position: relative;
+                                        margin-right: 25px;
+                                        width: 350px; height: 260px;
+                                        padding: 50px 40px 30px 40px;
+                                        background: #f4f4f4;
+                                        color: #666;
+                                        &:last-child {margin-right: 0;}
+        
+                                        .text_01 {@include font-M();}
+                                        .text_02 { margin-top: 20px; color: $color-100;}
+                                        .text_03 { margin-top: 10px;}
+                                        .img_wrap {position: absolute; right: 30px; bottom: 20px;}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            
+                &#history {
+                    .section_01 {
+                        .content_wrap {
+                            margin-top: 100px;
+                            display: flex; justify-content: space-between;
+
+                            .swiper-pagination {
+                                &.type {
+                                    position: static;
+                                    > span {
+                                        @include transition(.15s);
+                                        margin-bottom: 60px;
+                                        width: auto; height: auto;   
+                                        position: relative; display: block; background: none;
+                                        font-size: 59px; font-weight: 300; letter-spacing: -2.36px; color: #ddd; line-height: 1;
+                                        &:last-child {margin-bottom: 0;}
+
+                                        &::after {
+                                            content: '';
+                                            position: absolute; left: 0; bottom: -10px;
+                                            width: 0; height: 25px;
+                                            background: rgba($color: #f5821f, $alpha: .1);
+                                            @include transition(.3s);
+                                        }
+                                        &.swiper-pagination-bullet-active {
+                                            color: $color-100;  font-weight: 500;
+                                            &::after {
+                                                width: 100%;
+                                            }
+
+                                        }
+                                    }
+                                }
+                                &.pagination_progress {
+                                    position: static;  
+                                    display: flex;
+                                    margin-bottom: 40px;
+                                    > span {
+                                        width: 100%; height: auto;
+                                        margin: 0; border-radius: 0;
+                                        background: #fff; border-bottom: 2px solid #ddd; padding-bottom: 20px;
+                                        @include font-M(); font-size: 24px; font-weight: bold; color: #fff;
+                                        @include transition(.3s);
+                                        &.swiper-pagination-bullet-active {
+                                            border-bottom: 2px solid $color-100; color: $color-100;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .swiper-container {
+                                max-width: 1100px;
+                                margin: 0;
+
+                                .swiper-wrapper {
+                                    
+                                    .swiper-slide {
+                                        .img_wrap {
+                                            img {}
+                                        }
+                                        
+                                        figcaption {
+                                            @include font-18();
+                                            line-height: 2.22;
+                                            margin-top: 60px;
+                                            .text_wrap {
+                                                display: flex;
+                                                > span {
+                                                    &.text_01 {
+                                                        @include font-M();
+                                                        width: 73px;
+                                                        font-weight: bold; color: $color-100;
+                                                    }
+                                                    &.text_02 {
+                                                        margin-left: 60px;
+                                                        color: #666;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                    
+                }
+            }
+
+
+        }
     }
 }
 // ====================================padge css====================================
@@ -1353,6 +1581,7 @@ body {
     10% {background: red;}
     30% {background: orange;}
     50% {background: yellow;}
+
     70% {background: green;}
     100% {background: blue;}
 }

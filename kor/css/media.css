@@ -491,6 +491,33 @@
   }
 }
 
+@media (max-height: 800px) {
+  body main#main_page .main_section .section_title {
+    padding-top: 75px;
+  }
+  body main#main_page .main_section .section_title .text_02 {
+    margin-top: 30px;
+  }
+  body main#main_page .main_section .section_title .text_03 {
+    margin-top: 30px;
+  }
+  body main#main_page .main_section.main_section_01.active .business_tabcon::before {
+    -webkit-animation: barload 3s ease forwards;
+            animation: barload 3s ease forwards;
+  }
+  body main#main_page .main_section.main_section_01.active .business_tabcon .tabcon.swiper-container {
+    transition: 1s 2.5s;
+    -webkit-transition: 1s 2.5s;
+    -moz-transition: 1s 2.5s;
+    -ms-transition: 1s 2.5s;
+    -o-transition: 1s 2.5s;
+    opacity: 1 !important;
+  }
+  body main#main_page .main_section.main_section_01 .business_tabcon {
+    height: 200px;
+  }
+}
+
 @media (max-height: 600px) {
   body main#main_page .main_section .section_title {
     padding-top: 75px;

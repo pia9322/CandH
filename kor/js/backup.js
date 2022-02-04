@@ -7,8 +7,7 @@ $(document).ready(function () {
     AOS.init();
 
     // swiper
-    // main_visual
-    var mainSwiper = new Swiper('.main_visual', {
+    var Mainswiper = new Swiper('.main_visual', {
         effect: "fade",
         slidesPerView: 1,
         loop: true,
@@ -49,7 +48,6 @@ $(document).ready(function () {
     });
     
 
-    // main_bis
     var swiper02 = new Swiper('.tabcon', {
         slidesPerView: 5,
         spaceBetween: 100,
@@ -71,50 +69,6 @@ $(document).ready(function () {
             }
         }
     });
-
-    // sub_his
-    let type = ['시작', '성장', '확장', '도전']
-    var historySwiper = new Swiper('.history_swiper', {
-        slidesPerView: 1,
-        // loop: true,
-        // loopAdditionalSlides: 1,
-        autoHeight: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        lazy: {loadPrevNext: true},
-        touchMoveStopPropagation: true,
-
-        pagination: {
-            el: '.swiper-pagination.type',
-            clickable: true,
-            renderBullet: function(index, className) {
-                return '<span class="' + className + '">' + (type[index]) + '</span>';
-            },
-        },
-
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-   
-    });
-
-    // bar
-    let year = ['1994~2005', '2007~2011', '2012~2017', '2018~현재']
-    var pagingSwiper = new Swiper(".history_swiper", {
-		pagination: {
-			el: ".swiper-pagination.pagination_progress",
-            clickable: true,
-            renderBullet: function(index, className) {
-                return '<span class="' + className + '">' + (year[index]) + '</span>';
-            },
-		},
-	});
-
-    historySwiper.controller.control = pagingSwiper;
-    pagingSwiper.controller.control = historySwiper;
     // swiper
 
 
@@ -168,6 +122,32 @@ $(document).ready(function () {
 
     // sub_manu_navi 
     let sub_depth = document.querySelector('#sub_depth');
+
+
+
+    // jj_add window Scroll event 
+    $(window).scroll(function () {
+        let y = $(this).scrollTop(),
+            scrolltop = $(window).scrollTop();
+        // IndexHome = '/',
+        // path = location.pathname;
+
+        function IndexPop() {
+            let popbanner = document.querySelector('.event_banner_01'),
+                popbannerHei = popbanner.offsetTop;
+
+            if (y >= popbannerHei) {
+                $('.banner_pop').addClass("active");
+            } else {
+                $('.banner_pop').removeClass("active");
+            }
+        }
+
+        (y >= 70) ? $("#header").addClass('active') : $("#header").removeClass('active');
+
+
+    });
+    // jj_add window Scroll event
 
 
 
@@ -234,21 +214,14 @@ $(document).ready(function () {
         });
     })
 
-    
 
-    // page check header active
-    function headerActive() {
-        let nowLocation = location.href;
-        let nowIdxOf = nowLocation.indexOf('index');
     
-        (nowIdxOf <= 0 ) ? $('#header').addClass('active') : null;
-    }
-    
+    let nowIdx = $(this).location().indexOf('');
+    console.log('asd');
 
 
 
-    headerActive()
-    
+
     headerRight()
     // common_js_end
     console.log('common_js_end')
