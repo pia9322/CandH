@@ -291,55 +291,60 @@
 
                         <!-- 기상  -->
                         <div class="swiper-slide active">
-                            
-                            <script>
-                                $(function() {
-
-                                    $.ajax({
-                                        url: '../js/data.json',
-                                        success: function(data) {
-
-                                            let type, partnerName, partnerAddr_01, partnerAddr_02, homepageUrl, tagList;
-
-                                            function dataFun(ty) {
-                                                let i = 0;
-                                                
-                                                for (idx in data) {
-                                                    let tt = data.partner_weather;
-                                                    
-                                                    console.log(idx, data)
-                                                    
-                                                    tt.forEach(function(value, key) {
-                                                        if (value.type == ty) {
-
-                                                            partnerName = value.partnerName;
-                                                            partnerAddr_01 = value.partnerAddr_01;
-                                                            partnerAddr_02 = value.partnerAddr_02;
-                                                            homepageUrl = value.homepageUrl;
-
-                                                            tagList = '<div class="slide_box"><div class="slide_head"><span class="text_01">' + partnerName + '</span><i><span></span><span></span></i></div>'
-                                                            tagList += '<div class="slide_body"><p class="text_01"><em>' + partnerAddr_01 + '</em><em>' + partnerAddr_02 + '</em></p>'
-                                                            tagList += '<p class="homepage_ico"><a href="' + homepageUrl + '"><img src="../images/ico/ico_home_color.svg" alt=""></a></p></div></div>'
-
-                                                        }
-                                                        $('.swiper-slide').eq(0).append(tagList);
-                                                    });
-                                                    i++;
-                                                }
-
-                                                $('.partner_swiper .slide_box').click(function() {
-                                                    $(this).toggleClass('active');
-                                                    ($(this).hasClass('active')) ? $(this).children('.slide_body').toggleClass('active'): $(this).children('.slide_body').removeClass('active');
-                                                });
-
-                                            }
-                                            dataFun()
-                                        }
-                                    });
-                                });
-                            </script>
 
                         </div>
+                        
+                        <script>
+                            $(function() {
+
+                                $.ajax({
+                                    url: '../js/data.json',
+                                    success: function(data) {
+                                        let type, partnerName, partnerAddr_01, partnerAddr_02, homepageUrl;
+                                        
+
+
+                                        function dataFun(ty) {
+                                            let tagList = '';
+                                            // let i = 0;
+                                            
+                                        // for (idx in data) {
+                                            // for(let i=0; i<da)
+                                            
+                                            let test = data;
+                                            let tt = data.partner_weather;
+
+                                            
+                                            
+                                            tt.forEach(function(value, key) {
+                                                if (value.type == ty) {
+
+                                                    partnerName = value.partnerName;
+                                                    partnerAddr_01 = value.partnerAddr_01;
+                                                    partnerAddr_02 = value.partnerAddr_02;
+                                                    homepageUrl = value.homepageUrl;
+
+                                                    tagList = '<div class="slide_box"><div class="slide_head"><span class="text_01">' + partnerName + '</span><i><span></span><span></span></i></div>'
+                                                    tagList += '<div class="slide_body"><p class="text_01"><em>' + partnerAddr_01 + '</em><em>' + partnerAddr_02 + '</em></p>'
+                                                    tagList += '<p class="homepage_ico"><a href="' + homepageUrl + '"><img src="../images/ico/ico_home_color.svg" alt=""></a></p></div></div>'
+
+                                                }
+                                                $('.swiper-slide').eq(0).append(tagList);
+                                            });
+                                            // i++;
+                                        // }
+
+                                            $('.partner_swiper .slide_box').click(function() {
+                                                $(this).toggleClass('active');
+                                                ($(this).hasClass('active')) ? $(this).children('.slide_body').toggleClass('active'): $(this).children('.slide_body').removeClass('active');
+                                            });
+
+                                        }
+                                        dataFun()
+                                    }
+                                });
+                            });
+                        </script>
 
 
 
