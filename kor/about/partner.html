@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta name="viewport" content="width=2, initial-scale=1.0"> -->
     <title>C&H INC – 자연과 사람이 함께 공존하는 세상을 만들어 나갑니다.</title>
 
     <!-- --------------------SEO-------------------- -->
@@ -289,7 +288,6 @@
 
                     <div class="swiper-wrapper">
 
-                        <!-- 기상  -->
                         <div class="swiper-slide active"></div>
                         <div class="swiper-slide"></div>
                         <div class="swiper-slide"></div>
@@ -316,8 +314,8 @@
                                                 let testArry = [];
                                                 testArry.push(data.partner_weather, data.partner_water, data.partner_soil, data.partner_lipid, data.partner_radon)
                                                 let tt = testArry[i];
-                                                
-                                                
+
+
                                                 tt.forEach(function(value, key) {
                                                     if (value.type == ty) {
 
@@ -336,21 +334,29 @@
                                                 i++;
                                             }
 
+
+                                            $('.partner_navi a').click(function() {
+                                                let idx;
+
+                                                $('.partner_navi a').removeClass('active');
+                                                $(this).addClass('active');
+                                                idx = $(this).index();
+
+                                                $('.partner_swiper .swiper-slide').removeClass('active')
+                                                $('.partner_swiper .swiper-slide').eq(idx).addClass('active')
+                                            })
+
                                             $('.partner_swiper .slide_box').click(function() {
                                                 $(this).toggleClass('active');
                                                 ($(this).hasClass('active')) ? $(this).children('.slide_body').toggleClass('active'): $(this).children('.slide_body').removeClass('active');
                                             });
 
-                                        }
+                                        } 
                                         dataFun()
                                     }
                                 });
                             });
                         </script>
-
-
-
-
 
                     </div>
 
@@ -359,50 +365,6 @@
 
             </div>
         </section>
-
-
-        <script>
-            $(function() {
-
-                $('.partner_navi a').click(function() {
-                    let idx;
-
-                    $('.partner_navi a').removeClass('active');
-                    $(this).addClass('active');
-                    idx = $(this).index();
-
-                    $('.partner_swiper .swiper-slide').removeClass('active')
-                    $('.partner_swiper .swiper-slide').eq(idx).addClass('active')
-                })
-
-
-                // var swiper02 = new Swiper('.partner_swiper', {
-                //     slidesPerView: 1,
-                //     // loop: true,
-
-                //     touchMoveStopPropagation: true,
-                //     breakpoints: {
-                //         1600: {
-                //             slidesPerView: 3,
-                //             spaceBetween: 40,
-                //         },
-                //         1200: {
-                //             slidesPerView: 3,
-                //             spaceBetween: 20,
-                //         },
-                //         500: {
-                //             slidesPerView: 1,
-                //             spaceBetween: 0,
-                //         }
-                //     }
-                // });
-
-
-
-            });
-        </script>
-
-
 
     </main>
 

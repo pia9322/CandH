@@ -1,5 +1,8 @@
-$(document).ready(function () {
+
+$(function(){
+
     console.log('common_js_start')
+
     // common_js_start
 
 
