@@ -72,51 +72,6 @@ $(document).ready(function () {
         }
     });
 
-    // sub_his
-    let type = ['시작', '성장', '확장', '도전']
-    var historySwiper = new Swiper('.history_swiper', {
-        slidesPerView: 1,
-        // loop: true,
-        // loopAdditionalSlides: 1,
-        autoHeight: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        lazy: {loadPrevNext: true},
-        touchMoveStopPropagation: true,
-
-        pagination: {
-            el: '.swiper-pagination.type',
-            clickable: true,
-            renderBullet: function(index, className) {
-                return '<span class="' + className + '">' + (type[index]) + '</span>';
-            },
-        },
-
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-   
-    });
-
-    // bar
-    let year = ['1994~2005', '2007~2011', '2012~2017', '2018~현재']
-    var pagingSwiper = new Swiper(".history_swiper", {
-		pagination: {
-			el: ".swiper-pagination.pagination_progress",
-            clickable: true,
-            renderBullet: function(index, className) {
-                return '<span class="' + className + '">' + (year[index]) + '</span>';
-            },
-		},
-	});
-
-    historySwiper.controller.control = pagingSwiper;
-    pagingSwiper.controller.control = historySwiper;
-    // swiper
-
 
 
     // header_default 
@@ -241,7 +196,7 @@ $(document).ready(function () {
         let nowLocation = location.href;
         let nowIdxOf = nowLocation.indexOf('index');
     
-        (nowIdxOf <= 0 ) ? $('#header').addClass('active') : null;
+        (nowIdxOf <= 0 ) ? $('#header').addClass('active') : console.log('erro');
     }
     
 

@@ -21,6 +21,8 @@ $color-100 : #f5821f;
 @mixin layoutBoxColor {border: 2px solid #f00;}
 @mixin header-height {height: 110px;}
 
+@mixin flexCenter { display: flex; justify-content: center; align-items: center; }
+
 
 // 
 @mixin marginTop-120 {margin-top: 120px;}
@@ -1353,6 +1355,7 @@ body {
                             // active, hover 
                             &.active, &:hover {
                                 color: $color-100;
+                                font-weight: bold;
                             }
                         }
                     }
@@ -1542,6 +1545,181 @@ body {
 
                     }
                     
+                }
+
+                &#brand {
+                    .sub_section {
+                        &.section_01 {
+                            @include marginTop-70();
+                            .content_wrap {
+                                > figure {
+                                    display: flex; align-items: center;
+                                    margin-bottom: 80px;
+                                    &:last-child {margin-bottom: 0;}
+                                    
+                                    .img_wrap {
+                                        img {}
+                                    }
+                                    
+                                    figcaption {
+                                        margin-left: 60px;
+                                        .text_01 {
+                                            font-size: 24px; font-weight: bold; line-height: 1; letter-spacing: -0.96px; 
+                                        }
+                                        .text_02 {
+                                            margin-top: 40px;
+                                            @include font-18(); font-weight: 300; letter-spacing: -0.72px; color: #666;
+                                        }
+                                        .ico_wrap {
+                                            margin-top: 40px;
+                                            display: flex; align-items: center;
+                                            a {
+                                                @include flexCenter();
+                                                @include transition(.15s);
+                                                width: 60px; height: 60px;
+                                                background-color: #f4f4f4; border-radius: 100%;
+                                                margin-right: 20px;
+                                                &:last-child {margin-right: 0;}
+                                                svg {
+                                                    max-width: 35px; height: 35px;
+                                                    path {
+                                                        fill: #aaa;
+                                                    }
+                                                }
+                                                &:hover { 
+                                                    background-color: $color-100;
+                                                    svg {
+                                                        path {
+                                                            fill: #fff;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+    
+                            }
+                        }
+                    } 
+                }
+
+                &#partner {
+                    .sub_section {
+                        &.section_01 {
+                            .content_wrap {
+                                #partner_navi {
+                                    @include marginTop-70();
+                                    @include font-18(); 
+                                    font-weight: 500; color: #666;
+                                    a {
+                                        margin-right: 35px;
+                                        position: relative;
+                                        @include transition(.15s);
+                                        &::after {
+                                            content: '';
+                                            position: absolute; left: 0; bottom: -5px;
+                                            background: $color-100;
+                                            @include transition(.15s);
+                                            width: 0; height: 2px;
+                                        }
+                                        
+                                        &:last-child {margin-right: 0;}
+                                        &.active, &:hover {
+                                            color: $color-100;
+
+                                            &::after {
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+
+                                }
+
+                                .swiper-container {
+                                    margin-top: 30px;
+                                    .swiper-wrapper {
+                                        
+                                        .swiper-slide {
+                                            display: none;
+
+                                            &.active {
+                                                display: block;
+                                            }
+
+                                            .slide_box {
+                                                display: inline-block;
+                                                border: 1px solid #ddd;
+                                                padding: 30px; 
+                                                max-width: 480px; width: 100%;
+                                                margin: 0 17px 30px 0;
+                                                &:nth-of-type(3n) {margin-right: 0;}
+    
+                                                &.active {
+                                                    .slide_head {
+                                                        i {
+                                                            span {
+                                                                &:nth-child(2){
+                                                                    top: calc(50% + -1px);
+                                                                    transform: rotate(90deg);
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+    
+                                                    .slide_body {
+                                                        display: flex;
+                                                    }
+                                                }
+                                                .slide_head {
+                                                    display: flex; align-items: center; justify-content: space-between;
+                                                    cursor: pointer;
+                                                    .text_01 { font-size: 24px; font-weight: bold; line-height: 1.25; letter-spacing: -0.96px; }
+                                                    i {
+                                                        display: flex;
+                                                        position: relative;
+                                                        width: 20px; height: 20px;
+                                                        span {
+                                                            @include absolute-y(0, 50%);
+                                                            @include transition(.15s);
+                                                            display: flex;
+                                                            width: 100%; height: 2px; background-color: #000;
+                                                        }
+                                                    }
+    
+                                                }
+                                                .slide_body {
+                                                    margin-top: 20px;
+                                                    display: none; align-items: center; justify-content: space-between;
+                                                    .text_01 {
+                                                        @include font-18();
+                                                        font-weight: 300; line-height: 1.33; color: #666;
+                                                        em {display: block;}
+                                                    }
+                                                    
+                                                    .homepage_ico {
+                                                        a {
+                                                            @include transition(.15s);
+                                                            &:hover {
+                                                                opacity: .5;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        
+                                    }
+                                }
+
+
+
+                            }
+
+                        }
+                    }
+
                 }
             }
 

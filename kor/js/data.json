@@ -1,62 +1,89 @@
 {
-    "certifi" : [
-        {"imgSrc": "01","imgAlt": "인증서_01","imgName_sub":"","imgName": "품질경영시스템 인증서"},
-        {"imgSrc": "02","imgAlt": "인증서_02","imgName_sub":"","imgName": "벤처기업 확인서"},
-        {"imgSrc": "03","imgAlt": "인증서_03","imgName_sub":"","imgName": "장애인기업 확인서"},
-        {"imgSrc": "04","imgAlt": "인증서_04","imgName_sub":"","imgName": "중소기업 확인서"},
-        {"imgSrc": "05","imgAlt": "인증서_05","imgName_sub":"","imgName": "창업기업 확인서"},
-        {"imgSrc": "06","imgAlt": "인증서_06","imgName_sub":"넥쿨링튜브","imgName": "PCM위해물질 시험성적서" },
-        {"imgSrc": "07","imgAlt": "인증서_07","imgName_sub":"넥쿨링튜브","imgName": "강도누수 시험성적서"},
-        {"imgSrc": "08","imgAlt": "인증서_08","imgName_sub":"넥쿨링튜브","imgName": "지식재산권 출원사실증명원"},
-        {"imgSrc": "09","imgAlt": "인증서_09","imgName_sub":"소프트핏 마스크","imgName": "디자인등록원부"},
-        {"imgSrc": "10","imgAlt": "인증서_10","imgName_sub":"소프트핏 마스크","imgName": "디자인등록원부"},
-        {"imgSrc": "11","imgAlt": "인증서_11","imgName_sub":"소프트핏 마스크","imgName": "디자인등록원부"},
-        {"imgSrc": "12","imgAlt": "인증서_12","imgName_sub":"소프트핏 마스크","imgName": "디자인등록원부"},
-        {"imgSrc": "13","imgAlt": "인증서_13","imgName_sub":"소프트핏 마스크","imgName": "디자인등록원부"},
-        {"imgSrc": "14","imgAlt": "인증서_14","imgName_sub":"액티브핏 마스크","imgName": "디자인등록원부"},
-        {"imgSrc": "15","imgAlt": "인증서_15","imgName_sub":"액티브핏 마스크","imgName": "디자인등록원부"},
-        {"imgSrc": "16","imgAlt": "인증서_16","imgName_sub":"액티브핏 마스크","imgName": "디자인등록원부"}
+
+    "partner_weather" : [
+        {"partnerName":"Hyquest solutions","partnerAddr_01":"Oceania","partnerAddr_02":"Austrailia","homepageUrl":"https://www.hyquestsolutions.com.au/"},
+        {"partnerName":"METER Group Inc.","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.metergroup.com/environment/"},
+        {"partnerName":"ZATA","partnerAddr_01":"Asia","partnerAddr_02":"Hongkong","homepageUrl":"https://www.zataiot.com/disdrometer-distrometer-zdm100/"}
     ],
 
-    "product_01" : [
-        {
-            "alink": "#none",
-            "product_img": "../images/product/product_mpac_01.png",
-            "product_title": "다용도 방수팩",
-            "product_detail": "엠팩플러스 다용도 방수팩 스마트폰용 테블릿용 중형 대형 색상2종"
-        },
-        {
-            "alink": "#none",
-            "product_img": "../images/product/product_mpac_02.png",
-            "product_title": "엠팩 다이브",
-            "product_detail": "엠팩플러스 D30 수심40m 수중터치 스마트폰 방수팩 엠팩다이브"
-        },
-        {
-            "alink": "#none",
-            "product_img": "../images/product/product_mpac_03.png",
-            "product_title": "엠팩 클래식",
-            "product_detail": "엠팩플러스 C20 카드포켓 스마트폰 방수팩 엠팩클래식"
-        }
+    "partner_water" : [
+        {"partnerName":"geotech","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.geotechenv.com/"},
+        {"partnerName":"Eijkelkamp Soil & Water","partnerAddr_01":"Europe","partnerAddr_02":"Netherlands","homepageUrl":"https://en.eijkelkamp.com/"},
+        {"partnerName":"Waterra","partnerAddr_01":"North America","partnerAddr_02":"Canada","homepageUrl":"https://waterra.com/"},
+        {"partnerName":"Proactive","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.proactivedirect.biz/"},
+        {"partnerName":"QED","partnerAddr_01":"Europe","partnerAddr_02":"UK","homepageUrl":"https://www.qedenv.com/"},
+        {"partnerName":"ESP","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"http://www.biobailer.com/"},
+        {"partnerName":"BESST inc.","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://besst-inc.com/"},
+        {"partnerName":"Seametrics","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.seametrics.com/"},
+        {"partnerName":"SEBA hydrometri","partnerAddr_01":"Europe","partnerAddr_02":"Germany","homepageUrl":"https://www.seba-hydrometrie.com/"},
+        {"partnerName":"Hydrotechnik","partnerAddr_01":"Europe","partnerAddr_02":"Germany","homepageUrl":"https://www.ht-hydrotechnik.com/de/"},
+        {"partnerName":"EON product inc.","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.eonpro.com/"}
     ],
-    "product_02" : [
-        {
-            "alink": "#none",
-            "product_img": "../images/product/product_mpac_01.png",
-            "product_title": "다용도 방수팩",
-            "product_detail": "엠팩플러스 다용도 방수팩 스마트폰용 테블릿용 중형 대형 색상2종"
-        },
-        {
-            "alink": "#none",
-            "product_img": "../images/product/product_mpac_02.png",
-            "product_title": "엠팩 다이브",
-            "product_detail": "엠팩플러스 D30 수심40m 수중터치 스마트폰 방수팩 엠팩다이브"
-        },
-        {
-            "alink": "#none",
-            "product_img": "../images/product/product_mpac_03.png",
-            "product_title": "엠팩 클래식",
-            "product_detail": "엠팩플러스 C20 카드포켓 스마트폰 방수팩 엠팩클래식"
-        }
-    ]
+
+    "partner_soil" : [
+        {"partnerName":"Daiki Rika Kogyo Co., Ltd","partnerAddr_01":"Asia","partnerAddr_02":"Japan","homepageUrl":"www.daiki.co.jp"},
+        {"partnerName":"Eijkelkamp Soil & Water","partnerAddr_01":"Europe","partnerAddr_02":"Netherlands","homepageUrl":"https://en.eijkelkamp.com/"},
+        {"partnerName":"IMKO GmbH","partnerAddr_01":"Europe","partnerAddr_02":"Germany","homepageUrl":"https://www.imko.de/en/"},
+        {"partnerName":"Rhizosphere","partnerAddr_01":"Europe","partnerAddr_02":"Netherlands","homepageUrl":"https://www.rhizosphere.com/"},
+        {"partnerName":"METER Group AG","partnerAddr_01":"Europe","partnerAddr_02":"Germany","homepageUrl":"https://www.metergroup.com/environment/"},
+        {"partnerName":"METER Group Inc.","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.metergroup.com/environment/"},
+        {"partnerName":"TruTrack","partnerAddr_01":"Oceania","partnerAddr_02":"New Zealand","homepageUrl":"http://www.trutrack.com/"},
+        {"partnerName":"Soilmoisture Equipment Corp.","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.soilmoisture.com/"},
+        {"partnerName":"AMS","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.ams-samplers.com/"},
+        {"partnerName":"Soil Measurement Systems","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.soilmeasurement.com/"},
+        {"partnerName":"Sampletek","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://sampletek.net/"},
+        {"partnerName":"Irrometer","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.irrometer.com/"},
+        {"partnerName":"Holland Scientific","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://hollandscientific.com/"},
+        {"partnerName":"Gasmet Technologies Oy","partnerAddr_01":"Europe","partnerAddr_02":"Finland","homepageUrl":"https://www.gasmet.com/"},
+        {"partnerName":"Instrotech Australia Pty Ltd","partnerAddr_01":"Oceania","partnerAddr_02":"Australia","homepageUrl":"https://www.instrotech.com.au/"},
+        {"partnerName":"SWAP","partnerAddr_01":"Europe","partnerAddr_02":"Netherlands","homepageUrl":"https://www.swapinstruments.com/"},
+        {"partnerName":"Presens","partnerAddr_01":"Europe","partnerAddr_02":"Germany","homepageUrl":"https://presens.de"},
+        {"partnerName":"Veristech","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://veristech.com"}
+    ],
+
+    "partner_lipid" : [
+        {"partnerName":"IDS GeoRadar","partnerAddr_01":"Europe","partnerAddr_02":"Italia","homepageUrl":"https://idsgeoradar.com/"},
+        {"partnerName":"VISTA CLARA Inc.","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.vista-clara.com/"},
+        {"partnerName":"GEODEVICE","partnerAddr_01":"Asia","partnerAddr_02":"Russia","homepageUrl":"https://geodevice.co/"},
+        {"partnerName":"Uppsala University","partnerAddr_01":"Europe","partnerAddr_02":"Sweden","homepageUrl":""},
+        {"partnerName":"ALT","partnerAddr_01":"Europe","partnerAddr_02":"Luxemburg","homepageUrl":"https://www.alt.lu/"},
+        {"partnerName":"Geometrics","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.geometrics.com/"},
+        {"partnerName":"Park Seismic, LLC","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.parkseismic.com/"},
+        {"partnerName":"Sol Solution","partnerAddr_01":"Europe","partnerAddr_02":"France","homepageUrl":"https://www.sol-solution.com/"},
+        {"partnerName":"Geostuff","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"http://www.geostuff.com/"},
+        {"partnerName":"Allegheny instruments","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://alleghenyinstruments.com/"},
+        {"partnerName":"Inertial Sensing One AB","partnerAddr_01":"Europe","partnerAddr_02":"Sweden","homepageUrl":""},
+        {"partnerName":"Laval underGround Surveys","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://lavalunderground.com/"},
+        {"partnerName":"Geonics Limited","partnerAddr_01":"North America","partnerAddr_02":"Canada","homepageUrl":"http://www.geonics.com/"},
+        {"partnerName":"Geopartner","partnerAddr_01":"Europe","partnerAddr_02":"Poland","homepageUrl":""},
+        {"partnerName":"AGI USA","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.agiusa.com/"},
+        {"partnerName":"MountSopris","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://mountsopris.com/"},
+        {"partnerName":"Argus Electronic GmbH","partnerAddr_01":"Europe","partnerAddr_02":"Germany","homepageUrl":"https://www.argus-electronic.de/"},
+        {"partnerName":"Seamap","partnerAddr_01":"Asia","partnerAddr_02":"Singapore","homepageUrl":"https://www.seamap.com/"},
+        {"partnerName":"Radiation Solutions Inc.","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.radiationsolutions.ca/"},
+        {"partnerName":"OYO Corporation","partnerAddr_01":"Asia","partnerAddr_02":"Japan","homepageUrl":"https://www.oyo.co.jp/english/"},
+        {"partnerName":"HADES SYSTEMS LTD","partnerAddr_01":"Oceania","partnerAddr_02":"Australia","homepageUrl":"https://www.hadessystems.com/"},
+        {"partnerName":"Geo5","partnerAddr_01":"Asia","partnerAddr_02":"Japan","homepageUrl":""},
+        {"partnerName":"Zonge International,Inc","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"http://zonge.com/"},
+        {"partnerName":"Abbytek Enterprises, LLC","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"http://www.abbytek.com/"},
+        {"partnerName":"DAT INSTRUMENTS SRL","partnerAddr_01":"Europe","partnerAddr_02":"Italy","homepageUrl":"https://www.datinstruments.com/en/"},
+        {"partnerName":"IRIS Instruments","partnerAddr_01":"Europe","partnerAddr_02":"France","homepageUrl":"http://www.iris-instruments.com/"},
+        {"partnerName":"Inflatable Packers International Pty Ltd","partnerAddr_01":"Asia","partnerAddr_02":"Singapore","homepageUrl":"https://www.inflatable-packers.com/IPI/index"},
+        {"partnerName":"DECO Geophysical Software Company","partnerAddr_01":"Asia","partnerAddr_02":"Russia","homepageUrl":"http://decogeo.com/en/"},
+        {"partnerName":"SEEQUENT Geosoft Software","partnerAddr_01":"Asia","partnerAddr_02":"Vietnam","homepageUrl":"https://www.seequent.com/products-solutions/geosoft-software/"},
+        {"partnerName":"Geophex, Ltd.","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"http://www.geophex.com/"},
+        {"partnerName":"Geospace Technologies","partnerAddr_01":"North America","partnerAddr_02":"US","homepageUrl":"https://www.geospace.com/"},
+        {"partnerName":"Aarhus GeoSoftware","partnerAddr_01":"Europe","partnerAddr_02":"Denmark","homepageUrl":"https://www.aarhusgeosoftware.dk/"},
+        {"partnerName":"Roadscanners","partnerAddr_01":"Europe","partnerAddr_02":"Finland","homepageUrl":"https://www.roadscanners.com/"},
+        {"partnerName":"RadExPro Seismic Software","partnerAddr_01":"Asia","partnerAddr_02":"Russia","homepageUrl":"https://radexpro.com/"},
+        {"partnerName":"Intellignt Resources Inc","partnerAddr_01":"North America","partnerAddr_02":"Canada","homepageUrl":"https://www.rayfract.com/"}
+    ],
+
+    "partner_radon" : []
+
+    
+    
+
 }   
 
+ 
