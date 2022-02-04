@@ -1245,6 +1245,7 @@ body main#main_page .main_section.main_section_01 .business_tabcon .swiper-butto
 body main#main_page .main_section.main_section_01 .business_tabcon .tabcon.swiper-container {
   height: 100%;
   opacity: 0;
+  overflow: visible;
 }
 
 body main#main_page .main_section.main_section_01 .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide:hover a .boxwrap::before, body main#main_page .main_section.main_section_01 .business_tabcon .tabcon.swiper-container .business.swiper-wrapper .swiper-slide:active a .boxwrap::before {

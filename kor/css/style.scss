@@ -1063,6 +1063,7 @@ body {
     
                         .tabcon.swiper-container {
                             height: 100%; opacity: 0;
+                            overflow: visible;
                             .business.swiper-wrapper {
                                 .swiper-slide {
                                     // hover, active effect business

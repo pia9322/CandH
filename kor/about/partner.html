@@ -290,10 +290,12 @@
                     <div class="swiper-wrapper">
 
                         <!-- 기상  -->
-                        <div class="swiper-slide active">
+                        <div class="swiper-slide active"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
 
-                        </div>
-                        
                         <script>
                             $(function() {
 
@@ -301,39 +303,38 @@
                                     url: '../js/data.json',
                                     success: function(data) {
                                         let type, partnerName, partnerAddr_01, partnerAddr_02, homepageUrl;
-                                        
 
 
                                         function dataFun(ty) {
                                             let tagList = '';
-                                            // let i = 0;
-                                            
-                                        // for (idx in data) {
-                                            // for(let i=0; i<da)
-                                            
-                                            let test = data;
-                                            let tt = data.partner_weather;
+                                            let i = 0;
 
-                                            console.table(test)
-                                            
-                                            
-                                            tt.forEach(function(value, key) {
-                                                if (value.type == ty) {
+                                            for (idx in data) {
 
-                                                    partnerName = value.partnerName;
-                                                    partnerAddr_01 = value.partnerAddr_01;
-                                                    partnerAddr_02 = value.partnerAddr_02;
-                                                    homepageUrl = value.homepageUrl;
+                                                // let tt = data.partner_weather;
 
-                                                    tagList = '<div class="slide_box"><div class="slide_head"><span class="text_01">' + partnerName + '</span><i><span></span><span></span></i></div>'
-                                                    tagList += '<div class="slide_body"><p class="text_01"><em>' + partnerAddr_01 + '</em><em>' + partnerAddr_02 + '</em></p>'
-                                                    tagList += '<p class="homepage_ico"><a href="' + homepageUrl + '"><img src="../images/ico/ico_home_color.svg" alt=""></a></p></div></div>'
+                                                let testArry = [];
+                                                testArry.push(data.partner_weather, data.partner_water, data.partner_soil, data.partner_lipid, data.partner_radon)
+                                                let tt = testArry[i];
+                                                
+                                                
+                                                tt.forEach(function(value, key) {
+                                                    if (value.type == ty) {
 
-                                                }
-                                                $('.swiper-slide').eq(0).append(tagList);
-                                            });
-                                            // i++;
-                                        // }
+                                                        partnerName = value.partnerName;
+                                                        partnerAddr_01 = value.partnerAddr_01;
+                                                        partnerAddr_02 = value.partnerAddr_02;
+                                                        homepageUrl = value.homepageUrl;
+
+                                                        tagList = '<div class="slide_box"><div class="slide_head"><span class="text_01">' + partnerName + '</span><i><span></span><span></span></i></div>'
+                                                        tagList += '<div class="slide_body"><p class="text_01"><em>' + partnerAddr_01 + '</em><em>' + partnerAddr_02 + '</em></p>'
+                                                        tagList += '<p class="homepage_ico"><a href="' + homepageUrl + '"><img src="../images/ico/ico_home_color.svg" alt=""></a></p></div></div>'
+
+                                                    }
+                                                    $('.swiper-wrapper .swiper-slide').eq(i).append(tagList);
+                                                });
+                                                i++;
+                                            }
 
                                             $('.partner_swiper .slide_box').click(function() {
                                                 $(this).toggleClass('active');
@@ -368,7 +369,7 @@
 
                     $('.partner_navi a').removeClass('active');
                     $(this).addClass('active');
-                    idx = $(this).index(); 
+                    idx = $(this).index();
 
                     $('.partner_swiper .swiper-slide').removeClass('active')
                     $('.partner_swiper .swiper-slide').eq(idx).addClass('active')

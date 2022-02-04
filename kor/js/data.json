@@ -79,7 +79,10 @@
         {"partnerName":"Intellignt Resources Inc","partnerAddr_01":"North America","partnerAddr_02":"Canada","homepageUrl":"https://www.rayfract.com/"}
     ],
 
-    "partner_radon" : []
+    "partner_radon" : [
+        {"partnerName":"라돈테스트","partnerAddr_01":"North America","partnerAddr_02":"Canada","homepageUrl":"https://www.rayfract.com/"}
+
+    ]
 
     
     
