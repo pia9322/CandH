@@ -364,6 +364,34 @@ body .table_wrap_more .table_notice_more > a:hover {
   background: rgba(59, 176, 226, 0.5);
 }
 
+body .submit_box.box_01 {
+  width: 100%;
+  text-align: center;
+}
+
+body .submit_box.box_01 button {
+  cursor: pointer;
+  width: 160px;
+  height: 60px;
+  background: transparent;
+  border-radius: 50px;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 18px;
+  letter-spacing: -0.72px;
+  transition: 0.15s;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
+}
+
+body .submit_box.box_01 button:hover, body .submit_box.box_01 button:active {
+  background: #f5821f;
+  color: #fff;
+  border-color: transparent;
+}
+
 body #header {
   height: 110px;
   position: fixed;
@@ -1440,6 +1468,7 @@ body main#main_page .main_section.main_section_03 .main_wrap > div.left_content 
 }
 
 body main#main_page .main_section.main_section_03 .main_wrap > div.left_content .content_wrap .input_box {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1460,6 +1489,21 @@ body main#main_page .main_section.main_section_03 .main_wrap > div.left_content 
 
 body main#main_page .main_section.main_section_03 .main_wrap > div.left_content .content_wrap .input_box:nth-child(odd) {
   margin-left: 0;
+}
+
+body main#main_page .main_section.main_section_03 .main_wrap > div.left_content .content_wrap .input_box #search_box {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+body main#main_page .main_section.main_section_03 .main_wrap > div.left_content .content_wrap .input_box #search_box ion-icon {
+  width: 20px;
+  height: 20px;
+  color: #000;
 }
 
 body main#main_page .main_section.main_section_03 .main_wrap > div.left_content .content_wrap .input_box label {
@@ -1493,33 +1537,8 @@ body main#main_page .main_section.main_section_03 .main_wrap > div.left_content 
   width: 70%;
 }
 
-body main#main_page .main_section.main_section_03 .main_wrap > div.left_content .content_wrap .submit_box {
+body main#main_page .main_section.main_section_03 .main_wrap > div.left_content .content_wrap .submit_box.box_01 {
   margin-top: 30px;
-  width: 100%;
-  text-align: center;
-}
-
-body main#main_page .main_section.main_section_03 .main_wrap > div.left_content .content_wrap .submit_box button {
-  cursor: pointer;
-  width: 160px;
-  height: 60px;
-  background: transparent;
-  border-radius: 50px;
-  border: 1px solid #000;
-  color: #000;
-  font-size: 18px;
-  letter-spacing: -0.72px;
-  transition: 0.15s;
-  -webkit-transition: 0.15s;
-  -moz-transition: 0.15s;
-  -ms-transition: 0.15s;
-  -o-transition: 0.15s;
-}
-
-body main#main_page .main_section.main_section_03 .main_wrap > div.left_content .content_wrap .submit_box button:hover, body main#main_page .main_section.main_section_03 .main_wrap > div.left_content .content_wrap .submit_box button:active {
-  background: #f5821f;
-  color: #fff;
-  border-color: transparent;
 }
 
 body main#main_page .main_section.main_section_03 .main_wrap > div.right_content .content_box {
@@ -2202,6 +2221,436 @@ body main.sub_page.about#partner .sub_section.section_01 .content_wrap .swiper-c
 
 body main.sub_page.about#partner .sub_section.section_01 .content_wrap .swiper-container .swiper-wrapper .swiper-slide .slide_box .slide_body .homepage_ico a:hover {
   opacity: .5;
+}
+
+body main.sub_page.about#direction .sub_section.section_01 {
+  margin-top: 70px;
+}
+
+body main.sub_page.about#direction .sub_section.section_01 .content_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main.sub_page.about#direction .sub_section.section_01 .content_wrap > div.box_wrap .slide_box {
+  width: 680px;
+  border: 1px solid #ddd;
+  padding: 30px;
+  margin: 0 0 20px 0;
+}
+
+body main.sub_page.about#direction .sub_section.section_01 .content_wrap > div.box_wrap .slide_box:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+body main.sub_page.about#direction .sub_section.section_01 .content_wrap > div.box_wrap .slide_box.active .slide_head i span:nth-child(2) {
+  top: calc(50% + -1px);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+body main.sub_page.about#direction .sub_section.section_01 .content_wrap > div.box_wrap .slide_box.active .slide_body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main.sub_page.about#direction .sub_section.section_01 .content_wrap > div.box_wrap .slide_box .slide_head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+body main.sub_page.about#direction .sub_section.section_01 .content_wrap > div.box_wrap .slide_box .slide_head .text_01 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.25;
+  letter-spacing: -0.96px;
+}
+
+body main.sub_page.about#direction .sub_section.section_01 .content_wrap > div.box_wrap .slide_box .slide_head i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+body main.sub_page.about#direction .sub_section.section_01 .content_wrap > div.box_wrap .slide_box .slide_head i span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  transition: 0.15s;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+body main.sub_page.about#direction .sub_section.section_01 .content_wrap > div.box_wrap .slide_box .slide_body {
+  margin-top: 20px;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main.sub_page.about#direction .sub_section.section_01 .content_wrap > div.box_wrap .slide_box .slide_body .text_01 {
+  font-size: 18px;
+  letter-spacing: -0.72px;
+  font-weight: 300;
+  line-height: 1.33;
+  color: #666;
+}
+
+body main.sub_page.about#direction .sub_section.section_01 .content_wrap > div.box_wrap .slide_box .slide_body .text_01 em {
+  display: block;
+}
+
+body main.sub_page.about#direction .sub_section.section_01 .content_wrap > div.box_wrap .slide_box .slide_body .text_01 em ion-icon {
+  width: 15px;
+  height: 15px;
+  color: #f5821f;
+  margin-right: 10px;
+}
+
+body main.sub_page.about#direction .sub_section.section_01 .content_wrap > div.box_wrap .slide_box .slide_body .homepage_ico a {
+  transition: 0.15s;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
+}
+
+body main.sub_page.about#direction .sub_section.section_01 .content_wrap > div.box_wrap .slide_box .slide_body .homepage_ico a:hover {
+  opacity: .5;
+}
+
+body main.sub_page.about#direction .sub_section.section_01 .content_wrap > div.map_wrap {
+  margin-left: 55px;
+  width: 100%;
+  height: 660px;
+}
+
+body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap {
+  font-size: 18px;
+  letter-spacing: -0.72px;
+}
+
+body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a {
+  position: relative;
+  margin-right: 35px;
+  color: #666;
+  transition: 0.15s;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
+}
+
+body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a::after {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  content: '';
+  width: 0;
+  height: 2px;
+  margin-top: 5px;
+  background-color: #f5821f;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a.active, body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a:hover {
+  color: #f5821f;
+}
+
+body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a.active::after, body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a:hover::after {
+  width: 100%;
+}
+
+body main.sub_page.about#person .sub_section.section_01 {
+  margin-top: 70px;
+}
+
+body main.sub_page.about#person .sub_section.section_02 {
+  margin-top: 30px;
+}
+
+body main.sub_page.about#person .sub_section.section_02 .img_wrap figure {
+  position: relative;
+}
+
+body main.sub_page.about#person .sub_section.section_02 .img_wrap figure figcaption {
+  position: absolute;
+  left: 50%;
+  top: 62%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 1100px;
+}
+
+body main.sub_page.about#person .sub_section.section_02 .img_wrap figure figcaption p {
+  background-color: #fff;
+  text-align: center;
+}
+
+body main.sub_page.about#person .sub_section.section_02 .img_wrap figure figcaption p.text_01 {
+  padding: 80px 180px 0;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 1.33;
+  letter-spacing: -1.92px;
+  color: #333;
+}
+
+body main.sub_page.about#person .sub_section.section_02 .img_wrap figure figcaption p.text_01 strong {
+  font-weight: normal;
+}
+
+body main.sub_page.about#person .sub_section.section_02 .img_wrap figure figcaption p.text_02 {
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.33;
+  letter-spacing: -0.72px;
+  color: #666;
+}
+
+body main.sub_page.about#person .sub_section.section_03 {
+  margin-top: 260px;
+}
+
+body main.sub_page.about#person .sub_section.section_03 .team.swiper-container::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #ddd;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+body main.sub_page.about#person .sub_section.section_03 .team.swiper-container .swiper-wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main.sub_page.about#person .sub_section.section_03 .team.swiper-container .swiper-wrapper .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 130px !important;
+  height: 130px !important;
+  border: 1px solid #f5821f;
+  border-radius: 100%;
+  background: #fff;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  text-align: center;
+  margin: 0 28px 0 0;
+}
+
+body main.sub_page.about#person .sub_section.section_03 .team.swiper-container .swiper-wrapper .swiper-slide.margin_0 {
+  margin: 0;
+}
+
+body main.sub_page.about#person .sub_section.section_03 .team.swiper-container .swiper-wrapper .swiper-slide.big {
+  margin: 0 60px 0;
+  width: 350px !important;
+  height: 350px !important;
+  border: 35px solid transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), -webkit-gradient(linear, left bottom, left top, color-stop(10%, #f15113), to(#f5811f));
+  background-image: linear-gradient(#fff, #fff), linear-gradient(to top, #f15113 10%, #f5811f 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  font-size: 28px;
+  line-height: 1.29;
+  letter-spacing: -1.12px;
+}
+
+body main.sub_page.about#person .sub_section.section_03 .team.swiper-container .swiper-wrapper .swiper-slide.big .logo_svg {
+  width: 103px;
+  height: 52px;
+}
+
+body main.sub_page.about#person .sub_section.section_03 .team.swiper-container .swiper-wrapper .swiper-slide.big p {
+  margin-top: 15px;
+}
+
+body main.sub_page.about#person .sub_section.section_03 .team.swiper-container .swiper-wrapper .swiper-slide.big p strong {
+  color: #1a3968;
+}
+
+body main.sub_page.about#person .sub_section.section_04 {
+  margin-top: 120px;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 {
+  margin-top: 70px;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-top: 1px solid #333;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 720px;
+  padding: 28px 0 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box.margin {
+  margin-right: 40px;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box.margin:nth-child(2n) {
+  margin-right: 0;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box.full_size {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box:nth-child(odd) {
+  margin-left: 0;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box.textarea_box {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 300px;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box #search_box {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 85px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: -0.72px;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box #search_box ion-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  color: #fff;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box label {
+  vertical-align: top;
+  display: inline-block;
+  width: 50px;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box label.text_02 {
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: -0.72px;
+  color: #666;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box input, body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box textarea {
+  width: 100%;
+  margin-left: 40px;
+  border: none;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box input::-webkit-input-placeholder, body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box textarea::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box input:-ms-input-placeholder, body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box textarea:-ms-input-placeholder {
+  color: #aaa;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box input::-ms-input-placeholder, body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box textarea::-ms-input-placeholder {
+  color: #aaa;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box input::placeholder, body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box textarea::placeholder {
+  color: #aaa;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .input_box textarea {
+  width: 100%;
+  height: 100%;
+}
+
+body main.sub_page.cscenter#as .sub_section.section_01 .content_wrap .input_wrap .submit_box.box_01 {
+  margin-top: 70px;
 }
 
 @-webkit-keyframes business_ani {

@@ -222,38 +222,35 @@
             </nav>
         </nav>
     </header>
+    <!-- <?php include_once('../include/header.html') ?> -->
     <!-----------------------------header ver_01----------------------------->
 
-    <!-- <?php include_once('../include/header.html') ?> -->
-    <!-- ---------------------------header--------------------------- -->
 
-    <main class="sub_page about partner" id="partner">
+    <!-- ---------------------------main--------------------------- -->
+    <main class="sub_page cscenter as" id="as">
 
         <!-- sub_navi -->
         <section class="sub_navi" id="sub_navi">
             <!-- sub_navi_content -->
             <div class="content_wrap">
                 <div class="text_wrap">
-                    <p class="text_01">ABOUT US</p>
-                    <p class="text_02">협력사</p>
+                    <p class="text_01">CS CENTER</p>
+                    <p class="text_02">A/S접수</p>
                 </div>
 
                 <div class="bar_wrap"></div>
 
                 <div class="link_wrap">
-                    <a href="../about/about.html">회사소개</a>
-                    <a href="../about/history.html">연혁</a>
-                    <a href="../about/brand.html">계열사&브랜드</a>
-                    <a href="../about/partner.html">협력사</a>
-                    <a href="../about/person.html">인재채용</a>
-                    <a href="../about/direction.html">오시는길</a>
+                    <a href="#none">A/S접수</a>
+                    <a href="#none">문의접수</a>
+                    <a href="#none">자료실</a>
                 </div>
             </div>
 
 
             <!-- background_point -->
             <div class="background_point">
-                <p class="point_text">ABOUT US</p>
+                <p class="point_text">CS CENTER</p>
             </div>
 
         </section>
@@ -262,8 +259,8 @@
         <section class="sub_section section_title">
 
             <div class="text_wrap">
-                <p class="text_01">협력사</p>
-                <p class="text_02">C&H는 우수한 자체 기술력과 새로운 혁신으로 발전해나가겠습니다.</p>
+                <p class="text_01">A/S 문의</p>
+                <p class="text_02">C&H궁금한 점을 무엇이든 물어보세요.</p>
             </div>
 
         </section>
@@ -273,107 +270,81 @@
         <section class="sub_section section_01">
             <div class="content_wrap">
 
-                <!-- partner_navi -->
-                <div class="partner_navi" id="partner_navi">
-                    <a href="#none" class="active">기상</a>
-                    <a href="#none">물</a>
-                    <a href="#none">토양</a>
-                    <a href="#none">지질</a>
-                    <a href="#none">라돈</a>
-                </div>
+                <div class="input_wrap">
 
+                    <p class="input_box margin">
+                        <label for="" class="text_02 margin0">이름</label>
+                        <input type="text" name="" id="" placeholder="이름을 입력해주세요">
+                    </p>
 
-                <div class="partner_swiper swiper-container">
+                    <p class="input_box margin">
+                        <label for="" class="text_02 margin0">회사명</label>
+                        <input type="text" name="" id="" placeholder="회사명을 입력해주세요">
+                    </p>
 
+                    <p class="input_box margin">
+                        <label for="" class="text_02">이메일</label>
+                        <input type="text" name="" id="" placeholder="이메일을 입력해주세요">
+                    </p>
 
-                    <div class="swiper-wrapper">
+                    <p class="input_box margin">
+                        <label for="" class="text_02">연락처</label>
+                        <input type="text" name="" id="" placeholder="연락처을 입력해주세요">
+                    </p>
 
-                        <div class="swiper-slide active"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
+                    <p class="input_box margin">
+                        <label for="" class="text_02">팩스</label>
+                        <input type="text" name="" id="" placeholder="팩스를 입력해주세요">
+                    </p>
 
+                    <p class="input_box margin">
+                        <label for="" class="text_02">제품명</label>
+                        <input type="text" name="" id="" placeholder="제품명을 입력해주세요">
+                        <span class="search_box" id="search_box">
+                            <ion-icon name="search-outline"></ion-icon>
+                            검색
+                        </span>
+                    </p>
 
-                        <!-- partner data.json -->
-                        <script>
-                            $(function() {
+                    <p class="input_box full_size">
+                        <label for="" class="text_02">제목</label>
+                        <input type="text" name="" id="" placeholder="제목을 입력해주세요">
+                    </p>
 
-                                $.ajax({
-                                    url: '../js/data.json',
-                                    success: function(data) {
-                                        let type, partnerName, partnerAddr_01, partnerAddr_02, homepageUrl;
+                    <p class="input_box full_size textarea_box">
+                        <label for="" class="text_02">내용</label>
+                        <textarea name="" id="" placeholder="내용을 입력해주세요"></textarea>
 
+                    </p>
 
-                                        function dataFun(ty) {
-                                            let tagList = '';
-                                            let i = 0;
-
-                                            for (idx in data) {
-
-                                                // let tt = data.partner_weather;
-
-                                                let testArry = [];
-                                                testArry.push(data.partner_weather, data.partner_water, data.partner_soil, data.partner_lipid, data.partner_radon)
-                                                let tt = testArry[i];
-
-
-                                                tt.forEach(function(value, key) {
-                                                    if (value.type == ty) {
-
-                                                        partnerName = value.partnerName;
-                                                        partnerAddr_01 = value.partnerAddr_01;
-                                                        partnerAddr_02 = value.partnerAddr_02;
-                                                        homepageUrl = value.homepageUrl;
-
-                                                        tagList = '<div class="slide_box"><div class="slide_head"><span class="text_01">' + partnerName + '</span><i><span></span><span></span></i></div>'
-                                                        tagList += '<div class="slide_body"><p class="text_01"><em>' + partnerAddr_01 + '</em><em>' + partnerAddr_02 + '</em></p>'
-                                                        tagList += '<p class="homepage_ico"><a href="' + homepageUrl + '"><img src="../images/ico/ico_home_color.svg" alt=""></a></p></div></div>'
-
-                                                    }
-                                                    $('.swiper-wrapper .swiper-slide').eq(i).append(tagList);
-                                                });
-                                                i++;
-                                            }
-
-
-                                            $('.partner_navi a').click(function() {
-                                                let idx;
-
-                                                $('.partner_navi a').removeClass('active');
-                                                $(this).addClass('active');
-                                                idx = $(this).index();
-
-                                                $('.partner_swiper .swiper-slide').removeClass('active')
-                                                $('.partner_swiper .swiper-slide').eq(idx).addClass('active')
-                                            })
-
-                                            $('.partner_swiper .slide_box').click(function() {
-                                                $(this).toggleClass('active');
-                                                ($(this).hasClass('active')) ? $(this).children('.slide_body').toggleClass('active'): $(this).children('.slide_body').removeClass('active');
-                                            });
-
-                                        }
-                                        dataFun()
-                                    }
-                                });
-                            });
-                        </script>
-                        <!-- partner data.json -->
-
-
-
+                    <div class="submit_box box_01">
+                        <button type="submit">문의하기</button>
                     </div>
 
-                    <div class="swiper-pagination"></div>
+
+
                 </div>
+
+
+
 
             </div>
         </section>
 
     </main>
 
+    <script>
+        $('.slide_head').click(function() {
+            $(this).parent().toggleClass('active');
+            ($(this).hasClass('active')) ? $(this).children('.slide_body').toggleClass('active'): $(this).children('.slide_body').removeClass('active');
+        });
+    </script>
 
+    <!-- --------------------------- main --------------------------- -->
+
+
+
+    <!-- --------------------------- footer --------------------------- -->
     <footer class="footer section fp-auto-height" id="footer">
         <div class="footer_wrap ">
             <nav class="footer_left">
@@ -476,7 +447,6 @@
             </nav>
         </div>
     </footer>
-    <!-- --------------------------- main --------------------------- -->
 
 
     <!-- ---------------------------footer--------------------------- -->

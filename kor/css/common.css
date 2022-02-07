@@ -17,6 +17,7 @@ html{
 	scroll-behavior: smooth;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: auto;
+	overflow-x: hidden;
 }
 
 html, body, div, span, applet, object, iframe,

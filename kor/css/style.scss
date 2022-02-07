@@ -389,6 +389,26 @@ body {
             }
         }
     }
+
+    .submit_box {
+        &.box_01  {
+                width: 100%; text-align: center;
+            button {
+                cursor: pointer;
+                width: 160px; height: 60px;
+                background: transparent; 
+                border-radius: 50px; border: 1px solid #000; color: #000;
+                font-size: 18px; letter-spacing: -0.72px;
+                @include transition(.15s);
+                &:hover, &:active {
+                    background: $color-100; color: #fff;
+                    border-color: transparent;
+                }
+            }
+        }
+        
+    }
+
 }
 // ====================================default css====================================
 
@@ -1202,12 +1222,22 @@ body {
                                     margin-top: 60px;
                                     display: flex; flex-wrap: wrap;
                                     .input_box {
+                                        position: relative;
                                         display: flex; align-items: center;
                                         width: 50%; max-width: 320px; 
                                         padding: 28px 0 20px;
                                         border-bottom: 1px solid #ddd;
                                         &.full_size {width: 100%; max-width: 700px; margin-left: 0;}
                                         &:nth-child(odd) {margin-left: 0;}
+
+                                        #search_box {
+                                            cursor: pointer;
+                                            position: absolute; top: 50%; right: 0; transform: translateY(-50%);
+                                            ion-icon {
+                                                width: 20px; height: 20px;
+                                                color: #000;
+                                            }
+                                        }
                                         label {
                                             vertical-align: top;
                                             display: inline-block; width: 50px;
@@ -1221,22 +1251,10 @@ body {
                                         textarea {width: 70%;}
                                     }
         
-                                    .submit_box {
-                                        @include marginTop-30();
-                                        width: 100%; text-align: center;
-                                        button {
-                                            cursor: pointer;
-                                            width: 160px; height: 60px;
-                                            background: transparent; 
-                                            border-radius: 50px; border: 1px solid #000; color: #000;
-                                            font-size: 18px; letter-spacing: -0.72px;
-                                            @include transition(.15s);
-                                            &:hover, &:active {
-                                                background: $color-100; color: #fff;
-                                                border-color: transparent;
-                                            }
-                                        }
-        
+                                    .submit_box{
+                                        &.box_01 {
+                                            @include marginTop-30();
+                                        } 
                                     }
                                 }
                             }
@@ -1395,9 +1413,10 @@ body {
 
             // ABOUT sub_page
             &.about {
+
+                // 회사소개
                 &#company {
                     .sub_section {
-        
                         &.section_01 {
                             @include marginTop-70();
                             .content_wrap {
@@ -1459,6 +1478,7 @@ body {
                     }
                 }
             
+                // 연혁
                 &#history {
                     .section_01 {
                         .content_wrap {
@@ -1548,6 +1568,7 @@ body {
                     
                 }
 
+                // 브랜드
                 &#brand {
                     .sub_section {
                         &.section_01 {
@@ -1606,6 +1627,7 @@ body {
                     } 
                 }
 
+                // 협력사
                 &#partner {
                     .sub_section {
                         &.section_01 {
@@ -1722,6 +1744,282 @@ body {
                     }
 
                 }
+
+                // 오시는길
+                &#direction {
+                    .sub_section {
+                        &.section_01 {
+                            @include marginTop-70();
+                            .content_wrap {
+                                display: flex;
+                                > div {
+                                    &.box_wrap {
+                                        .slide_box {
+                                            width: 680px;
+                                            border: 1px solid #ddd;
+                                            padding: 30px; 
+                                            margin: 0 0 20px 0;
+                                            &:nth-of-type(3n) {margin-right: 0;}
+        
+                                            &.active {
+                                                .slide_head {
+                                                    i {
+                                                        span {
+                                                            &:nth-child(2){
+                                                                top: calc(50% + -1px);
+                                                                transform: rotate(90deg);
+                                                            }
+                                                        }
+                                                    }
+                                                }
+        
+                                                .slide_body {
+                                                    display: flex;
+                                                }
+                                            }
+                                            .slide_head {
+                                                display: flex; align-items: center; justify-content: space-between;
+                                                cursor: pointer;
+                                                .text_01 { font-size: 24px; font-weight: bold; line-height: 1.25; letter-spacing: -0.96px; }
+                                                i {
+                                                    display: flex;
+                                                    position: relative;
+                                                    width: 20px; height: 20px;
+                                                    span {
+                                                        @include absolute-y(0, 50%);
+                                                        @include transition(.15s);
+                                                        display: flex;
+                                                        width: 100%; height: 2px; background-color: #000;
+                                                    }
+                                                }
+        
+                                            }
+                                            .slide_body {
+                                                margin-top: 20px;
+                                                display: none; align-items: center; justify-content: space-between;
+                                                .text_01 {
+                                                    @include font-18();
+                                                    font-weight: 300; line-height: 1.33; color: #666;
+                                                    em {
+                                                        display: block;
+                                                        ion-icon {
+                                                            width: 15px;height: 15px; color: $color-100;
+                                                            margin-right: 10px;
+                                                        }
+                                                    }
+                                                }
+                                                
+                                                .homepage_ico {
+                                                    a {
+                                                        @include transition(.15s);
+                                                        &:hover {
+                                                            opacity: .5;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &.map_wrap {
+                                        margin-left: 55px;
+                                        width: 100%; height: 660px;
+                                    }
+
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+                &#person {
+                    .sub_section {
+
+                        // tab_navi_section
+                        &.tab_navi_section {
+                            .person_tab {
+                                .text_wrap {
+                                    @include font-18();
+                                    a {
+                                        position: relative;
+                                        margin-right: 35px;
+                                        color: #666;
+                                        @include transition(.15s);
+
+                                        &::after {
+                                            @include absolute-y(0, 100%);
+                                            content: '';
+                                            width: 0; height: 2px;
+                                            margin-top: 5px;
+                                            background-color: $color-100;
+                                            @include transition(.3s);
+                                        }
+                                        &.active, &:hover {
+                                            color: $color-100;
+                                            &::after {width: 100%;}
+                                        }
+                                    }
+                                }
+                                &.tab_01 {}
+                            }
+
+                        }
+
+                        &.section_01{
+                            @include marginTop-70();
+                        }
+
+                        &.section_02 {
+                            margin-top: 30px;
+                            .img_wrap {
+                                figure {
+                                    position: relative;
+                                    img {}
+                                    figcaption {
+                                        position: absolute; left: 50%; top: 62%; transform: translateX(-50%);
+                                        width: 1100px;
+                                        p {
+                                            background-color: #fff; text-align: center;
+                                            &.text_01 {
+                                                padding: 80px 180px 0;
+                                                font-size: 48px; font-weight: 300; line-height: 1.33; letter-spacing: -1.92px; color: #333;
+                                                strong {font-weight: normal;}  
+                                            }
+                                            &.text_02 {
+                                                margin-top: 40px;
+                                                font-size: 18px; font-weight: 300; line-height: 1.33; letter-spacing: -0.72px; color: #666;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &.section_03 {
+                            margin-top: 260px;
+                            .team {
+                                &.swiper-container {
+                                    &::after {
+                                        content: '';
+                                        width: 100%; height: 2px; background: #ddd;
+                                        position: absolute; left: 0; top: 50%;
+                                    }
+                                    .swiper-wrapper {
+                                        align-items: center; justify-content: center;
+                                        .swiper-slide {
+                                            @include flexCenter();
+                                            flex-direction: column;
+                                            width: 130px !important; height: 130px !important; border: 1px solid $color-100; border-radius: 100%;
+                                            background: #fff;
+                                            font-size: 20px; line-height: 1.2; letter-spacing: -0.8px; text-align: center;
+                                            margin: 0 28px 0 0;
+                                            &.margin_0 {margin: 0;}
+
+                                            &.big {
+                                                margin: 0 60px 0;
+                                                width: 350px !important; height:350px !important;
+                                                border: 35px solid transparent;
+                                                background-image: linear-gradient(#fff, #fff),  linear-gradient(to top, #f15113 10%,  #f5811f 100%);
+                                                background-origin: border-box;
+                                                background-clip: content-box, border-box;
+                                                font-size: 28px;line-height: 1.29;letter-spacing: -1.12px;
+                                                .logo_svg {
+                                                    width: 103px; height: 52px;
+                                                }
+                                                p {
+                                                    margin-top: 15px;
+                                                    strong {color: #1a3968;}
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        
+                        &.section_04 {
+                            margin-top: 120px;
+                        }
+                    }
+                }
+
+
+                
+
+                
+            }
+
+
+            // CS CENTER 
+            &.cscenter {
+                &#as {
+                    .sub_section {
+                        &.section_01 {
+                            @include marginTop-70();
+                            .content_wrap {
+                                .input_wrap  {
+                                    display: flex; flex-wrap: wrap;
+                                    border-top: 1px solid #333;
+                                    .input_box {
+                                        position: relative;
+                                        display: flex; align-items: center;
+                                        width: 100%; max-width: 720px;
+                                        padding: 28px 0 20px;
+                                        border-bottom: 1px solid #ddd;
+                                        &.margin {margin-right: 40px;}
+                                        &.margin:nth-child(2n) {margin-right: 0;}
+                                        &.full_size {width: 100%; max-width:100%; margin-left: 0;}
+                                        &:nth-child(odd) {margin-left: 0;}
+                                        &.textarea_box {
+                                            align-items: flex-start; height: 300px;
+                                        }
+
+                                        #search_box {
+                                            cursor: pointer;
+                                            @include flexCenter();
+                                            width: 85px; height: 40px;
+                                            position: absolute; top: 50%; right: 0; transform: translateY(-50%);
+                                            background-color: #000;
+                                            color: #fff;
+                                            font-size: 18px; letter-spacing: -0.72px;
+                                            ion-icon {
+                                                width: 20px; height: 20px;
+                                                margin-right: 8px;
+                                                color: #fff;
+                                            }
+                                        }
+                                        
+                                        label {
+                                            &.text_02 {font-size: 18px;line-height: 1.33;letter-spacing: -0.72px; color: #666;}
+                                            vertical-align: top;
+                                            display: inline-block; width: 50px;
+                                        
+                                        }
+                                        input, textarea {
+                                            width: 100%; 
+                                            margin-left: 40px;
+                                            border: none;
+                                            &::placeholder {color: #aaa;}
+                                        }
+                                        textarea {width: 100%; height: 100%}
+                                    }
+
+                                    .submit_box {
+                                        &.box_01 {
+                                            @include marginTop-70();
+                                        }
+                                    }
+                                }
+
+                                
+                            }
+                        }
+                    }
+
+                }
+
             }
 
 

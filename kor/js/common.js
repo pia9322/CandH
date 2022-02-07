@@ -195,18 +195,26 @@ $(function(){
     
 
     // page check header active
-    function headerActive() {
+    function pageCheck() {
         let nowLocation = location.href;
-        let nowIdxOf = nowLocation.indexOf('index');
-    
-        (nowIdxOf <= 0 ) ? $('#header').addClass('active') : console.log('erro');
+        // let nowIdxOf = nowLocation.indexOf('index');
+        let subNaviEvent = $('#sub_navi .content_wrap .text_02').text();
+        let LinkActive = $('.link_wrap a');
+
+        // link_wrap auto active
+        LinkActive.each(function(idx){
+            (subNaviEvent == LinkActive.eq(idx).text()) ? $(this).addClass('active') : console.log(subNaviEvent);
+        });
+
+        // location Check
+        (nowLocation.indexOf('index') >= 0 ) ?  console.log('Home') : $('#header').addClass('active');
+        (nowLocation.indexOf('/about/') >= 0 ) ? null : null
     }
     
 
 
 
-    headerActive()
-    
+    pageCheck()
     headerRight()
     // common_js_end
     console.log('common_js_end')

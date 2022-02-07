@@ -43,8 +43,6 @@
 
     <!-- --------------------Script-------------------- -->
     <script src="../js/jquery.js"></script>
-    <script src="../js/fullpage.min.js"></script>
-    <script src="../js/scrolloverflow.min.js.js"></script>
     <script src="../js/swiper.js"></script>
     <script src="../js/aos.js"></script>
     <script src="../js/gsap.min.js"></script>
@@ -222,20 +220,19 @@
             </nav>
         </nav>
     </header>
+    <!-- <?php include_once('../include/header.html') ?> -->
     <!-----------------------------header ver_01----------------------------->
 
-    <!-- <?php include_once('../include/header.html') ?> -->
-    <!-- ---------------------------header--------------------------- -->
 
-    <main class="sub_page about partner" id="partner">
-
+    <!-- ---------------------------main--------------------------- -->
+    <main class="sub_page about person" id="person">
         <!-- sub_navi -->
         <section class="sub_navi" id="sub_navi">
             <!-- sub_navi_content -->
             <div class="content_wrap">
                 <div class="text_wrap">
                     <p class="text_01">ABOUT US</p>
-                    <p class="text_02">협력사</p>
+                    <p class="text_02">인재채용</p>
                 </div>
 
                 <div class="bar_wrap"></div>
@@ -262,118 +259,157 @@
         <section class="sub_section section_title">
 
             <div class="text_wrap">
-                <p class="text_01">협력사</p>
-                <p class="text_02">C&H는 우수한 자체 기술력과 새로운 혁신으로 발전해나가겠습니다.</p>
+                <p class="text_01">인재채용</p>
+                <p class="text_02">C&H는 지속 가능한 성장을 꿈꾸는 인재를 기다립니다.</p>
             </div>
 
         </section>
 
-
-        <!-- section_01 -->
-        <section class="sub_section section_01">
+        <!-- section_01 tab_navi_section -->
+        <section class="sub_section section_01 tab_navi_section">
             <div class="content_wrap">
 
-                <!-- partner_navi -->
-                <div class="partner_navi" id="partner_navi">
-                    <a href="#none" class="active">기상</a>
-                    <a href="#none">물</a>
-                    <a href="#none">토양</a>
-                    <a href="#none">지질</a>
-                    <a href="#none">라돈</a>
-                </div>
-
-
-                <div class="partner_swiper swiper-container">
-
-
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide active"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-
-
-                        <!-- partner data.json -->
-                        <script>
-                            $(function() {
-
-                                $.ajax({
-                                    url: '../js/data.json',
-                                    success: function(data) {
-                                        let type, partnerName, partnerAddr_01, partnerAddr_02, homepageUrl;
-
-
-                                        function dataFun(ty) {
-                                            let tagList = '';
-                                            let i = 0;
-
-                                            for (idx in data) {
-
-                                                // let tt = data.partner_weather;
-
-                                                let testArry = [];
-                                                testArry.push(data.partner_weather, data.partner_water, data.partner_soil, data.partner_lipid, data.partner_radon)
-                                                let tt = testArry[i];
-
-
-                                                tt.forEach(function(value, key) {
-                                                    if (value.type == ty) {
-
-                                                        partnerName = value.partnerName;
-                                                        partnerAddr_01 = value.partnerAddr_01;
-                                                        partnerAddr_02 = value.partnerAddr_02;
-                                                        homepageUrl = value.homepageUrl;
-
-                                                        tagList = '<div class="slide_box"><div class="slide_head"><span class="text_01">' + partnerName + '</span><i><span></span><span></span></i></div>'
-                                                        tagList += '<div class="slide_body"><p class="text_01"><em>' + partnerAddr_01 + '</em><em>' + partnerAddr_02 + '</em></p>'
-                                                        tagList += '<p class="homepage_ico"><a href="' + homepageUrl + '"><img src="../images/ico/ico_home_color.svg" alt=""></a></p></div></div>'
-
-                                                    }
-                                                    $('.swiper-wrapper .swiper-slide').eq(i).append(tagList);
-                                                });
-                                                i++;
-                                            }
-
-
-                                            $('.partner_navi a').click(function() {
-                                                let idx;
-
-                                                $('.partner_navi a').removeClass('active');
-                                                $(this).addClass('active');
-                                                idx = $(this).index();
-
-                                                $('.partner_swiper .swiper-slide').removeClass('active')
-                                                $('.partner_swiper .swiper-slide').eq(idx).addClass('active')
-                                            })
-
-                                            $('.partner_swiper .slide_box').click(function() {
-                                                $(this).toggleClass('active');
-                                                ($(this).hasClass('active')) ? $(this).children('.slide_body').toggleClass('active'): $(this).children('.slide_body').removeClass('active');
-                                            });
-
-                                        }
-                                        dataFun()
-                                    }
-                                });
-                            });
-                        </script>
-                        <!-- partner data.json -->
-
-
-
-                    </div>
-
-                    <div class="swiper-pagination"></div>
+                <div class="person_tab tab_01" id="tab_01">
+                    <p class="text_wrap">
+                        <a href="#none" class="active">직무소개.인재상</a>
+                        <a href="#none">채용공고</a>
+                    </p>
                 </div>
 
             </div>
         </section>
 
+        <!-- section_02 -->
+        <section class="sub_section section_02">
+            <div class="content_wrap">
+
+                <div class="img_wrap">
+                    <figure>
+                        <img src="../images/about/person_01.png" alt="">
+                        <figcaption>
+                            <p class="text_01">
+                                C&H, Inc는 <strong>소통과 협력의 문화와
+                                    <br class="pc_only">
+                                </strong>시스템을 만들어 가고 있습니다.
+                            </p>
+                            <p class="text_02">
+                                C&H,Inc는 소통과 협력의 시스템으로 시너지를 만들어내고 있습니다. C&H,Inc는 설립 이래로 지속적인 성장을 이루어 왔습니다.
+                                <br class="pc_only">
+                                소통을 바탕으로 쌓은 두꺼운 고객층과 협력사와의 원만한 관계를 통해 이룬 성장입니다.
+                                <br>
+                                <br class="pc_only">
+                                앞으로도 C&H,Inc는 소통과 협력을 중심으로 임직원, 고객, 협력사의 행복을 추구하며 더 나아가 자연과 공존하는 삶의 새로운 가치를 만들어 나가겠습니다.
+                            </p>
+                        </figcaption>
+                    </figure>
+
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- section_03 -->
+        <section class="sub_section section_03">
+            <div class="content_wrap">
+
+                <section class="team swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">기술<br>영업팀</div>
+
+                        <div class="swiper-slide">경영<br>지원팀</div>
+                        <div class="swiper-slide margin_0">기술팀</div>
+
+                        <div class="swiper-slide big">
+                            <div class="logo_svg">
+                                <img src="../images/ico/logo.svg" alt="">
+                            </div>
+                            <p>
+                                <strong>창조하는 사람들</strong>이
+                                만들어가는 세상
+                            </p>
+                        </div>
+
+                        <div class="swiper-slide">신사업팀</div>
+
+                        <div class="swiper-slide">부설연구소</div>
+                        <div class="swiper-slide">솔루션<br>개발팀</div>
+                </section>
+
+            </div>
+        </section>
+
+        <!-- section_04 tab_navi_section -->
+        <section class="sub_section section_04 tab_navi_section">
+            <div class="content_wrap">
+                <div class="person_tab tab_02" id="tab_02">
+                    <p class="text_wrap">
+                        <a href="#none" class="active">기술팀</a>
+                        <a href="#none">기술 영업팀</a>
+                        <a href="#none">솔루션 개발팀</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- section_04 tab_section -->
+        <section class="sub_section section_05 tab_section" id="tab_section">
+            <div class="content_wrap">
+
+                <section class="team_info swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">기술<br>영업팀</div>
+                    </div>
+                </section>
+
+
+            </div>
+        </section>
+
+
     </main>
+    <script>
+        // main_bis
+        var swiper02 = new Swiper('.team.swiper-container', {
+            slidesPerView: 'auto',
+            // loop: true,
+            touchMoveStopPropagation: true,
+            breakpoints: {
+                1600: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                500: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                }
+            }
+        });
 
 
+        let year = ['1994~2005', '2007~2011', '2012~2017', '2018~현재']
+
+        var teamTab = new Swiper("#tab_02", {
+            pagination: {
+                el: ".swiper-pagination.pagination_progress",
+                clickable: true,
+                renderBullet: function(index, className) {
+                    return '<span class="' + className + '">' + (year[index]) + '</span>';
+                },
+            },
+        });
+    </script>
+
+    <!-- --------------------------- main --------------------------- -->
+
+
+
+    <!-- --------------------------- footer --------------------------- -->
     <footer class="footer section fp-auto-height" id="footer">
         <div class="footer_wrap ">
             <nav class="footer_left">
@@ -476,7 +512,6 @@
             </nav>
         </div>
     </footer>
-    <!-- --------------------------- main --------------------------- -->
 
 
     <!-- ---------------------------footer--------------------------- -->
