@@ -659,15 +659,15 @@ body main.sub_page.about#direction .sub_section.section_01 .content_wrap > div.b
 
 body main.sub_page.about#direction .sub_section.section_01 .content_wrap > div.map_wrap { margin-left: 55px; width: 100%; height: 660px; }
 
-body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap { font-size: 18px; letter-spacing: -0.72px; }
+body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap { font-size: 18px; letter-spacing: -0.72px; position: relative; text-align: left; }
 
-body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a { position: relative; margin-right: 35px; color: #666; transition: 0.15s; -webkit-transition: 0.15s; -moz-transition: 0.15s; -ms-transition: 0.15s; -o-transition: 0.15s; }
+body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a, body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap span { width: auto; height: auto; background: transparent; border: none; position: relative; margin-right: 35px; color: #666; transition: 0.15s; -webkit-transition: 0.15s; -moz-transition: 0.15s; -ms-transition: 0.15s; -o-transition: 0.15s; }
 
-body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a::after { position: absolute; left: 0; top: 100%; -webkit-transform: translateY(-100%); transform: translateY(-100%); content: ''; width: 0; height: 2px; margin-top: 5px; background-color: #f5821f; transition: 0.3s; -webkit-transition: 0.3s; -moz-transition: 0.3s; -ms-transition: 0.3s; -o-transition: 0.3s; }
+body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a::after, body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap span::after { position: absolute; left: 0; top: 100%; -webkit-transform: translateY(-100%); transform: translateY(-100%); content: ''; width: 0; height: 2px; margin-top: 5px; background-color: #f5821f; transition: 0.3s; -webkit-transition: 0.3s; -moz-transition: 0.3s; -ms-transition: 0.3s; -o-transition: 0.3s; }
 
-body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a.active, body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a:hover { color: #f5821f; }
+body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a.active, body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a:hover, body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a.swiper-pagination-bullet-active, body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap span.active, body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap span:hover, body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap span.swiper-pagination-bullet-active { color: #f5821f; }
 
-body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a.active::after, body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a:hover::after { width: 100%; }
+body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a.active::after, body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a:hover::after, body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap a.swiper-pagination-bullet-active::after, body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap span.active::after, body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap span:hover::after, body main.sub_page.about#person .sub_section.tab_navi_section .person_tab .text_wrap span.swiper-pagination-bullet-active::after { width: 100%; }
 
 body main.sub_page.about#person .sub_section.section_01 { margin-top: 70px; }
 
@@ -704,6 +704,56 @@ body main.sub_page.about#person .sub_section.section_03 .team.swiper-container .
 body main.sub_page.about#person .sub_section.section_03 .team.swiper-container .swiper-wrapper .swiper-slide.big p strong { color: #1a3968; }
 
 body main.sub_page.about#person .sub_section.section_04 { margin-top: 120px; }
+
+body main.sub_page.about#person .sub_section.section_05 { margin-top: 40px; }
+
+body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide { background: #fff; }
+
+body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap { margin-top: 60px; }
+
+body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table { width: 100%; }
+
+body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table tr { font-size: 18px; letter-spacing: -0.72px; line-height: 1.5; }
+
+body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table th { border: 1px solid #fff; background-color: #f5821f; color: #fff; font-weight: 500; }
+
+body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table td { border: 1px solid #ddd; color: #666; font-weight: 300; padding: 40px; }
+
+body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table td.td_01 { text-align: center; }
+
+body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table td:first-child { border-left: none; }
+
+body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table td:last-child { border-right: none; }
+
+body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table thead { height: 60px; }
+
+body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table tbody { height: 180px; }
+
+body main.sub_page.about#person .sub_section.section_06 { margin-top: 120px; }
+
+body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container { overflow: visible; }
+
+body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide { position: relative; }
+
+body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide::after { content: ''; position: absolute; width: 100%; height: 100%; background: url("../images/about/person_dotted_01.svg") no-repeat; background-size: contain; }
+
+body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide:nth-child(odd)::after { left: -20px; top: -20px; }
+
+body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide:nth-child(even)::after { -webkit-transform: rotate(180deg); transform: rotate(180deg); left: -20px; bottom: -20px; }
+
+body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .dots { position: absolute; left: -24px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 8px; height: 8px; border-radius: 100%; background-color: #f5821f; }
+
+body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .dots.right { left: auto; right: 18px; }
+
+body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 333px; height: 333px; border: 1px solid #ddd; border-radius: 100%; }
+
+body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box figure { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; text-align: center; }
+
+body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box figure figcaption { font-size: 18px; letter-spacing: -0.72px; line-height: 1.33; }
+
+body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box figure figcaption .text_01 { margin-top: 20px; font-weight: 500; color: #f5821f; }
+
+body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box figure figcaption .text_02 { margin-top: 16px; color: #666; }
 
 body main.sub_page.cscenter#as .sub_section.section_01 { margin-top: 70px; }
 

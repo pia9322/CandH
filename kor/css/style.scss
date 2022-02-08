@@ -7,6 +7,8 @@ $reset-time: 150ms;
 // color
 $color-100 : #f5821f;
 
+$border-hegith : 185px;
+
 // ====================================default mixin====================================
 @mixin absolute-center {position: absolute;left: -50%;top: -50%;transform: translate(-50%, -50%);}
 @mixin absolute-x($left, $top) {position: absolute;left: $left;top: $top;transform: translateX(-$left);}
@@ -24,7 +26,7 @@ $color-100 : #f5821f;
 @mixin flexCenter { display: flex; justify-content: center; align-items: center; }
 
 
-// 
+//
 @mixin marginTop-120 {margin-top: 120px;}
 @mixin marginTop-100 {margin-top: 100px;}
 @mixin marginTop-70 {margin-top: 70px;}
@@ -68,7 +70,7 @@ body {
         border-radius: 20px;
         display: inline-block;
         @include transition(.15s);
-        &.black { 
+        &.black {
             border: 1px solid #000;
             span { color: #000; }
         }
@@ -87,31 +89,31 @@ body {
             @include transition(.15s);
         }
     }
-    
+
     .table_wrap {
         .table_header {
             margin: 0 auto 2rem;
             // border: 1px solid #F00;
             display: flex;
             justify-content: space-between;
-    
-    
+
+
             .table_text_search {
                 display: flex;
                 align-items: center;
-    
+
                 .search_form {
                     fieldset {
                         legend {
                             display: none;
                         }
-    
+
                         display: flex;
                         align-items: center;
-    
+
                         .form_02_selectbox {
                             flex-wrap: wrap;
-    
+
                             select {
                                 border: 1px solid #ddd;
                                 width: 90px;
@@ -119,7 +121,7 @@ body {
                                 margin-right: 6px;
                                 padding-left: 14px;
                             }
-    
+
                             input[type=text] {
                                 height: 40px;
                                 width: 220px;
@@ -127,7 +129,7 @@ body {
                                 margin-right: 6px;
                                 padding: 0 10px;
                             }
-    
+
                             input[type=submit] {
                                 background: #3bb0e2;
                                 color: #fff;
@@ -139,47 +141,47 @@ body {
                     }
                 }
             }
-    
+
         }
-    
+
         .table_notice {
             width: 100%;
             line-height: 1.78;
             letter-spacing: -0.45px;
             table-layout: fixed;
-    
+
             thead {
                 letter-spacing: -0.6px;
                 background: #f1f1f1;
                 border-top: 2px solid #1e3c5a;
                 color: #222;
                 font-size: 1.8rem;
-    
+
                 tr {
                     th {
                         padding: 20px 10px;
                         text-align: center;
-    
+
                         &.table_num,
                         &.table_data {
                             width: 17%;
                         }
-    
+
                         &.table_title {
                             width: auto;
                         }
                     }
-    
+
                 }
             }
-    
+
             tbody {
                 display: none;
                 font-size: 1.6rem;
-    
+
                 tr {
                     border-bottom: 1px solid #e5e5e5;
-    
+
                     td {
                         padding: 20px 0;
                         text-align: center;
@@ -187,71 +189,71 @@ body {
                         text-overflow: ellipsis;
                         white-space: nowrap;
                         color: #555;
-    
+
                         &.table_title {
                             text-align: left;
-    
+
                             a {
                                 color: #555;
                             }
-    
+
                             &:hover {
                                 a {
                                     color: #3bb0e2;
                                 }
                             }
                         }
-    
+
                     }
-    
+
                     .notice_download {
                         a {
                             display: block;
                         }
                     }
                 }
-    
+
                 &.active {
                     display: table-footer-group;
                 }
             }
         }
-    
+
         // table_news
         .table_news {
             margin-top: 50px;
-    
+
             .news_wrap {
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
                 flex-wrap: wrap;
-    
+
                 >a {
                     width: calc(33% - 20px);
                     margin-bottom: 40px;
-    
+
                     .news_item {
                         img {
                             object-fit: cover;
                             width: 100%;
                             height: 100%;
                         }
-    
+
                         figcaption {
                             padding: 19px 17px;
-    
+
                             >span {
                                 display: block;
                             }
-    
+
                             .text_01 {
                                 font-size: 2rem;
                                 letter-spacing: -0.2px;
                                 color: #222;
                                 transition: all .15s;
                             }
-    
+
                             .text_02 {
                                 font-size: 1.4rem;
                                 margin-top: 20px;
@@ -259,7 +261,7 @@ body {
                             }
                         }
                     }
-    
+
                     // hover, active
                     &:hover {
                         .text_01 {
@@ -269,29 +271,29 @@ body {
                 }
             }
         }
-    
+
         .table_notice_more_btn {
             margin-top: 70px;
             display: flex;
             justify-content: center;
             align-items: center;
-    
+
             .num_box {
                 a {
                     font-size: 1.6rem;
                     color: #a6a6a6;
                     padding: 0 10px;
                     font-weight: bold;
-    
+
                     &.active {
                         color: #112D4E;
                     }
                 }
             }
-    
+
             .btn_box {
                 display: flex;
-    
+
                 a {
                     display: flex;
                     align-items: center;
@@ -299,81 +301,81 @@ body {
                     padding: 5px;
                     margin: 0 5px;
                 }
-    
+
             }
         }
-    
+
     }
-    
+
     .table_wrap_more {
         margin-top: 50px;
-    
+
         .table_notice {
             width: 100%;
             line-height: 1.78;
             letter-spacing: -0.45px;
             table-layout: fixed;
-    
+
             thead {
                 letter-spacing: -0.6px;
                 border-top: 1px solid #1e3c5a;
                 border-bottom: 1px solid #e6e6e6;
                 color: #222;
                 font-size: 1.8rem;
-    
+
                 tr {
                     th {
                         padding: 20px
                     }
-    
+
                     td {
                         a {
                             display: block;
                         }
                     }
-    
+
                     .table_notice_title {
                         font-size: 2rem;
                         width: auto;
                         text-align: left;
                         vertical-align: middle;
                     }
-    
+
                     .table_notice_data {
                         font-size: 1.4rem;
                         width: 20%;
                         text-align: right;
                         color: #999;
                     }
-    
+
                     &:first-child {
                         font-size: 2rem;
                     }
                 }
             }
-    
+
             tbody {
                 tr {
                     border-bottom: 1px solid #e5e5e5;
-    
+
                     .table_notice_detail {
                         padding: 20px;
                         font-size: 1.6rem;
                     }
                 }
             }
-    
-    
-    
-    
-    
+
+
+
+
+
         }
-    
+
         .table_notice_more {
             margin-top: 40px;
             display: flex;
             justify-content: flex-end;
-    
+
             >a {
                 font-size: 1.6rem;
                 display: inline-block;
@@ -381,7 +383,7 @@ body {
                 color: #fff;
                 transition: all .3s;
                 background: #3bb0e2;
-    
+
                 &:hover {
                     color: #fff;
                     background: rgba($color: #3bb0e2, $alpha: .5);
@@ -396,7 +398,7 @@ body {
             button {
                 cursor: pointer;
                 width: 160px; height: 60px;
-                background: transparent; 
+                background: transparent;
                 border-radius: 50px; border: 1px solid #000; color: #000;
                 font-size: 18px; letter-spacing: -0.72px;
                 @include transition(.15s);
@@ -406,7 +408,7 @@ body {
                 }
             }
         }
-        
+
     }
 
 }
@@ -416,7 +418,7 @@ body {
 
 // ========================== header, footer ==========================
 body {
-    
+
     #header {
         @include header-height();
         position: fixed; left: 0;top: 0; z-index: 9999;
@@ -431,7 +433,7 @@ body {
             a {
                 color: #333;
             }
-            
+
             .header_wrap {
                 .header_center {
                     >li {
@@ -470,7 +472,7 @@ body {
             // max-width: 2560px;
 
 
-            // header_wrap hover,active 
+            // header_wrap hover,active
             &:hover {
                 background: rgba($color: #fff, $alpha: 1);
                 border-bottom: 1px solid #ddd;
@@ -523,7 +525,7 @@ body {
                 display: flex; justify-content: center;
                 width: 80%; max-width: 800px; margin: 0 auto;
                 visibility: visible;
-                
+
 
                 a {
                     display: block;
@@ -629,13 +631,13 @@ body {
                 .depth_01 {
                     display: none;
                 }
-                
-                // header_center effect 
+
+                // header_center effect
                 .depth_01.active {display: block;}
                 .header_bg.active {display: block;}
             }
 
-            // header_right 
+            // header_right
             .header_right {
                 @include transition(.3s);
                 display: flex;
@@ -653,7 +655,7 @@ body {
                 .header_search_box {
                     position: absolute; left: 0; top: 100%;
                     width: 100%;
-                    display: flex; 
+                    display: flex;
                     background: rgba($color: #fff, $alpha: .4);
                     backdrop-filter: saturate(180%) blur(10px);
                     display: none;
@@ -682,7 +684,7 @@ body {
                                     color: $color-100;
                                     @include transition(.15s);
 
-                                    // search_result_box effect 
+                                    // search_result_box effect
                                     &:hover {
                                         opacity: .5;
                                     }
@@ -858,12 +860,12 @@ body {
                             width: 210px; height: 40px;
                             border-color: #ddd;
                             background: transparent;
-                            padding: 0 20px; 
+                            padding: 0 20px;
                             font-size: 16px; font-weight: 500; line-height: 1.5;
                             &::-ms-expand {
                                 display: none;
                             }
-                        }   
+                        }
                     }
                     .footer_info {
                         margin-top: 45px;
@@ -942,41 +944,41 @@ body {
                             padding-bottom: 12px; border-bottom: 2px solid #fff;
                         }
                     }
-    
+
                     .text_02 {
                         margin-top: 35px;
                         font-size: 6rem; font-weight: bold; line-height: 0.92; letter-spacing: -2.4px;
                     }
-    
+
                     .text_03 {
                         @include marginTop-30();
                         font-size: 18px; letter-spacing: -0.72px;
                     }
                 }
                 &:not(:first-child) {}
-    
+
 
                 &.main_visual {
                     height: 100vh;
                     .mv_wrap {
                         .mv {
                             position: relative;
-    
+
                             &.mv_01 {background: url("../images/main/mv_04.png") no-repeat center/cover;}
                             &.mv_02 {background: url("../images/main/mv_01.png") no-repeat center/cover;}
                             // &.mv_03 {background: url("../images/main/mv_03.png") no-repeat center/cover;}
-    
+
                             .mv_img {width: 100%;}
-    
+
                             figcaption {
                                 width: 100%; height: 100%;
                                 display: flex; align-items: center; justify-content: center;
-                       
+
                                 .mv_text {
                                     position: relative;
                                     max-width: 1480px; width: 100%; color: #000;
                                     span { display: flex; }
-    
+
                                     .text_01 {
                                         @include font-M();
                                         font-size: 6rem;
@@ -985,7 +987,7 @@ body {
                                         letter-spacing: normal;
                                         color: #333;
                                     }
-    
+
                                     .text_02 {
                                         margin-top: 20px;
                                         font-size: 18px;
@@ -993,13 +995,13 @@ body {
                                         letter-spacing: -0.72px;
                                         color: #666;
                                     }
-    
+
                                     .btn_white_border {
                                         margin-top: 60px;
                                     }
                                     .swiper-pagination {
                                         left: 0; bottom: 100%;
-                                        display: flex; 
+                                        display: flex;
                                         .swiper-pagination-bullet {
                                             width: 13px; height: 13px;
                                             border-radius: 0;
@@ -1013,16 +1015,16 @@ body {
                                     }
                                 }
                             }
-    
+
                         }
                     }
                 }
 
-                // main_section_01 
+                // main_section_01
                 &.main_section_01 {
                     background: url('../images/main/section_02_01.png')no-repeat center/cover;
                     height: 100vh;
-    
+
                     // main_section_01 active
                     &.active {
                         .business_tabcon {
@@ -1033,10 +1035,10 @@ body {
                                 @include transition(1s 2.5s);
                                 opacity: 1 !important;
                             }
-    
+
                         }
                     }
-    
+
                     .business_tabcon {
                         position: relative;
                         width: 100%; height: 305px;
@@ -1049,7 +1051,7 @@ body {
                             position: absolute; left: 0; top: 50%;
                             margin-top: -1px;
                         }
-    
+
                         .swiper-button-prev {
                             display: inline-block;
                             cursor: pointer;
@@ -1065,7 +1067,7 @@ body {
                             margin: -11px 0 0 0;
                             display: none;
                         }
-    
+
                         .swiper-button-next {
                             display: inline-block;
                             cursor: pointer;
@@ -1080,7 +1082,7 @@ body {
                             top: 50%;
                             margin: -11px 0 0 0;
                         }
-    
+
                         .tabcon.swiper-container {
                             height: 100%; opacity: 0;
                             overflow: visible;
@@ -1108,11 +1110,11 @@ body {
                                                         }
                                                     }
                                                 }
-    
+
                                             }
                                         }
                                     }
-                                    
+
                                     > a {
                                         display: block; width: 100%; height: 100%;
                                         .boxwrap {
@@ -1120,7 +1122,7 @@ body {
                                             width: 100%;
                                             height: 100%;
                                             margin: 0 auto;
-    
+
                                             &::before {
                                                 display: block;
                                                 content: "";
@@ -1131,23 +1133,23 @@ body {
                                                 transform: translate(-50%, -50%);
                                                 @include transition(.15s)
                                             }
-    
+
                                             .bg {
                                                 position: absolute; left: 0; top: 0;
                                                 width: 100%; height: 100%;
                                                 /*background:url(/images/main/sec2_guide_bg.png) no-repeat;*/
                                                 transform: rotate(0);
                                                 @include transition(3s);
-    
+
                                                 svg {
                                                     width: 100%; height: 100%;
                                                     path {
                                                         @include transition(.3s)
                                                     }
                                                 }
-    
+
                                             }
-    
+
                                             .ico {
                                                 display: flex; align-items: flex-end; justify-content: center;
                                                 height: 50%;
@@ -1167,7 +1169,7 @@ body {
                                                 text-align: center;
                                                 &.text_01 {}
                                             }
-    
+
                                         }
                                     }
                                 }
@@ -1175,8 +1177,8 @@ body {
                         }
                     }
                 }
-    
-                // main_section_02 
+
+                // main_section_02
                 &.main_section_02 {
                     background: url('../images/main/section_03.jpg')no-repeat center/cover;
                     position: relative;
@@ -1186,18 +1188,18 @@ body {
                             margin-top: 70px;
                         }
                     }
-    
+
                     .wave_container {
-                
+
                         svg {
                             width: 100%; height: 200px;
-                            position: absolute; bottom: 0; left: 0; 
+                            position: absolute; bottom: 0; left: 0;
                             #main_wave {}
                         }
                     }
                 }
-    
-                // main_section_03 
+
+                // main_section_03
                 &.main_section_03 {
                     display: flex;
                     @include fixed-layout();
@@ -1224,7 +1226,7 @@ body {
                                     .input_box {
                                         position: relative;
                                         display: flex; align-items: center;
-                                        width: 50%; max-width: 320px; 
+                                        width: 50%; max-width: 320px;
                                         padding: 28px 0 20px;
                                         border-bottom: 1px solid #ddd;
                                         &.full_size {width: 100%; max-width: 700px; margin-left: 0;}
@@ -1241,7 +1243,7 @@ body {
                                         label {
                                             vertical-align: top;
                                             display: inline-block; width: 50px;
-                                        
+
                                         }
                                         input, textarea {
                                             margin-left: 40px;
@@ -1250,25 +1252,25 @@ body {
                                         }
                                         textarea {width: 70%;}
                                     }
-        
+
                                     .submit_box{
                                         &.box_01 {
                                             @include marginTop-30();
-                                        } 
+                                        }
                                     }
                                 }
                             }
-        
+
                             &.right_content {
                                 .content_box {
                                     height: 50%;
                                     padding: 0 0 70px 70px;
-        
+
                                     &.box_01 {
                                         .client_img {
                                             margin-top: 60px;
                                             display: flex;
-        
+
                                             a {
                                                 border: 1px solid transparent;
                                                 @include transition(.15s);
@@ -1282,7 +1284,7 @@ body {
                                     &.box_02 {
                                         padding: 70px;
                                         border-top: 1px solid #ddd;
-        
+
                                         .table_rec {
                                             margin-top: 60px;
                                             padding-bottom: 25px; border-bottom: 1px solid $color-100;
@@ -1314,19 +1316,19 @@ body {
                                                     }
                                                 }
                                             }
-                                            
-                                            
+
+
                                         }
                                     }
                                 }
                             }
                         }
                     }
-                    
+
                 }
-    
-    
-    
+
+
+
             }
         }
 
@@ -1349,7 +1351,7 @@ body {
                     .text_wrap {
                         display: flex; align-items: flex-end; line-height: 1;
                         .text_01 {
-                            @include font-M(); @include font-40(); font-weight: 800; 
+                            @include font-M(); @include font-40(); font-weight: 800;
                         }
                         .text_02 {
                             @include font-18();
@@ -1361,7 +1363,7 @@ body {
                         margin: 30px 0;
                         width: 20px; height: 4px;
                                 background: $color-100;
-                        
+
                     }
 
                     .link_wrap {
@@ -1371,7 +1373,7 @@ body {
                             margin-right: 40px;
                             @include transition(.15s);
 
-                            // active, hover 
+                            // active, hover
                             &.active, &:hover {
                                 color: $color-100;
                                 font-weight: bold;
@@ -1382,7 +1384,7 @@ body {
                 }
 
                 .background_point {
-                    position: absolute; right: -65px; bottom: 0; 
+                    position: absolute; right: -65px; bottom: 0;
                     p {
                         &.point_text {
                             @include font-M();
@@ -1422,8 +1424,8 @@ body {
                             .content_wrap {
                                 > figure {
                                     display: flex; align-items: center;
-        
-                                    figcaption { 
+
+                                    figcaption {
                                         margin-left: 110px;
                                         .text_01 {
                                             font-size: 48px; font-weight: 300; line-height: 1.33; letter-spacing: -1.92px;
@@ -1434,12 +1436,12 @@ body {
                                             margin-top: 60px;
                                             font-weight: 300; line-height: 1.67; color: #666;
                                         }
-                                    
+
                                     }
                                 }
                             }
                         }
-                        
+
                         &.section_02 {
                             @include marginTop-100();
                             .content_wrap {
@@ -1453,7 +1455,7 @@ body {
                                         letter-spacing: -0.96px;
                                     }
                                 }
-        
+
                                 .box_wrap {
                                     margin-top: 40px;
                                     display: flex; flex-wrap: wrap;
@@ -1466,7 +1468,7 @@ body {
                                         background: #f4f4f4;
                                         color: #666;
                                         &:last-child {margin-right: 0;}
-        
+
                                         .text_01 {@include font-M();}
                                         .text_02 { margin-top: 20px; color: $color-100;}
                                         .text_03 { margin-top: 10px;}
@@ -1477,7 +1479,7 @@ body {
                         }
                     }
                 }
-            
+
                 // 연혁
                 &#history {
                     .section_01 {
@@ -1491,7 +1493,7 @@ body {
                                     > span {
                                         @include transition(.15s);
                                         margin-bottom: 60px;
-                                        width: auto; height: auto;   
+                                        width: auto; height: auto;
                                         position: relative; display: block; background: none;
                                         font-size: 59px; font-weight: 300; letter-spacing: -2.36px; color: #ddd; line-height: 1;
                                         &:last-child {margin-bottom: 0;}
@@ -1513,7 +1515,7 @@ body {
                                     }
                                 }
                                 &.pagination_progress {
-                                    position: static;  
+                                    position: static;
                                     display: flex;
                                     margin-bottom: 40px;
                                     > span {
@@ -1534,12 +1536,12 @@ body {
                                 margin: 0;
 
                                 .swiper-wrapper {
-                                    
+
                                     .swiper-slide {
                                         .img_wrap {
                                             img {}
                                         }
-                                        
+
                                         figcaption {
                                             @include font-18();
                                             line-height: 2.22;
@@ -1565,7 +1567,7 @@ body {
                         }
 
                     }
-                    
+
                 }
 
                 // 브랜드
@@ -1578,15 +1580,15 @@ body {
                                     display: flex; align-items: center;
                                     margin-bottom: 80px;
                                     &:last-child {margin-bottom: 0;}
-                                    
+
                                     .img_wrap {
                                         img {}
                                     }
-                                    
+
                                     figcaption {
                                         margin-left: 60px;
                                         .text_01 {
-                                            font-size: 24px; font-weight: bold; line-height: 1; letter-spacing: -0.96px; 
+                                            font-size: 24px; font-weight: bold; line-height: 1; letter-spacing: -0.96px;
                                         }
                                         .text_02 {
                                             margin-top: 40px;
@@ -1608,7 +1610,7 @@ body {
                                                         fill: #aaa;
                                                     }
                                                 }
-                                                &:hover { 
+                                                &:hover {
                                                     background-color: $color-100;
                                                     svg {
                                                         path {
@@ -1621,10 +1623,10 @@ body {
                                     }
 
                                 }
-    
+
                             }
                         }
-                    } 
+                    }
                 }
 
                 // 협력사
@@ -1634,7 +1636,7 @@ body {
                             .content_wrap {
                                 #partner_navi {
                                     @include marginTop-70();
-                                    @include font-18(); 
+                                    @include font-18();
                                     font-weight: 500; color: #666;
                                     a {
                                         margin-right: 35px;
@@ -1647,7 +1649,7 @@ body {
                                             @include transition(.15s);
                                             width: 0; height: 2px;
                                         }
-                                        
+
                                         &:last-child {margin-right: 0;}
                                         &.active, &:hover {
                                             color: $color-100;
@@ -1663,7 +1665,7 @@ body {
                                 .swiper-container {
                                     margin-top: 30px;
                                     .swiper-wrapper {
-                                        
+
                                         .swiper-slide {
                                             display: none;
 
@@ -1674,11 +1676,11 @@ body {
                                             .slide_box {
                                                 display: inline-block;
                                                 border: 1px solid #ddd;
-                                                padding: 30px; 
+                                                padding: 30px;
                                                 max-width: 480px; width: 100%;
                                                 margin: 0 17px 30px 0;
                                                 &:nth-of-type(3n) {margin-right: 0;}
-    
+
                                                 &.active {
                                                     .slide_head {
                                                         i {
@@ -1690,7 +1692,7 @@ body {
                                                             }
                                                         }
                                                     }
-    
+
                                                     .slide_body {
                                                         display: flex;
                                                     }
@@ -1710,7 +1712,7 @@ body {
                                                             width: 100%; height: 2px; background-color: #000;
                                                         }
                                                     }
-    
+
                                                 }
                                                 .slide_body {
                                                     margin-top: 20px;
@@ -1720,7 +1722,7 @@ body {
                                                         font-weight: 300; line-height: 1.33; color: #666;
                                                         em {display: block;}
                                                     }
-                                                    
+
                                                     .homepage_ico {
                                                         a {
                                                             @include transition(.15s);
@@ -1732,7 +1734,7 @@ body {
                                                 }
                                             }
                                         }
-                                        
+
                                     }
                                 }
 
@@ -1757,10 +1759,10 @@ body {
                                         .slide_box {
                                             width: 680px;
                                             border: 1px solid #ddd;
-                                            padding: 30px; 
+                                            padding: 30px;
                                             margin: 0 0 20px 0;
                                             &:nth-of-type(3n) {margin-right: 0;}
-        
+
                                             &.active {
                                                 .slide_head {
                                                     i {
@@ -1772,7 +1774,7 @@ body {
                                                         }
                                                     }
                                                 }
-        
+
                                                 .slide_body {
                                                     display: flex;
                                                 }
@@ -1792,7 +1794,7 @@ body {
                                                         width: 100%; height: 2px; background-color: #000;
                                                     }
                                                 }
-        
+
                                             }
                                             .slide_body {
                                                 margin-top: 20px;
@@ -1808,7 +1810,7 @@ body {
                                                         }
                                                     }
                                                 }
-                                                
+
                                                 .homepage_ico {
                                                     a {
                                                         @include transition(.15s);
@@ -1841,7 +1843,11 @@ body {
                             .person_tab {
                                 .text_wrap {
                                     @include font-18();
-                                    a {
+                                    position: relative; text-align: left;
+                                    a, span {
+                                        width: auto; height: auto;
+                                        background: transparent;
+                                        border: none;
                                         position: relative;
                                         margin-right: 35px;
                                         color: #666;
@@ -1855,7 +1861,7 @@ body {
                                             background-color: $color-100;
                                             @include transition(.3s);
                                         }
-                                        &.active, &:hover {
+                                        &.active, &:hover, &.swiper-pagination-bullet-active {
                                             color: $color-100;
                                             &::after {width: 100%;}
                                         }
@@ -1884,7 +1890,7 @@ body {
                                             &.text_01 {
                                                 padding: 80px 180px 0;
                                                 font-size: 48px; font-weight: 300; line-height: 1.33; letter-spacing: -1.92px; color: #333;
-                                                strong {font-weight: normal;}  
+                                                strong {font-weight: normal;}
                                             }
                                             &.text_02 {
                                                 margin-top: 40px;
@@ -1938,21 +1944,147 @@ body {
                             }
                         }
 
-                        
                         &.section_04 {
                             margin-top: 120px;
+                        }
+
+                        &.section_05 {
+                            margin-top: 40px;
+                            .team_info {
+                                &.swiper-container {
+                                    .swiper-wrapper {
+                                        .swiper-slide {
+                                            background: #fff;
+                                            figure {
+                                                .img_wrap {}
+
+                                                .table_wrap {
+                                                    margin-top: 60px;
+
+                                                    table {
+                                                        width: 100%;
+                                                        tr {
+                                                            @include font-18();
+                                                            line-height: 1.5;
+                                                        }
+                                                        th {
+                                                            border: 1px solid #fff;
+                                                            background-color: $color-100;
+                                                            color: #fff; font-weight: 500;
+                                                        }
+                                                        td {
+                                                            border: 1px solid #ddd;
+                                                            color: #666;font-weight: 300;
+                                                            padding: 40px;
+                                                            &.td_01 {text-align: center;}
+                                                            &:first-child {border-left: none;}
+                                                            &:last-child {border-right: none;}
+                                                        }
+
+                                                        thead {
+                                                            height: 60px;
+                                                            tr {
+                                                                th {
+                                                                }
+                                                            }
+                                                        }
+                                                        tbody {
+                                                            height: 180px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &.section_06 {
+                            @include marginTop-120();
+                            .person_info {
+                                &.swiper-container {
+                                    overflow: visible;
+                                    .swiper-wrapper {
+                                        .swiper-slide {
+                                            position: relative;
+                                            &::after {
+                                                content: '';
+                                                position: absolute; 
+                                                width: 100%; height: 100%;
+                                                background: url('../images/about/person_dotted_01.svg') no-repeat ; 
+                                                background-size: contain;
+                                            }
+                                            &:nth-child(odd)::after {left: -20px; top: -20px;}
+                                            &:nth-child(even)::after {transform: rotate(180deg); left: -20px; bottom: -20px;}
+
+                                            .dots {
+                                                position: absolute; left: -24px; top: 50%; transform: translateY(-50%);
+                                                width: 8px; height: 8px; border-radius: 100%;
+                                                background-color: $color-100;
+                                                &.right {
+                                                    left: auto; right: 18px;
+                                                }
+                                            }
+                                            // &:nth-child(odd) .outline_box {border-radius: $border-hegith $border-hegith 0 0 ; border-bottom: none;}
+                                            // &:nth-child(even) .outline_box {border-radius: $border-hegith $border-hegith 0 0 ; border-bottom: none;}
+
+                                            // .outline_box {
+                                            //     position: absolute; left: -15px; top: -15px;
+                                            //     width: 370px; height: $border-hegith;
+                                            //     border: 4px dotted $color-100;
+
+                                            //     &::after,&::before {
+                                            //         content: '';
+                                            //         position: absolute; bottom: 0;
+                                            //         width: 8px; height: 8px; border-radius: 100%;
+                                            //         background-color: $color-100;
+                                            //     }
+                                            //     &::after { left: -6px;  }
+                                            //     &::before { right: -6px;  }
+                                            // }
+                                            
+                                            .inline_box {
+                                                @include flexCenter();
+                                                width: 333px; height: 333px;
+                                                border: 1px solid #ddd; border-radius: 100%;
+                                               
+                                                figure {
+                                                    @include flexCenter();
+                                                    flex-direction: column; text-align: center;
+
+                                                    img { }
+                                                    figcaption {
+                                                        @include font-18();
+                                                        line-height: 1.33;
+                                                        .text_01 {
+                                                            margin-top: 20px;
+                                                            font-weight: 500;
+                                                            color: $color-100;
+                                                        }
+                                                        .text_02 {
+                                                            margin-top: 16px;
+                                                            color: #666;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
 
 
-                
 
-                
+
+
             }
 
 
-            // CS CENTER 
+            // CS CENTER
             &.cscenter {
                 &#as {
                     .sub_section {
@@ -1990,15 +2122,15 @@ body {
                                                 color: #fff;
                                             }
                                         }
-                                        
+
                                         label {
                                             &.text_02 {font-size: 18px;line-height: 1.33;letter-spacing: -0.72px; color: #666;}
                                             vertical-align: top;
                                             display: inline-block; width: 50px;
-                                        
+
                                         }
                                         input, textarea {
-                                            width: 100%; 
+                                            width: 100%;
                                             margin-left: 40px;
                                             border: none;
                                             &::placeholder {color: #aaa;}
@@ -2013,7 +2145,7 @@ body {
                                     }
                                 }
 
-                                
+
                             }
                         }
                     }
