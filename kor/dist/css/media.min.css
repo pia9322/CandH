@@ -51,21 +51,17 @@
   body main#main_page .main_section.main_section_03 .main_wrap > div.right_content .content_box.box_02 .table_rec a p.table_text_02 i { margin-left: 5px; } }
 
 @media (max-width: 1100px) { body .view_more:hover::after { height: 100%; }
-  body .table_wrap .table_header .table_company_select { display: none; }
-  body .table_wrap .table_header .table_text_search { margin-top: 3rem; width: 100%; }
-  body .table_wrap .table_header .table_text_search .search_form { width: 100%; }
-  body .table_wrap .table_header .table_text_search .search_form fieldset { width: 100%; }
-  body .table_wrap .table_header .table_text_search .search_form fieldset .form_02_selectbox { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; }
-  body .table_wrap .table_header .table_text_search .search_form fieldset .form_02_selectbox input[type=text] { margin-left: 1.5rem; -webkit-box-flex: 2; -ms-flex: 2; flex: 2; }
-  body .table_wrap .table_header .table_text_search .search_form fieldset .form_02_selectbox input[type=submit] { margin-left: 1.5rem; }
-  body .table_wrap .table_notice thead { font-size: 16px; }
-  body .table_wrap .table_notice tbody { font-size: 15px; }
-  body .table_wrap .table_notice tbody tr .notice_download a { display: block; }
-  body .table_wrap .table_notice tbody tr .notice_download a img { width: 15px; }
-  body .table_wrap .table_news .news_wrap > a { width: calc(50% - 10px); margin-right: 10px; }
-  body .table_wrap .table_news .news_wrap > a:nth-child(2n) { margin-right: 0; }
-  body .table_wrap .table_news .news_wrap > a .news_item figcaption { padding: 10px; }
-  body .table_wrap .table_news .news_wrap > a .news_item figcaption .text_02 { font-size: 14px; margin-top: 10px; }
+  body #table_default #table_header .table_company_select { display: none; }
+  body #table_default #table_header .table_text_search { margin-top: 3rem; width: 100%; }
+  body #table_default #table_header .table_text_search .search_form { width: 100%; }
+  body #table_default #table_header .table_text_search .search_form fieldset { width: 100%; }
+  body #table_default #table_header .table_text_search .search_form fieldset .form_02_selectbox { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; }
+  body #table_default #table_header .table_text_search .search_form fieldset .form_02_selectbox input[type=text] { margin-left: 1.5rem; -webkit-box-flex: 2; -ms-flex: 2; flex: 2; }
+  body #table_default #table_header .table_text_search .search_form fieldset .form_02_selectbox input[type=submit] { margin-left: 1.5rem; }
+  body #table_default #table_body thead { font-size: 16px; }
+  body #table_default #table_body tbody { font-size: 15px; }
+  body #table_default #table_body tbody tr .notice_download a { display: block; }
+  body #table_default #table_body tbody tr .notice_download a img { width: 15px; }
   body #header > .header_wrap { padding: 0 2.5%; }
   body #header > .header_wrap:hover { background: transparent; }
   body #header > .header_wrap .header_left { margin-top: 0; }
@@ -121,17 +117,12 @@
   body main#main_page .main_section.main_section_03 .main_wrap > div.right_content .content_box.box_02 .table_rec a p { font-size: 14px; }
   body main#main_page .main_section.main_section_03 .main_wrap > div.right_content .content_box.box_02 .table_rec a p.table_text_02 i { margin-left: 5px; } }
 
-@media (max-width: 479px) { .table_wrap .table_header .table_text_search .search_form fieldset .form_02_selectbox input[type=text] { margin-right: 0 !important; }
-  .table_wrap .table_header .table_text_search .search_form fieldset .form_02_selectbox input[type=submit] { margin: 10px 0 0 0; width: 100%; }
-  .table_wrap .table_notice { table-layout: auto; }
-  .table_wrap .table_notice thead tr th { padding: 2rem; }
-  .table_wrap .table_notice thead tr th:nth-of-type(2) { width: auto; }
-  .table_wrap .table_notice tbody tr td { padding: 20px; }
-  .table_wrap .table_rec { table-layout: auto; }
-  .table_wrap .table_rec thead tr th:nth-of-type(1), .table_wrap .table_rec thead tr th:nth-of-type(4), .table_wrap .table_rec thead tr th:nth-of-type(5) { width: auto; }
-  .table_wrap .table_rec thead tr th:nth-of-type(2) { width: auto; }
-  .table_wrap .table_rec thead tr th:nth-of-type(3) { width: auto; }
-  .table_wrap .table_rec tbody tr td { padding: 20px; }
+@media (max-width: 479px) { #table_default .table_header .table_text_search .search_form fieldset .form_02_selectbox input[type=text] { margin-right: 0 !important; }
+  #table_default .table_header .table_text_search .search_form fieldset .form_02_selectbox input[type=submit] { margin: 10px 0 0 0; width: 100%; }
+  #table_default #table_body { table-layout: auto; }
+  #table_default #table_body thead tr th { padding: 2rem; }
+  #table_default #table_body thead tr th:nth-of-type(2) { width: auto; }
+  #table_default #table_body tbody tr td { padding: 20px; }
   body main#main_page .main_section.main_visual .mv_wrap .mv figcaption .mv_text .text_01 { font-size: 36px; }
   body main#main_page .main_section.main_visual .mv_wrap .mv figcaption .mv_text .btn_white_border { margin-top: 40px; }
   body main#main_page .main_section.main_visual .mv_wrap .mv figcaption .mv_text .swiper-pagination .swiper-pagination-bullet { margin: 0 0 20px 10px; } }

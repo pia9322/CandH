@@ -228,50 +228,54 @@
     <!-- ---------------------------main--------------------------- -->
 
 
-    <main class="sub_page product product_list" id="product_list">
+    <main class="sub_page about person_table" id="person_table">
         
         <section class="sub_navi" id="sub_navi">
             <!-- sub_navi_content -->
             <div class="content_wrap">
                 <div class="text_wrap">
-                    <p class="text_01">PRODUCT</p>
-                    <p class="text_02">제품소개</p>
+                    <p class="text_01">ABOUT US</p>
+                    <p class="text_02">인재채용</p>
                 </div>
 
                 <div class="bar_wrap"></div>
 
                 <div class="link_wrap">
-                    <a href="#none" class="active">기상</a>
-                    <a href="#none">물</a>
-                    <a href="#none">토양</a>
-                    <a href="#none">식물</a>
-                    <a href="#none">데이터로거</a>
-                    <a href="#none">육상탐사</a>
-                    <a href="#none">시추공탐사</a>
+                    <a href="../about/about.html">회사소개</a>
+                    <a href="../about/history.html">연혁</a>
+                    <a href="../about/brand.html">계열사&브랜드</a>
+                    <a href="../about/partner.html">협력사</a>
+                    <a href="../about/person.html">인재채용</a>
+                    <a href="../about/direction.html">오시는길</a>
                 </div>
             </div>
 
 
             <!-- background_point -->
             <div class="background_point">
-                <p class="point_text">PRODUCT</p>
+                <p class="point_text">ABOUT US</p>
             </div>
 
         </section>
 
+        <!-- section_title -->
+        <section class="sub_section section_title">
+
+            <div class="text_wrap">
+                <p class="text_01">인재채용</p>
+                <p class="text_02">C&H는 지속 가능한 성장을 꿈꾸는 인재를 기다립니다.</p>
+            </div>
+
+        </section>
 
         <!-- section_01 tab_navi_section -->
-        <section class="sub_section section_01 product_tab" id="product_tab">
+        <section class="sub_section section_01 tab_navi_section">
             <div class="content_wrap">
 
-                <div class="product_tab">
+                <div class="person_tab tab_01" id="tab_01">
                     <p class="text_wrap">
-                        <a href="#none" class="active">탄성파탐사</a>
-                        <a href="#none">전기탐사</a>
-                        <a href="#none">자력탐사</a>
-                        <a href="#none">레이다탐사(GPR)</a>
-                        <a href="#none">변위 모니터링</a>
-                        <a href="#none">동적 콘 관입시험</a>
+                        <a href="../about/person.html">직무소개.인재상</a>
+                        <a href="#none" class="active">채용공고</a>
                     </p>
                 </div>
 
@@ -279,25 +283,97 @@
         </section>
 
 
-        <section class="sub_section section_02">
+        <section class="sub_section section_01">
 
             <article class="content content_01">
                 <div class="content_wrap">
 
-                    <div class="product_wrap">
-                        <figure class="product_item">
-                            <div class="thumb">
-                                <img src="" alt="">
-                            </div>
-                            <figcaption class="info">
-                                <p class="text_01">기압센서 61402</p>
-                                <p class="text_02">Barometric Pressure Sensor 61402</p>
-                                <p class="text_03"><em class="point_01">공급처</em> RM. Young</p>
-                                <p class="more_btn"><ahref="#none">View More</ahref=></p>
-                            </figcaption>
-                        </figure>
-                    </div>
+                    <!-- table -->
+                    <div class="table_default" id="table_default">
 
+                        <!-- table_header -->
+                        <div class="table_header" id="table_header">
+
+                            <div class="table_company_select"></div>
+
+                            <div class="table_text_search">
+                                <div class="search_form">
+                                    <fieldset>
+                                        <legend>검색명</legend>
+                                        
+                                        <form class="form_02_selectbox">
+                                            <select name="" id="">
+                                                <option value="">제목</option>
+                                                <option value="">제목1</option>
+                                                <option value="">제목2</option>
+                                                <option value="">제목3</option>
+                                                <option value="">제목4</option>
+                                            </select>
+                                            <input type="text" placeholder="제목을 입력해주세요.">
+                                            <input type="submit" value="검색">
+                                        </form>
+                                        
+                                    </fieldset>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- table_body -->
+                        <table class="table_body" id="table_body">
+                            <thead>
+                                <tr>
+                                    <th class="table_num">지원구분</th>
+                                    <th class="table_title">공고제목</th>
+                                    <th class="table_data">접수 기간</th>
+                                    <th class="table_state">지원가능</th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="notice_page active">
+                                <!-- 
+                                    type_01 = 신입
+                                    type_02 = 경력
+                                    null = 일반
+                                -->
+                                <tr>
+                                    <td class="table_num"><span class="type type_01">신입</span></td>
+                                    <td class="table_title"><a href="./notice_more.html">공고 제목을 입력해주세요</a></td>
+                                    <td class="table_data">~ 2022.03.31</td>
+                                    <td class="table_state">접수 가능</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="table_num"><span class="type type_02">경력</span></td>
+                                    <td class="table_title"><a href="./notice_more.html">공고 제목을 입력해주세요</a></td>
+                                    <td class="table_data">~ 2022.03.31</td>
+                                    <td class="table_state">접수 종료</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <!-- table_footer -->
+                        <div class="table_footer" id="table_footer">
+
+                            <div class="btn_box">
+                                <a href=""><ion-icon name="chevron-back-outline"></ion-icon></a>
+                            </div>
+
+                            <div class="num_box">
+                                <a href="#none" class="active">1</a>
+                                <a href="#none">2</a>
+                                <a href="#none">3</a>
+                                <a href="#none">4</a>
+                            </div>
+
+                            <div class="btn_box">
+                                <a href=""><ion-icon name="chevron-forward-outline"></ion-icon></a>
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
             </article>
 

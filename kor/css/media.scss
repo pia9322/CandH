@@ -353,8 +353,9 @@ $business_height_767 : 200px;
             }
         }
     
-        .table_wrap {
-            .table_header {
+        #table_default {
+
+            #table_header {
                 .table_company_select {
                     display: none;
     
@@ -402,7 +403,7 @@ $business_height_767 : 200px;
     
             }
     
-            .table_notice {
+            #table_body {
     
                 thead {
                     font-size: 16px;
@@ -456,42 +457,7 @@ $business_height_767 : 200px;
     
             }
     
-            // table_news
-            .table_news {
-                .news_wrap {
-                    > a {
-                        width: calc(50% - 10px);
-                        margin-right: 10px;
-                        &:nth-child(2n) {
-                            margin-right: 0;
-                        }
-                        .news_item {
-                            img {
-                            }
-                            figcaption {
-                                padding: 10px;
-                                > span {
-                                }
-                                .text_01 {
-                                }
-                                .text_02 {
-                                    font-size: 14px;
-                                    margin-top: 10px;
-                                }
-                            }
-                        }
-                        // hover, active
-                        &:hover {
-                            .text_01 {
-                            }
-                        }
-                    }
-                }
-            }
-    
-            .table_notice_more {
-                >a {}
-            }
+            #table_footer {}
         }
     }
     // ====================================default css====================================
@@ -910,7 +876,9 @@ $business_height_767 : 200px;
 @media (max-width: 479px) {
 
     // ====================================default css====================================
-    .table_wrap {
+
+    #table_default {
+
         .table_header {
             .table_company_select {
                 .search_form {
@@ -932,15 +900,8 @@ $business_height_767 : 200px;
                         .form_02_selectbox {
 
                             select {}
-
-                            input[type=text] {
-                                margin-right: 0 !important;
-                            }
-
-                            input[type=submit] {
-                                margin: 10px 0 0 0;
-                                width: 100%;
-                            }
+                            input[type=text] { margin-right: 0 !important; }
+                            input[type=submit] { margin: 10px 0 0 0; width: 100%;}
                         }
                     }
                 }
@@ -948,7 +909,7 @@ $business_height_767 : 200px;
 
         }
 
-        .table_notice {
+        #table_body {
             table-layout: auto;
 
             thead {
@@ -987,56 +948,6 @@ $business_height_767 : 200px;
 
         }
 
-
-        .table_rec {
-            table-layout: auto;
-
-            thead {
-                tr {
-                    th {
-
-                        &:nth-of-type(1),
-                        &:nth-of-type(4),
-                        &:nth-of-type(5) {
-                            width: auto;
-                        }
-
-                        &:nth-of-type(2) {
-                            width: auto;
-                        }
-
-                        &:nth-of-type(3) {
-                            width: auto;
-                        }
-                    }
-
-                }
-            }
-
-            tbody {
-                tr {
-                    td {
-                        padding: 20px;
-
-                        &:nth-child(2) {
-                            span {}
-                        }
-
-                        &:nth-child(3) {}
-                    }
-
-                    .notice_download {
-                        a {}
-                    }
-                }
-
-                &.active {}
-            }
-
-
-
-
-        }
     }
     // ====================================default css====================================
 
