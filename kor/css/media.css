@@ -31,22 +31,14 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body #footer .footer_wrap .footer_left > ul > li {
-    margin-top: 10px !important;
-  }
   body #footer .footer_wrap .footer_left > ul > li:first-child {
     margin-top: 0;
   }
   body #footer .footer_wrap .footer_left > ul .footer_logo {
-    max-width: 150px;
-  }
-  body #footer .footer_wrap .footer_left > ul .footer_select select {
-    padding: 5px 10px;
-    font-size: 14px;
+    max-width: 175px;
   }
   body #footer .footer_wrap .footer_left > ul .footer_info > p a {
-    font-size: 15px;
-    margin-left: 10px;
+    font-size: 14px;
   }
   body #footer .footer_wrap .footer_left > ul .footer_info > p a:first-child {
     margin-left: 0;
@@ -68,15 +60,21 @@
     color: #aaa;
   }
   body #footer .footer_wrap .footer_right {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 20px;
   }
-  body #footer .footer_wrap .footer_right > div {
-    margin: 15px;
+  body #footer .footer_wrap .footer_right .content_wrap > div.box_02 {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
-  body #footer .footer_wrap .footer_right > div:first-child {
-    margin: 15px;
+  body #footer .footer_wrap .footer_right .content_wrap > div.box_02 .img_wrap {
+    margin-right: 10px;
+  }
+  body #footer .footer_wrap .footer_right .content_wrap > div.box_02 .text_wrap .text_01 a {
+    font-size: 26px;
+  }
+  body #footer .footer_wrap .footer_right .content_wrap > div.box_02 .text_wrap .text_02 {
+    font-size: 14px;
   }
   body main#main_page .main_section .section_title {
     padding-top: 200px;
@@ -165,14 +163,16 @@
   body main#main_page .main_section.main_section_03 .main_wrap > div.left_content .content_wrap .submit_box {
     margin-top: 30px;
   }
+  body main#main_page .main_section.main_section_03 .main_wrap > div.right_content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
   body main#main_page .main_section.main_section_03 .main_wrap > div.right_content .content_box {
     height: auto;
     padding: 0;
     margin-top: 70px;
-  }
-  body main#main_page .main_section.main_section_03 .main_wrap > div.right_content .content_box.box_01 .client_img {
-    overflow: auto;
-    margin-top: 40px;
   }
   body main#main_page .main_section.main_section_03 .main_wrap > div.right_content .content_box.box_02 {
     padding: 0;
@@ -319,32 +319,35 @@
     width: 29px;
     height: 27px;
   }
-  body #footer .footer_wrap .footer_right {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-top: 30px;
+  body #footer .footer_wrap .footer_left > ul .footer_info > p a::after {
+    display: none;
   }
-  body #footer .footer_wrap .footer_right > div {
-    width: calc(50% - 20px);
-    margin: 10px 10px 10px 0;
+  body #footer .footer_wrap .footer_left > ul .footer_info > p a.a_link {
+    padding: 0;
+    padding-right: 5px;
   }
-  body #footer .footer_wrap .footer_right > div:first-child {
-    margin: 10px 10px 10px 0;
+  body #footer .footer_wrap .footer_left > ul .footer_copy {
+    margin-top: 15px;
   }
-  body #footer .footer_wrap .footer_right > div h2 {
-    font-size: 14px;
-  }
-  body #footer .footer_wrap .footer_right > div > ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  body #footer .footer_wrap .footer_right .content_wrap {
     width: 100%;
-    line-height: 1.5;
   }
-  body #footer .footer_wrap .footer_right > div > ul > li {
-    margin: 7px 7px 7px 0;
+  body #footer .footer_wrap .footer_right .content_wrap > div.box_01 figure {
+    width: 33%;
+  }
+  body #footer .footer_wrap .footer_right .content_wrap > div.box_02 {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  body #footer .footer_wrap .footer_right .content_wrap > div.box_02 .img_wrap {
+    margin-right: 10px;
+  }
+  body #footer .footer_wrap .footer_right .content_wrap > div.box_02 .text_wrap .text_01 a {
+    font-size: 20px;
+  }
+  body #footer .footer_wrap .footer_right .content_wrap > div.box_02 .text_wrap .text_02 {
+    font-size: 14px;
   }
   body main#main_page .main_section .section_title {
     padding-top: 100px;
@@ -398,6 +401,10 @@
   }
   body main#main_page .main_section.main_section_03 .main_wrap > div.left_content .content_wrap .submit_box {
     margin-top: 10px;
+  }
+  body main#main_page .main_section.main_section_03 .main_wrap > div.right_content::after {
+    width: 150px;
+    height: 75px;
   }
   body main#main_page .main_section.main_section_03 .main_wrap > div.right_content .content_box {
     height: auto;

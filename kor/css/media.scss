@@ -97,22 +97,20 @@ $business_height_767 : 200px;
                 .footer_left {
                     > ul {
                         > li {
-                            margin-top: 10px !important;
                             &:first-child {margin-top: 0;}
                         }
-                        .footer_logo {
-                            max-width: 150px;
-                        }
-                        .footer_select {
-                            select {
-                                padding: 5px 10px; font-size: 14px;
-                            }   
-                        }
+                        .footer_logo {max-width: 175px;}
+                        
+                        // .footer_select {
+                        //     select {
+                        //         padding: 5px 10px; font-size: 14px;
+                        //     }   
+                        // }
 
                         .footer_info {
                             > p {
                                 a {
-                                    font-size: 15px; margin-left: 10px;
+                                    font-size: 14px; 
                                     &:first-child{margin-left: 0;}
                                     &.a_link {
                                         @include transition(.15s);
@@ -132,13 +130,27 @@ $business_height_767 : 200px;
 
                 }
                 .footer_right {
-                    flex-wrap: wrap;
-                    margin-top: 30px;
-                    > div {
-                        // margin: 20px 10px; height: 250px;
-                        margin: 15px;
-                        &:first-child {margin: 15px;}
+                    margin-top: 20px;
+                    .content_wrap {
+                        > div {
+                            &.box_02 {
+                                justify-content: flex-start;
+                                .img_wrap {
+                                    margin-right: 10px;
+                                }
+                                .text_wrap {
+                                    .text_01 {
+                                        a {
+                                            font-size: 26px;
+                                        }
+                                    }
+                                    .text_02 {font-size: 14px;}
+                                }
+                            }
+                        }
+                        
                     }
+                    
                 }
             }
         }
@@ -285,15 +297,21 @@ $business_height_767 : 200px;
                                 }
             
                                 &.right_content {
+
+                                    &::after {
+                                        content: '';
+                                        position: absolute; top: 0; bottom: 0;
+                                    }
+
                                     .content_box {
                                         height: auto; padding: 0;
                                         @include marginTop-70();
-                                        &.box_01 {
-                                            .client_img {
-                                                overflow: auto;
-                                                margin-top: 40px;
-                                            }
-                                        }
+                                        // &.box_01 {
+                                        //     .client_img {
+                                        //         overflow: auto;
+                                        //         margin-top: 40px;
+                                        //     }
+                                        // }
                                         &.box_02 {
                                             padding: 0; border-top: none;
                                             .table_rec {
@@ -690,26 +708,53 @@ $business_height_767 : 200px;
         #footer {
             .footer_wrap {
 
-                .footer_right {
-                    flex-wrap: wrap;
-                    margin-top: 30px;
-                    > div {
-                        width: calc(50% - 20px);
-                        // margin: 20px 10px; height: 250px;
-                        margin: 10px 10px 10px 0;
-                        &:first-child {margin: 10px 10px 10px 0;}
-                        h2 {font-size: 14px;}
-                        > ul {
-                            display: flex; flex-wrap: wrap;
-                            width: 100%;
-                            line-height: 1.5;
-                            > li {
-                                margin: 7px 7px 7px 0;
+                .footer_left {
+                    > ul {
+                        .footer_info {
+                            > p {
                                 a {
+                                    &::after {
+                                        display: none;
+                                    }
+                                    &.a_link {
+                                        padding: 0;
+                                        padding-right: 5px;
+                                    }
                                 }
                             }
                         }
+                        .footer_copy { margin-top: 15px; }
                     }
+                }
+
+                .footer_right {
+                    .content_wrap {
+                        width: 100%;
+                        > div {
+                            &.box_01 {
+                                figure {
+                                    width: 33%;
+                                }
+
+                            }
+                            &.box_02 {
+                                justify-content: flex-start;
+                                .img_wrap {
+                                    margin-right: 10px;
+                                }
+                                .text_wrap {
+                                    .text_01 {
+                                        a {
+                                            font-size: 20px;
+                                        }
+                                    }
+                                    .text_02 {font-size: 14px;}
+                                }
+                            }
+                        }
+                        
+                    }
+                    
                 }
             }
         }
@@ -815,6 +860,7 @@ $business_height_767 : 200px;
                                 }
             
                                 &.right_content {
+                                    &::after { width: 150px; height: 75px; }
                                     .content_box {
                                         height: auto; padding: 0;
                                         @include marginTop-70();
