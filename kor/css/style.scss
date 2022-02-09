@@ -666,8 +666,8 @@ body {
 
             // full_header
             .header_full {
-                position: fixed;
-                left: 0; top: 0; bottom: 0; right: 0;
+                display: none;
+                position: fixed; left: 0; top: 0; bottom: 0; right: 0;
                 width: 100vw; height: 100vh;
                 overflow: auto;
                 background: #18242e;
@@ -676,6 +676,7 @@ body {
 
                 &.active {
                     transform: translateX(0);
+                    display: none;
                 }
 
                 .header_full_wrap {
@@ -931,7 +932,6 @@ body {
                     }
                 }
                 &:not(:first-child) {}
-
 
                 &.main_visual {
                     height: 100vh;
@@ -1326,9 +1326,6 @@ body {
                     }
 
                 }
-
-
-
             }
         }
 
