@@ -233,6 +233,7 @@
     padding: 0 2.5%;
   }
   body #header > .header_wrap:hover {
+    border-bottom: none;
     background: transparent;
   }
   body #header > .header_wrap .header_left {
@@ -300,9 +301,6 @@
 @media (max-width: 767px) {
   body #header {
     height: 60px;
-  }
-  body #header > .header_wrap {
-    border-bottom: none;
   }
   body #header > .header_wrap:hover {
     border-bottom: none;

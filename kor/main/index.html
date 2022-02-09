@@ -701,9 +701,10 @@
             let scroll = $(window).scrollTop(),
                 dh = $(document).height() - $('.main_section_02').height(),
                 wh = $(window).height();
-            scrollPercent = (scroll / (dh - wh)) * 100;
 
             ($('.main_section_02').offset().top - wh <= scroll) ? $('.main_section_01').addClass('active'): null;
+            ($('.main_section_03').offset().top - wh <= scroll) ? $('#header').addClass('active') : $('#header').removeClass('active');
+
         });
 
         // $(document).ready(function() {

@@ -62,7 +62,7 @@
   body #table_default #table_body tbody tr .notice_download a { display: block; }
   body #table_default #table_body tbody tr .notice_download a img { width: 15px; }
   body #header > .header_wrap { padding: 0 2.5%; }
-  body #header > .header_wrap:hover { background: transparent; }
+  body #header > .header_wrap:hover { border-bottom: none; background: transparent; }
   body #header > .header_wrap .header_left { margin-top: 0; }
   body #header > .header_wrap .header_center { opacity: 0; visibility: hidden; }
   body #header > .header_wrap .header_right .header_lang { display: none; }
@@ -81,7 +81,6 @@
   body #header > .header_wrap .header_full .header_full_wrap .header_full_list .depth_01 .depth_02 > li .depth_03 > li > a { padding: 15px 0 0 15px; } }
 
 @media (max-width: 767px) { body #header { height: 60px; }
-  body #header > .header_wrap { border-bottom: none; }
   body #header > .header_wrap:hover { border-bottom: none; }
   body #header > .header_wrap .header_left { max-width: 80px; }
   body #header > .header_wrap .header_center { display: none; }
