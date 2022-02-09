@@ -818,7 +818,8 @@ body #header > .header_wrap .header_right.active span:nth-of-type(3) {
 }
 
 body #header > .header_wrap .header_full {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: fixed;
   left: 0;
   top: 0;
@@ -840,7 +841,8 @@ body #header > .header_wrap .header_full {
 body #header > .header_wrap .header_full.active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  display: none;
+  visibility: visible;
+  opacity: 1;
 }
 
 body #header > .header_wrap .header_full .header_full_wrap {
