@@ -203,7 +203,7 @@ $(function(){
 
         // link_wrap auto active
         LinkActive.each(function(idx){
-            (subNaviEvent == LinkActive.eq(idx).text()) ? $(this).addClass('active') : console.log(subNaviEvent);
+            (subNaviEvent == LinkActive.eq(idx).text()) ? $(this).addClass('active') : null ;
         });
 
         // location Check

@@ -2101,13 +2101,21 @@ body {
 
                         &.section_02 {
                             .product_wrap {
-                                display: flex; flex-wrap: wrap;
+                                display: none;
+                                &.active {
+                                    display: flex; flex-wrap: wrap;
+                                }
                                 .product_item {
                                     width: 420px;
                                     border: 1px solid #ddd;
+                                    margin: 0 100px 80px 0;
+                                    &:nth-child(3n) { margin: 0 0 80px 0;}
+
                                     .thumb {
-                                        background-color: #ddd;
+                                        @include flexCenter();
+                                        background-color: #f5f5f5;
                                         height: 350px;
+                                        img {}
                                     }
                                     .info {
                                         padding: 40px 50px 60px;
@@ -2128,14 +2136,61 @@ body {
                                                 }
                                             }
                                             &.more_btn {
-                                                @include flexCenter();
-                                                @include font-18();
+                                                @include transition(.15s);
+                                                @include font-18(); letter-spacing: normal;
                                                 margin: 50px auto 0;
                                                 width: 160px; height: 43px;
                                                 border: 1px solid #ddd; border-radius: 20px;
+                                                a {
+                                                    @include flexCenter();
+                                                    width: 100%; height: 100%;
+                                                }
+                                                &:hover {
+                                                    background-color: $color-100; 
+                                                    a {
+                                                        color: #fff;
+                                                    }
+                                                }
                                             }
                                         }
                                     }
+                                }
+                            }
+                                     
+                            #table_footer {
+                                margin-top: 100px;
+                                @include flexCenter();
+
+                                .num_box {
+                                    a {
+                                        @include font-M();
+                                        position: relative;
+                                        font-size: 16px; font-weight: 300; color: #333;
+                                        margin: 0 20px;
+                                        &::after {
+                                            content: '';
+                                            @include transition(.15s);
+                                            position: absolute; left: 50%; top: -10px; transform: translateX(-50%);
+                                            width: 5px; height: 5px; background-color: $color-100; border-radius: 100%;
+                                            opacity: 0;
+                                        }
+
+                                        // active
+                                        &.active {
+                                            color: $color-100; font-weight: bold;
+                                            &::after { opacity: 1; }
+                                        }
+                                    }
+                                }
+
+                                .btn_box {
+                                    display: flex;
+                                    a {
+                                        display: flex; align-items: center; justify-content: center;
+                                        width: 20px; height: 20px;
+                                        margin: 0 5px; color: #666;
+                                    }
+
                                 }
                             }
                         }
