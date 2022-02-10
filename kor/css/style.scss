@@ -3,10 +3,7 @@
 
 $search-time: 800ms;
 $reset-time: 150ms;
-
-// color
 $color-100 : #f5821f;
-
 $border-hegith : 185px;
 
 // ====================================default mixin====================================
@@ -17,23 +14,21 @@ $border-hegith : 185px;
 @mixin transition($x) {transition: $x;-webkit-transition: $x;-moz-transition: $x;-ms-transition: $x;-o-transition: $x;}
 // ====================================default mixin====================================
 
-
 // ====================================jj mixin====================================
 @mixin fixed-layout {max-width: 1480px;margin: 0 auto;width: 100%;}
 @mixin layoutBoxColor {border: 2px solid #f00;}
 @mixin header-height {height: 110px;}
-
 @mixin flexCenter { display: flex; justify-content: center; align-items: center; }
 
 
-//
+// Margin
 @mixin marginTop-120 {margin-top: 120px;}
 @mixin marginTop-100 {margin-top: 100px;}
 @mixin marginTop-70 {margin-top: 70px;}
 @mixin marginTop-40 {margin-top: 40px;}
 @mixin marginTop-30 {margin-top: 30px;}
 
-// padding
+// Padding
 @mixin paddingTop-70 {padding-top: 70px;}
 @mixin paddingTop-40 {padding-top: 40px;}
 
@@ -90,7 +85,6 @@ body {
         }
     }
 
-    
     // table 공통
     #table_default {
         margin-top: 30px;
@@ -769,6 +763,7 @@ body {
 
 
     }
+
     #footer {
         background: #f4f4f4;
         padding: 60px 0;
@@ -1335,7 +1330,6 @@ body {
 
         // SUB_PAGE
         &.sub_page {
-
             // sub_navi
             #sub_navi {
                 display: flex; align-items: flex-end;
@@ -1482,7 +1476,7 @@ body {
                                     figcaption {
                                         margin-left: 110px;
                                         .text_01 {
-                                            font-size: 48px; font-weight: 300; line-height: 1.33; letter-spacing: -1.92px;
+                                            font-size: 4.8rem; font-weight: 300; line-height: 1.33; letter-spacing: -1.92px;
                                             em {font-weight: normal;}
                                         }
                                         .text_02 {
