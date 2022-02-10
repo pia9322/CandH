@@ -520,49 +520,33 @@ $color-100 : #f5821f;
                     &#brand {
                         .sub_section {
                             &.section_01 {
-                                @include marginTop-70();
+                                // @include marginTop-70();
                                 .content_wrap {
                                     > figure {
-                                        display: flex; align-items: center;
-                                        margin-bottom: 80px;
+                                        flex-direction: column;
+                                        margin-bottom: 60px;
                                         &:last-child {margin-bottom: 0;}
-
                                         .img_wrap {
-                                            img {}
+                                            height: 300px;
+                                            img {height: 100%;}
                                         }
 
                                         figcaption {
-                                            margin-left: 60px;
-                                            .text_01 {
-                                                font-size: 24px; font-weight: bold; line-height: 1; letter-spacing: -0.96px;
-                                            }
+                                            width: 100%;
+                                            margin: 20px 0 0 0;
+                                            text-align: center;
+                                            .text_01 { font-size: 20px; }
                                             .text_02 {
-                                                margin-top: 40px;
-                                                @include font-18(); font-weight: 300; letter-spacing: -0.72px; color: #666;
+                                                margin-top: 20px;
+                                                // @include font-18(); 
                                             }
                                             .ico_wrap {
-                                                margin-top: 40px;
-                                                display: flex; align-items: center;
+                                                justify-content: center; margin-top: 20px;
                                                 a {
-                                                    @include flexCenter();
-                                                    @include transition(.15s);
-                                                    width: 60px; height: 60px;
-                                                    background-color: #f4f4f4; border-radius: 100%;
-                                                    margin-right: 20px;
+                                                    width: 45px; height: 45px; margin-right: 20px;
                                                     &:last-child {margin-right: 0;}
                                                     svg {
-                                                        max-width: 35px; height: 35px;
-                                                        path {
-                                                            fill: #aaa;
-                                                        }
-                                                    }
-                                                    &:hover {
-                                                        background-color: $color-100;
-                                                        svg {
-                                                            path {
-                                                                fill: #fff;
-                                                            }
-                                                        }
+                                                        height: 25px;
                                                     }
                                                 }
                                             }
@@ -2059,6 +2043,41 @@ $color-100 : #f5821f;
                                             }
                                         }
                                     }
+                                }
+                            }
+                        }
+                    }
+
+                    
+                    // 브랜드
+                    &#brand {
+                        .sub_section {
+                            &.section_01 {
+                                @include marginTop-70();
+                                .content_wrap {
+                                    > figure {
+                                        .img_wrap {
+                                            height: 225px;
+                                        }
+
+                                        figcaption {
+                                            .text_01 { font-size: 18px; }
+                                            .text_02 {
+                                                margin-top: 15px;
+                                                @include font-18(); 
+                                            }
+                                            .ico_wrap {
+                                                a {
+                                                    width: 40px; height: 40px; margin-right: 15px;
+                                                    svg {
+                                                        height: 20px;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                    }
+
                                 }
                             }
                         }

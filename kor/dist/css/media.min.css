@@ -74,19 +74,17 @@
   body main.sub_page.about#history .section_01 .content_wrap .swiper-container .swiper-wrapper .swiper-slide figcaption { font-size: 18px; letter-spacing: -0.72px; margin-top: 40px; }
   body main.sub_page.about#history .section_01 .content_wrap .swiper-container .swiper-wrapper .swiper-slide figcaption .text_wrap > span.text_01 { width: 100px; }
   body main.sub_page.about#history .section_01 .content_wrap .swiper-container .swiper-wrapper .swiper-slide figcaption .text_wrap > span.text_02 { margin-left: 0; }
-  body main.sub_page.about#brand .sub_section.section_01 { margin-top: 70px; }
-  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-bottom: 80px; }
+  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; margin-bottom: 60px; }
   body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure:last-child { margin-bottom: 0; }
-  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption { margin-left: 60px; }
-  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption .text_01 { font-size: 24px; font-weight: bold; line-height: 1; letter-spacing: -0.96px; }
-  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption .text_02 { margin-top: 40px; font-size: 18px; letter-spacing: -0.72px; font-weight: 300; letter-spacing: -0.72px; color: #666; }
-  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption .ico_wrap { margin-top: 40px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
-  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption .ico_wrap a { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; transition: 0.15s; -webkit-transition: 0.15s; -moz-transition: 0.15s; -ms-transition: 0.15s; -o-transition: 0.15s; width: 60px; height: 60px; background-color: #f4f4f4; border-radius: 100%; margin-right: 20px; }
+  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure .img_wrap { height: 300px; }
+  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure .img_wrap img { height: 100%; }
+  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption { width: 100%; margin: 20px 0 0 0; text-align: center; }
+  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption .text_01 { font-size: 20px; }
+  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption .text_02 { margin-top: 20px; }
+  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption .ico_wrap { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-top: 20px; }
+  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption .ico_wrap a { width: 45px; height: 45px; margin-right: 20px; }
   body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption .ico_wrap a:last-child { margin-right: 0; }
-  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption .ico_wrap a svg { max-width: 35px; height: 35px; }
-  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption .ico_wrap a svg path { fill: #aaa; }
-  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption .ico_wrap a:hover { background-color: #f5821f; }
-  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption .ico_wrap a:hover svg path { fill: #fff; }
+  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption .ico_wrap a svg { height: 25px; }
   body main.sub_page.about#partner .sub_section.section_01 .content_wrap #partner_navi { margin-top: 70px; font-size: 18px; letter-spacing: -0.72px; font-weight: 500; color: #666; }
   body main.sub_page.about#partner .sub_section.section_01 .content_wrap #partner_navi a { margin-right: 35px; position: relative; transition: 0.15s; -webkit-transition: 0.15s; -moz-transition: 0.15s; -ms-transition: 0.15s; -o-transition: 0.15s; }
   body main.sub_page.about#partner .sub_section.section_01 .content_wrap #partner_navi a::after { content: ''; position: absolute; left: 0; bottom: -5px; background: #f5821f; transition: 0.15s; -webkit-transition: 0.15s; -moz-transition: 0.15s; -ms-transition: 0.15s; -o-transition: 0.15s; width: 0; height: 2px; }
@@ -341,7 +339,13 @@
   body main.sub_page.about#history .section_01 .content_wrap .swiper-container .swiper-wrapper .swiper-slide figcaption { font-size: 16px; margin-top: 20px; }
   body main.sub_page.about#history .section_01 .content_wrap .swiper-container .swiper-wrapper .swiper-slide figcaption .text_wrap { margin-top: 15px; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
   body main.sub_page.about#history .section_01 .content_wrap .swiper-container .swiper-wrapper .swiper-slide figcaption .text_wrap > span.text_01 { line-height: 1.5; }
-  body main.sub_page.about#history .section_01 .content_wrap .swiper-container .swiper-wrapper .swiper-slide figcaption .text_wrap > span.text_02 { margin-left: 0; font-size: 14px; line-height: 1.3; } }
+  body main.sub_page.about#history .section_01 .content_wrap .swiper-container .swiper-wrapper .swiper-slide figcaption .text_wrap > span.text_02 { margin-left: 0; font-size: 14px; line-height: 1.3; }
+  body main.sub_page.about#brand .sub_section.section_01 { margin-top: 50px; }
+  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure .img_wrap { height: 225px; }
+  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption .text_01 { font-size: 18px; }
+  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption .text_02 { margin-top: 15px; font-size: 16px; }
+  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption .ico_wrap a { width: 40px; height: 40px; margin-right: 15px; }
+  body main.sub_page.about#brand .sub_section.section_01 .content_wrap > figure figcaption .ico_wrap a svg { height: 20px; } }
 
 @media (max-width: 479px) { #table_default .table_header .table_text_search .search_form fieldset .form_02_selectbox input[type=text] { margin-right: 0 !important; }
   #table_default .table_header .table_text_search .search_form fieldset .form_02_selectbox input[type=submit] { margin: 10px 0 0 0; width: 100%; }
