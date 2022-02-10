@@ -760,13 +760,15 @@ $color-100 : #f5821f;
                                                 .dots { display: none; }
                                                 
                                                 .inline_box {
-                                                    width: 350px; height: 350px;
+                                                    width: 300px; height: 300px;
                                                     margin: 0 auto;
                                                     &:hover { border: 2px dotted $color-100; }
                                                     
                                                     figure {
 
-                                                        img { }
+                                                        img {
+                                                            height: 55px;
+                                                        }
                                                         figcaption {
                                                             // @include font-18();
                                                             .text_01 {
@@ -1971,6 +1973,140 @@ $color-100 : #f5821f;
                             }
                         }
                     }
+                    
+                    // 인재상
+                    &#person {
+                        .sub_section {
+                            &.section_01{
+                                @include marginTop-70();
+                            }
+
+                            &.section_02 {
+                                margin-top: 20px;
+                                .img_wrap {
+                                    padding: 10px;
+                                    figure {
+                                        .img_wrap {
+                                            background: url('../images/about/person_01.png')no-repeat center/cover;
+                                            width: 100%; height: 350px;
+                                            background-attachment: fixed;
+                                            img { display: none; }
+                                        }
+                                        figcaption {
+                                            left: 0; top: 0; transform: translateX(0);
+                                            background-color: rgba($color: #fff, $alpha: .7);
+                                            backdrop-filter: saturate(180%) blur(10px);
+                                            width: 100%; height: 100%;
+                                            @include flexCenter();
+                                            flex-direction: column;
+                                            p {
+                                                background-color: transparent; 
+                                                &.text_01 { padding: 0; font-size: 36px; }
+                                                &.text_02 {
+                                                    margin-top: 30px; // font-size: 18px; 
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.section_03 {
+                                @include marginTop-100();
+                                .team {
+                                    &.swiper-container {
+                                        .swiper-wrapper {
+                                            justify-content: flex-start;
+                                            .swiper-slide {
+                                                font-size: 20px;  margin: 0 20px 0 0;
+                                                &.margin_0 {margin: 0;}
+                                                &.big {
+                                                    margin: 0 40px 0; border: 30px solid transparent; 
+                                                    font-size: 28px; 
+                                                    .logo_svg { }
+                                                    p {
+                                                        margin-top: 10px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.section_04 {
+                                @include marginTop-100();
+                            }
+
+                            &.section_05 {
+                                margin-top: 20px;
+                                .team_info {
+                                    &.swiper-container {
+                                        .swiper-wrapper {
+                                            .swiper-slide {
+                                                figure {
+                                                    .img_wrap {}
+
+                                                    .table_wrap {
+                                                        // margin-top: 60px;
+
+                                                        table {
+                                                            tr {
+                                                                // @include font-18();
+                                                            }
+                                                            th { }
+                                                            td { padding: 20px; }
+
+                                                            thead { height: 50px;}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            // 보류
+
+                            &.section_06 {
+                                @include marginTop-100();
+                                .person_info {
+                                    &.swiper-container {
+                                        overflow: hidden;
+                                        .swiper-wrapper {
+                                            .swiper-slide {
+                                                
+                                                &::after { display: none; }
+                                                .dots { display: none; }
+                                                
+                                                .inline_box {
+                                                    width: 300px; height: 300px;
+                                                    margin: 0 auto;
+                                                    &:hover { border: 2px dotted $color-100; }
+                                                    
+                                                    figure {
+
+                                                        img {
+                                                            height: 55px;
+                                                        }
+                                                        figcaption {
+                                                            // @include font-18();
+                                                            .text_01 {
+                                                                margin-top: 18px;
+                                                            }
+                                                            .text_02 { margin-top: 15px; }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    
 
                     
                 }
