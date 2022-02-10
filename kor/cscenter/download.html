@@ -35,6 +35,8 @@
     <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="../css/swiper.css">
     <link rel="stylesheet" href="../css/aos.css">
+    <link rel="stylesheet" href="../css/fullpage.min.css">
+    <link rel="stylesheet" href="../css/lity.css">
 
 
     <!-- --------------------CSS-------------------- -->
@@ -42,13 +44,15 @@
 
     <!-- --------------------Script-------------------- -->
     <script src="../js/jquery.js"></script>
+    <script src="../js/fullpage.min.js"></script>
+    <script src="../js/scrolloverflow.min.js.js"></script>
     <script src="../js/swiper.js"></script>
     <script src="../js/aos.js"></script>
     <script src="../js/gsap.min.js"></script>
     <script src="../js/wave.js"></script>
+    <script src="../js/lity.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 
     <!-- --------------------Script-------------------- -->
 </head>
@@ -225,178 +229,140 @@
 
 
     <!-- ---------------------------main--------------------------- -->
+    <main class="sub_page cscenter as" id="as">
 
-
-    <main class="sub_page product product_list" id="product_list">
-
+        <!-- sub_navi -->
         <section class="sub_navi" id="sub_navi">
             <!-- sub_navi_content -->
             <div class="content_wrap">
                 <div class="text_wrap">
-                    <p class="text_01">PRODUCT</p>
-                    <p class="text_02">제품소개</p>
+                    <p class="text_01">CS CENTER</p>
+                    <p class="text_02">자료실</p>
                 </div>
 
                 <div class="bar_wrap"></div>
 
                 <div class="link_wrap">
-                    <a href="#none" class="active">기상</a>
-                    <a href="#none">물</a>
-                    <a href="#none">토양</a>
-                    <a href="#none">식물</a>
-                    <a href="#none">데이터로거</a>
-                    <a href="#none">육상탐사</a>
-                    <a href="#none">시추공탐사</a>
+                    <a href="../cscenter/as.html">A/S접수</a>
+                    <a href="../cscenter/inquiry.html">문의접수</a>
+                    <a href="../cscenter/download.html">자료실</a>
                 </div>
             </div>
 
 
             <!-- background_point -->
             <div class="background_point">
-                <p class="point_text">PRODUCT</p>
+                <p class="point_text">CS CENTER</p>
             </div>
 
         </section>
 
+        <!-- section_title -->
+        <section class="sub_section section_title">
 
-        <!-- section_01 tab_navi_section -->
-        <section class="sub_section section_01 product_tab" id="product_tab">
-            <div class="content_wrap">
-
-                <div class="product_tab">
-                    <p class="text_wrap">
-                        <a href="#none" class="active">탄성파탐사</a>
-                        <a href="#none">전기탐사</a>
-                        <a href="#none">자력탐사</a>
-                        <a href="#none">레이다탐사(GPR)</a>
-                        <a href="#none">변위 모니터링</a>
-                        <a href="#none">동적 콘 관입시험</a>
-                    </p>
-                </div>
-
+            <div class="text_wrap">
+                <p class="text_01">자료실</p>
+                <p class="text_02">C&H의 자료실입니다.</p>
             </div>
+
         </section>
 
-
-        <section class="sub_section section_02">
+        <section class="sub_section section_01">
 
             <article class="content content_01">
                 <div class="content_wrap">
 
-                    <div class="product_wrap active">
+                    <!-- table -->
+                    <div class="table_default" id="table_default">
 
-                        <figure class="product_item">
-                            <div class="thumb"> <img src="../images/product/product_01.png" alt=""> </div>
+                        <!-- table_header -->
+                        <div class="table_header" id="table_header">
 
-                            <figcaption class="info">
-                                <p class="text_01">기압센서 61402</p>
-                                <p class="text_02">Barometric Pressure Sensor 61402</p>
-                                <p class="text_03"><em class="point_01">공급처</em> RM. Young</p>
-                                <p class="more_btn"><a href="../product/product_detail.html">View More</a></p>
-                            </figcaption>
-                        </figure>
+                            <div class="table_company_select"></div>
 
-                        <figure class="product_item">
-                            <div class="thumb"> <img src="../images/product/product_01.png" alt=""> </div>
-
-                            <figcaption class="info">
-                                <p class="text_01">기압센서 61402</p>
-                                <p class="text_02">Barometric Pressure Sensor 61402</p>
-                                <p class="text_03"><em class="point_01">공급처</em> RM. Young</p>
-                                <p class="more_btn"><a href="../product/product_detail.html">View More</a></p>
-                            </figcaption>
-                        </figure>
-
-                        <figure class="product_item">
-                            <div class="thumb"> <img src="../images/product/product_01.png" alt=""> </div>
-
-                            <figcaption class="info">
-                                <p class="text_01">기압센서 61402</p>
-                                <p class="text_02">Barometric Pressure Sensor 61402</p>
-                                <p class="text_03"><em class="point_01">공급처</em> RM. Young</p>
-                                <p class="more_btn"><a href="../product/product_detail.html">View More</a></p>
-                            </figcaption>
-                        </figure>
-                        
-                        <figure class="product_item">
-                            <div class="thumb"> <img src="../images/product/product_01.png" alt=""> </div>
-
-                            <figcaption class="info">
-                                <p class="text_01">기압센서 61402</p>
-                                <p class="text_02">Barometric Pressure Sensor 61402</p>
-                                <p class="text_03"><em class="point_01">공급처</em> RM. Young</p>
-                                <p class="more_btn"><a href="../product/product_detail.html">View More</a></p>
-                            </figcaption>
-                        </figure>
-
-                    </div>
-
-                    
-                    <div class="product_wrap">
-
-                        <figure class="product_item">
-                            <div class="thumb">
-                                <img src="../images/product/product_01.png" alt="">
+                            <div class="table_text_search">
+                                <div class="search_form">
+                                    <fieldset>
+                                        <legend>검색명</legend>
+                                        
+                                        <form class="form_02_selectbox">
+                                            <select name="" id="">
+                                                <option value="">제목</option>
+                                                <option value="">제목1</option>
+                                                <option value="">제목2</option>
+                                                <option value="">제목3</option>
+                                                <option value="">제목4</option>
+                                            </select>
+                                            <input type="text" placeholder="제목을 입력해주세요.">
+                                            <input type="submit" value="검색">
+                                        </form>
+                                        
+                                    </fieldset>
+                                </div>
                             </div>
-                            <figcaption class="info">
-                                <p class="text_01">기압센서 61402</p>
-                                <p class="text_02">Barometric Pressure Sensor 61402</p>
-                                <p class="text_03"><em class="point_01">공급처</em> RM. Young</p>
-                                <p class="more_btn"><a href="#none">View More</a></p>
-                            </figcaption>
-                        </figure>
+
+                        </div>
+
+                        <!-- table_body -->
+                        <table class="table_body" id="table_body">
+                            <thead>
+                                <tr>
+                                    <th class="table_num">지원구분</th>
+                                    <th class="table_title">공고제목</th>
+                                    <th class="table_data">접수 기간</th>
+                                    <th class="table_state">지원가능</th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="notice_page active">
+                                <!-- 
+                                    type_01 = 신입
+                                    type_02 = 경력
+                                    null = 일반
+                                -->
+                                <tr>
+                                    <td class="table_num"><span class="type type_01">신입</span></td>
+                                    <td class="table_title"><a href="./notice_more.html">공고 제목을 입력해주세요</a></td>
+                                    <td class="table_data">~ 2022.03.31</td>
+                                    <td class="table_state">접수 가능</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="table_num"><span class="type type_02">경력</span></td>
+                                    <td class="table_title"><a href="./notice_more.html">공고 제목을 입력해주세요</a></td>
+                                    <td class="table_data">~ 2022.03.31</td>
+                                    <td class="table_state">접수 종료</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <!-- table_footer -->
+                        <div class="table_footer" id="table_footer">
+
+                            <div class="btn_box">
+                                <a href=""><ion-icon name="chevron-back-outline"></ion-icon></a>
+                            </div>
+
+                            <div class="num_box">
+                                <a href="#none" class="active">1</a>
+                                <a href="#none">2</a>
+                                <a href="#none">3</a>
+                                <a href="#none">4</a>
+                            </div>
+
+                            <div class="btn_box">
+                                <a href=""><ion-icon name="chevron-forward-outline"></ion-icon></a>
+                            </div>
+
+                        </div>
 
                     </div>
-
-                    <!-- table_footer -->
-                    <div class="table_footer" id="table_footer">
-
-                        <div class="btn_box">
-                            <a href="">
-                                <ion-icon name="chevron-back-outline"></ion-icon>
-                            </a>
-                        </div>
-
-                        <div class="num_box">
-                            <a href="#none" class="active">1</a>
-                            <a href="#none">2</a>
-                            <a href="#none">3</a>
-                            <a href="#none">4</a>
-                        </div>
-
-                        <div class="btn_box">
-                            <a href="">
-                                <ion-icon name="chevron-forward-outline"></ion-icon>
-                            </a>
-                        </div>
-
-                    </div>
-
                 </div>
             </article>
 
 
         </section>
-
-        <script>
-            function productChange() {
-                let pageNum = $('#table_footer .num_box a'),
-                    productWrap = $('.product_wrap');
-
-                pageNum.each(function(i) {
-                    let idx = $('#table_footer .num_box a').eq(i).index();
-
-                    pageNum.eq(i).click(function() {
-                        pageNum.removeClass('active');
-                        $(this).addClass('active');
-
-                        productWrap.removeClass('active');
-                        productWrap.eq(idx).addClass('active');
-                    })
-                })
-            }
-            productChange()
-        </script>
 
     </main>
 

@@ -627,6 +627,45 @@
             </div>
         </section>
     </main>
+    
+    <script>
+        $(window).scroll(function() {
+            let scroll = $(window).scrollTop(),
+                dh = $(document).height() - $('.main_section_02').height(),
+                wh = $(window).height();
+
+            ($('.main_section_02').offset().top - wh <= scroll) ? $('.main_section_01').addClass('active'): null;
+            ($('.main_section_03').offset().top - wh <= scroll) ? $('#header').addClass('active') : $('#header').removeClass('active');
+
+        });
+
+        // $(document).ready(function() {
+        //     $('#fullpage').fullpage({
+        //         // options here
+        //         // normalScrollElements: '.main_section_03, .footer',
+
+        //         autoScrolling: true,
+        //         scrollHorizontally: true,
+        //         scrollOverflow: true,
+        //         onLeave: function(anchorLink, index, direction) {
+
+        //             (index >= 4) ? $('header').addClass('active') : $('header').removeClass('active');
+        //         }
+
+        //     });
+        // });
+
+
+        // wave
+        var top_wave = new Wavify('#main_wave', {
+            height: 30,
+            bones: 3,
+            amplitude: 80,
+            speed: .15,
+            color: '#fff'
+        });
+        // wave
+    </script>
 
     <footer class="footer section fp-auto-height" id="footer">
         <div class="footer_wrap">
@@ -696,44 +735,6 @@
 
     <script src="../js/common.js"></script>
 
-    <script>
-        $(window).scroll(function() {
-            let scroll = $(window).scrollTop(),
-                dh = $(document).height() - $('.main_section_02').height(),
-                wh = $(window).height();
-
-            ($('.main_section_02').offset().top - wh <= scroll) ? $('.main_section_01').addClass('active'): null;
-            ($('.main_section_03').offset().top - wh <= scroll) ? $('#header').addClass('active') : $('#header').removeClass('active');
-
-        });
-
-        // $(document).ready(function() {
-        //     $('#fullpage').fullpage({
-        //         // options here
-        //         // normalScrollElements: '.main_section_03, .footer',
-
-        //         autoScrolling: true,
-        //         scrollHorizontally: true,
-        //         scrollOverflow: true,
-        //         onLeave: function(anchorLink, index, direction) {
-
-        //             (index >= 4) ? $('header').addClass('active') : $('header').removeClass('active');
-        //         }
-
-        //     });
-        // });
-
-
-        // wave
-        var top_wave = new Wavify('#main_wave', {
-            height: 30,
-            bones: 3,
-            amplitude: 80,
-            speed: .15,
-            color: '#fff'
-        });
-        // wave
-    </script>
 </body>
 
 </html>

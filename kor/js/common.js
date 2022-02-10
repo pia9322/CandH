@@ -1,5 +1,5 @@
 
-$(function(){
+$(function () {
 
     console.log('common_js_start')
 
@@ -9,9 +9,9 @@ $(function(){
 
     AOS.init();
 
-    // swiper
+    // ============= swiper ============= 
     // main_visual
-    var mainSwiper = new Swiper('.main_visual', {
+    let mainSwiper = new Swiper('.main_visual', {
         effect: "fade",
         slidesPerView: 1,
         loop: true,
@@ -50,10 +50,9 @@ $(function(){
         //     },
         // }
     });
-    
 
     // main_bis
-    var swiper02 = new Swiper('.tabcon', {
+    let swiper02 = new Swiper('.tabcon', {
         slidesPerView: 5,
         spaceBetween: 100,
         // loop: true,
@@ -75,6 +74,50 @@ $(function(){
         }
     });
 
+    // productThumb
+    let productThumb = new Swiper('.product_thum.swiper-container', {
+        slidesPerView: 1,
+        autoHeight: true,
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false,
+        // },
+        lazy: {
+            loadPrevNext: true
+        },
+        touchMoveStopPropagation: true,
+    });
+
+    // productMore
+    let productMore = new Swiper('.product_more.swiper-container', {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        // loop: true,
+        // loopAdditionalSlides: 1,
+        autoHeight: true,
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false,
+        // },
+        lazy: { loadPrevNext: true },
+        touchMoveStopPropagation: true,
+
+        breakpoints: {
+            1480: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+            },
+            1100: {
+                slidesPerView: 3,
+            },
+            767: {
+                slidesPerView: 2,
+            },
+        }
+    });
+
+    // ============= swiper ============= 
+
 
 
     // header_default 
@@ -83,7 +126,7 @@ $(function(){
         header_full = document.querySelector('.header_full'),
         depth_01 = document.querySelectorAll('.header_full_list > li')
 
-        
+
     $('.header_center > li').hover(function () {
         $('.depth_01, .header_bg').addClass('active');
     }, function () {
@@ -110,8 +153,8 @@ $(function(){
             }
 
 
-            if($('.header_full').hasClass('active')){
-                $('body').on('scroll touchmove mousewheel', function(e) {
+            if ($('.header_full').hasClass('active')) {
+                $('body').on('scroll touchmove mousewheel', function (e) {
                     e.preventDefault();
                     e.stopPropagation();
                     return false;
@@ -132,8 +175,8 @@ $(function(){
     // jj fullpage
     let delta, loop, num = 0, pos = [],
         mainLen = ($(".fullpage_wrap > section").length),
-        y = {sy:0,ey:0}
-    
+        y = { sy: 0, ey: 0 }
+
 
 
     function mainWrap() {
@@ -141,14 +184,14 @@ $(function(){
             pos.push($(".fullpage_wrap > section").eq(i).offset().top)
         });
 
-        
+
         $(".fullpage_wrap").on('scroll touchstart touchmove mousewheel DOMMouseScroll', function (e) {
-            if(e.type=='touchstart'){
-                y.sy=e.targetTouches[0].clientY;
-            }else if(e.type=='touchmove'){
-                y.ey=e.targetTouches[0].clientY;
-                delta = (y.sy > y.ey) ? -1 : 1 ;
-            }else{
+            if (e.type == 'touchstart') {
+                y.sy = e.targetTouches[0].clientY;
+            } else if (e.type == 'touchmove') {
+                y.ey = e.targetTouches[0].clientY;
+                delta = (y.sy > y.ey) ? -1 : 1;
+            } else {
                 delta = e.originalEvent.wheelDelta || -e.originalEvent.detail
             }
 
@@ -160,11 +203,11 @@ $(function(){
                     if (num != 0) num--;
                 };
 
-                $(".fullpage_wrap").animate({ marginTop: -pos[num] },"slow")
+                $(".fullpage_wrap").animate({ marginTop: -pos[num] }, "slow")
             }, 300);
 
             (num <= 2) ? $('.main_wrap').addClass('active') : null;
-            (num == 0 || num == 2 ) ? $('.main_section_01').addClass('active') : $('.main_section_01').removeClass('active');
+            (num == 0 || num == 2) ? $('.main_section_01').addClass('active') : $('.main_section_01').removeClass('active');
             (num == 2 && delta <= 120) ? $('.main_wrap').removeClass('active') : null;
 
 
@@ -184,15 +227,15 @@ $(function(){
     // resize reload
 
 
-    
 
-    $('#header_search_btn').click(function(){
-        $('#header_search_box').slideToggle(function(){
+
+    $('#header_search_btn').click(function () {
+        $('#header_search_box').slideToggle(function () {
             $(this).toggleClass('active');
         });
     })
 
-    
+
 
     // page check header active
     function pageCheck() {
@@ -202,15 +245,15 @@ $(function(){
         let LinkActive = $('.link_wrap a');
 
         // link_wrap auto active
-        LinkActive.each(function(idx){
-            (subNaviEvent == LinkActive.eq(idx).text()) ? $(this).addClass('active') : null ;
+        LinkActive.each(function (idx) {
+            (subNaviEvent == LinkActive.eq(idx).text()) ? $(this).addClass('active') : null;
         });
 
         // location Check
-        (nowLocation.indexOf('index') >= 0 ) ?  console.log('Home') : $('#header').addClass('active');
-        (nowLocation.indexOf('/about/') >= 0 ) ? null : null
+        (nowLocation.indexOf('index') >= 0) ? console.log('Home') : $('#header').addClass('active');
+        (nowLocation.indexOf('/about/') >= 0) ? null : null
     }
-    
+
 
 
 

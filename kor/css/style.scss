@@ -720,7 +720,7 @@ body {
                                 }
                             }
 
-                            // depth_02
+                            // depth_01
                             .depth_01 {
                                 display: none;
 
@@ -728,13 +728,17 @@ body {
                                     display: flex;
                                     flex-direction: column;
 
-                                    >a {
+                                    > a {
                                         text-align: left;
                                         font-size: 4rem;
                                         padding: 15px 0 0 15px;
+                                        color: #ddd;
+                                        &:hover {
+                                            color: rgba($color: #f5821f, $alpha: .7);
+                                        }
                                     }
 
-                                    // depth_03
+                                    // depth_02
                                     .depth_02 {
                                         display: flex;
                                         flex-direction: column;
@@ -2173,9 +2177,10 @@ body {
                         &.section_02 {
                             .product_wrap {
                                 display: none;
-                                &.active {
-                                    display: flex; flex-wrap: wrap;
-                                }
+
+                                // active
+                                &.active { display: flex; flex-wrap: wrap; }
+
                                 .product_item {
                                     width: 420px;
                                     border: 1px solid #ddd;
@@ -2266,6 +2271,158 @@ body {
                             }
                         }
                     }
+                }
+
+                &#product_detail {
+
+                    .sub_section {
+                        
+                        // product_header
+                        &.section_01 { 
+                            @include marginTop-100();
+                            .product_header {
+                                .product_wrap {
+                                    display: flex;
+
+                                    .product_img {
+                                        max-width: 605px; max-height: 605px;
+                                        .product_thum {
+                                            width: 100%; height : 100%;
+                                            text-align: center; 
+                                            img { object-fit: cover; }
+                                        }
+                                    }
+            
+                                    .product_info {
+                                        margin-left: 80px; width: 100%;
+                                        .text_wrap {
+                                            &.wrap_01 {
+                                                padding-bottom: 50px; border-bottom: 1px solid #ddd;
+
+                                                > span {
+                                                    display: block;
+                                                    &.text_01 {
+                                                        font-size: 3.6rem; font-weight: bold; line-height: 1; letter-spacing: -1.44px; 
+                                                    }
+                                                    &.text_02 {
+                                                        @include font-18(); 
+                                                        margin-top: 40px; color: #666;
+                                                    }
+                                                } 
+                                            }
+
+                                            &.wrap_02 {
+                                                > span {
+                                                    display: block;
+                                                    @include font-M();
+                                                    
+                                                    &.text_01 {
+                                                        margin-top: 40px;
+                                                        font-size: 24px; font-weight: 500; line-height: 1; color: #f68c31;
+                                                    }
+                                                    &.text_02 {
+                                                        margin-top: 20px; 
+                                                        @include font-18(); color: #666;
+                                                    }
+                                                }
+                                            }
+
+                                            &.wrap_03 {
+                                                display: flex;
+                                                width: 290px; height: 61px;
+                                                margin-top: 60px;
+                                                a {
+                                                    @include font-M();
+                                                    @include flexCenter();
+                                                    @include font-18();
+                                                    @include transition(.15s);
+                                                    font-weight: 500; color: #666;
+                                                    width: 100%; height: 100%;
+                                                    border: 1px solid #ddd;
+                                                    &:hover {
+                                                        background-color: $color-100;
+                                                        color: #333;
+                                                        ion-icon {color: #333;}
+                                                    }
+                                                    ion-icon {
+                                                        width: 20px; height: 20px;
+                                                        margin-left: 20px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                        
+                                    }
+                                }
+            
+                            }
+                        }
+
+
+                        // product_table
+                        &.section_02 {
+                            margin-top: 130px;
+                            .product_table_title {
+                                @include font-M();
+                                font-size: 24px; font-weight: 600; color: #f68c31;
+                            }
+                            .product_table_wrap {
+                                margin-top: 30px;
+                                padding: 100px 100px 90px;
+                                background-color: #f4f4f4;
+                                .product_table {
+                                    width: 100%;
+                                    border-top: 2px solid #f68c31;
+                                    tbody {
+                                        background-color: #fff;
+                                        > tr {
+                                            border: 1px solid #e0e0e0;
+                                            font-size: 1.6rem;
+                                            th {
+                                                @include font-M();
+                                                background: rgba($color: #f68c31, $alpha: .4);
+                                                width: 250px; height: 240px;
+                                            }
+                                            td {
+                                                color: #666;
+                                                border: 1px solid #e0e0e0;
+                                                padding: 12px 0;
+                                                text-align: center;
+                                            }
+                                        }
+                                        
+                                    }
+                                }
+
+                                .table_state_btn {
+                                    @include flexCenter();
+                                    @include font-18();
+                                    // active, hover
+                                    &.active {
+                                        margin-top: 60px;
+                                        ion-icon {
+                                            transform: rotate(180deg);
+                                        }
+                                    }
+
+                                    ion-icon {
+                                        @include transition(.15s);
+                                        margin-right: 10px;
+                                        background-color: #ddd; border-radius: 100%;
+                                        width: 30px; height: 30px;
+                                    }
+                                }
+
+                            }
+
+                            .product_more {
+                                margin-top: 30px;
+                            }
+                        }
+
+                    }
+        
+
                 }
             }
 
