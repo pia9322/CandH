@@ -116,6 +116,68 @@ $(function () {
         }
     });
 
+
+
+    // person swiper
+    let name = ['기술팀', '기술 영업팀', '솔루션 개발팀']
+
+    let teamTab = new Swiper(".team_info.swiper-container", {
+        autoHeight: true,
+        effect: "fade",
+
+        pagination: {
+            el: ".swiper-pagination.tab_02_list",
+            clickable: true,
+            renderBullet: function(index, className) {
+                return '<span class="' + className + '">' + (name[index]) + '</span>';
+            },
+        },
+    });
+
+    let teamSlide = new Swiper('.team.swiper-container', {
+        slidesPerView: 'auto',
+        // centeredSlides: true,
+        // loop: true,
+        // touchMoveStopPropagation: true,
+        breakpoints: {
+            // 1480: {
+            //     slidesPerView: 2,
+            // },
+        }
+    });
+
+    let personInfo = new Swiper('.person_info.swiper-container', {
+        slidesPerView: '4',
+        // centeredSlides: true,
+        touchMoveStopPropagation: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            1480: {
+                slidesPerView: 3,
+                loop: true,
+
+            },
+            1120: {
+                slidesPerView: 2.5,
+            },
+            950: {
+                slidesPerView: 2,
+                spaceBetween: 0,
+            },
+            767: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+            }
+        }
+    });
+    // person swiper
+
+
+
+
     // ============= swiper ============= 
 
 

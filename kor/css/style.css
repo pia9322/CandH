@@ -2677,10 +2677,6 @@ body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-contai
   height: 60px;
 }
 
-body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table tbody {
-  height: 180px;
-}
-
 body main.sub_page.about#person .sub_section.section_06 {
   margin-top: 120px;
 }

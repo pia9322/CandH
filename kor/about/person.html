@@ -285,7 +285,8 @@
 
                 <div class="img_wrap">
                     <figure>
-                        <img src="../images/about/person_01.png" alt="">
+                        <div class="img_wrap"> <img src="../images/about/person_01.png" alt=""> </div>
+
                         <figcaption>
                             <p class="text_01">
                                 C&H, Inc는 <strong>소통과 협력의 문화와
@@ -761,65 +762,9 @@
             </div>
         </section>
 
-        <!-- section_03 swiper js -->
-        <script>
-            let swiper02 = new Swiper('.team.swiper-container', {
-                slidesPerView: 'auto',
-                // loop: true,
-                touchMoveStopPropagation: true,
-                breakpoints: {
-                    // 1600: {
-                    //     slidesPerView: 3,
-                    //     spaceBetween: 40,
-                    // },
-                    // 1200: {
-                    //     slidesPerView: 3,
-                    //     spaceBetween: 20,
-                    // },
-                    // 500: {
-                    //     slidesPerView: 1,
-                    //     spaceBetween: 0,
-                    // }
-                }
-            });
-
-            let swiper03 = new Swiper('.person_info.swiper-container', {
-                slidesPerView: '4',
-                // loop: true,
-                // centeredSlides: true,
-                touchMoveStopPropagation: true,
-                breakpoints: {
-                    1480: {
-                        slidesPerView: 3,
-                    },
-                    1200: {
-                        slidesPerView: 2,
-                    },
-                    500: {
-                        slidesPerView: 1,
-                        spaceBetween: 0,
-                    }
-                }
-            });
-        </script>
-        <!-- section_03 swiper js -->
-
     </main>
     <script>
-        let name = ['기술팀', '기술 영업팀', '솔루션 개발팀']
-
-        let teamTab = new Swiper(".team_info.swiper-container", {
-            autoHeight: true,
-            effect: "fade",
-
-            pagination: {
-                el: ".swiper-pagination.tab_02_list",
-                clickable: true,
-                renderBullet: function(index, className) {
-                    return '<span class="' + className + '">' + (name[index]) + '</span>';
-                },
-            },
-        });
+     
     </script>
 
     <!-- --------------------------- main --------------------------- -->
