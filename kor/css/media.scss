@@ -462,11 +462,13 @@ $color-100 : #f5821f;
 
                 // product_tab
                 #product_tab {
-                    .product_tab {
+                    .product_tab_wrap {
                         .text_wrap {
+                            justify-content: center;
                             > a {
                                 // @include font-18();
                                 width: auto; padding: 10px 20px;
+                                margin-bottom: 10px;
                             }
                         }
                     }
@@ -952,57 +954,78 @@ $color-100 : #f5821f;
 
                     &#product_detail {
                         .sub_section {
+                            
                             // product_header
                             &.section_01 { 
                                 // @include marginTop-100();
                                 .product_header {
                                     .product_wrap {
-                                        flex-direction: column; text-align: center; align-items: center;
+                                        flex-direction: column;
                                         .product_img {
-                                            max-height: 400px;
-                                            .product_thum {
-                                               max-height: 400px;
-                                                img { max-height: 400px; }
+                                            .product_thum_wrap {
+                                                max-width: 600px;
+                                                margin: 0 auto;
+                                                .product_thum {
+                                                    max-height: 400px; height: 400px; width: 400px;
+                                                    margin: 0 auto;
+                                                    .thum {
+                                                        img {}
+                                                    }
+                                                }
+                                                .product_small_wrap {
+                                                    .product_small {
+                                                        .small {
+                                                            max-width: 120px; max-height: 120px;
+                                                            width: 120px; height: 120px;
+                                                            img {}
+                                                        }
+                                                    }
+                                                }
+                                               
                                             }
                                         }
                 
                                         .product_info {
-                                            margin: 40px 0 0 0;
+                                            display: inline-block;
+                                            margin-left: 0; 
                                             .text_wrap {
+                                                text-align: center;
                                                 &.wrap_01 {
                                                     padding-bottom: 40px;
                                                     > span {
-                                                        &.text_01 {
-                                                            // font-size: 3.6rem;
+                                                        &.text_01 { 
+                                                            margin-top: 40px;
+                                                            // font-size: 20px;
                                                         }
-                                                        &.text_02 {
-                                                            // @include font-18(); 
-                                                            // margin-top: 40px;
+                                                        &.text_02 { 
+                                                            margin-top: 20px;
+                                                            // font-size: 36px; 
+                                                        }
+                                                        &.text_03 { 
+                                                            margin-top: 10px;
+                                                            font-size: 20px;
                                                         }
                                                     } 
                                                 }
-
+    
                                                 &.wrap_02 {
                                                     > span {
                                                         &.text_01 {
-                                                            // margin-top: 40px;
-                                                            // font-size: 24px;
-                                                        }
-                                                        &.text_02 {
-                                                            margin-top: 10px; 
-                                                            // @include font-18();
+                                                            // @include font-18(); 
+                                                            margin-top: 30px;
                                                         }
                                                     }
                                                 }
-
+    
                                                 &.wrap_03 {
-                                                    width: 100%;
-                                                    justify-content: center;
+                                                    width: 100%; justify-content: center;
                                                     margin-top: 40px;
                                                     a {
                                                         // @include font-18();
                                                         width: 290px; height: 60px;
-                                                        ion-icon { margin-left: 10px;}
+                                                        ion-icon {
+                                                            margin-left: 10px;
+                                                        }
                                                     }
                                                 }
                                             }
@@ -1012,76 +1035,48 @@ $color-100 : #f5821f;
                 
                                 }
                             }
-
-
+    
+    
                             // product_table
-                            // 대기대기대기대기
-                            // 대기대기대기대기
-                            // 대기대기대기대기
-                            // 대기대기대기대기
                             &.section_02 {
-                                margin-top: 130px;
+                                @include marginTop-100();
                                 .product_table_title {
-                                    @include font-M();
-                                    font-size: 24px; font-weight: 600; color: #f68c31;
+                                    // font-size: 24px;
                                 }
                                 .product_table_wrap {
-                                    margin-top: 30px;
-                                    padding: 100px 100px 90px;
-                                    background-color: #f4f4f4;
+                                    margin-top: 20px;
+                                    padding: 50px;
                                     .product_table {
-                                        width: 100%;
-                                        border-top: 2px solid #f68c31;
                                         tbody {
-                                            background-color: #fff;
                                             > tr {
-                                                border: 1px solid #e0e0e0;
-                                                font-size: 1.6rem;
-                                                th {
-                                                    @include font-M();
-                                                    background: rgba($color: #f68c31, $alpha: .4);
-                                                    width: 250px; height: 240px;
-                                                }
-                                                td {
-                                                    color: #666;
-                                                    border: 1px solid #e0e0e0;
-                                                    padding: 12px 0;
-                                                    text-align: center;
-                                                }
+                                                // font-size: 16px;
+                                                th { max-width: 200px; height: auto;}
+                                                td {padding: 10px 0;}
                                             }
                                             
                                         }
                                     }
-
+    
                                     .table_state_btn {
-                                        @include flexCenter();
-                                        @include font-18();
-                                        // active, hover
-                                        &.active {
-                                            margin-top: 60px;
-                                            ion-icon {
-                                                transform: rotate(180deg);
-                                            }
-                                        }
+                                        // @include font-18();
 
+                                        &.active {margin-top: 40px;}
+    
                                         ion-icon {
-                                            @include transition(.15s);
-                                            margin-right: 10px;
-                                            background-color: #ddd; border-radius: 100%;
-                                            width: 30px; height: 30px;
+                                            // width: 30px; height: 30px;
                                         }
                                     }
-
+    
                                 }
-
+    
                                 .product_more {
-                                    margin-top: 30px;
+                                    margin-top: 20px;
                                 }
                             }
-
+    
                         }
             
-
+    
                     }
                 }
 
@@ -1731,6 +1726,21 @@ $color-100 : #f5821f;
                     }
                 }
 
+                
+                // product_tab
+                #product_tab {
+                    .product_tab_wrap {
+                        .text_wrap {
+                            > a {
+                                @include font-18();
+                                padding: 2px 10px;
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+
+                }
+
 
 
                 // ABOUT sub_page
@@ -2100,6 +2110,177 @@ $color-100 : #f5821f;
 
                     }
                 }
+
+                
+                // Product
+                &.product {
+                    &#product_list {
+                        .sub_section {
+                            &.section_01 { margin: 70px auto 40px; }
+
+                            &.section_02 {
+                                .product_wrap {
+                                    .product_item {
+                                        width: calc( 50% - 10px );
+                                        margin: 0 20px 40px 0;
+                                        &:nth-child(3n) { margin: 0 20px 40px 0;}
+                                        &:nth-child(2n) { margin: 0 0 40px 0;}
+
+                                        .thumb {
+                                            height: 175px;
+                                        }
+                                        .info {
+                                            padding: 15px 10px;
+                                            p {
+                                                &.text_01 { font-size: 18px; }
+                                                &.text_02 { margin-top: 5px; font-size: 14px;}
+                                                &.text_03 { margin-top: 10px; font-size: 14px;}
+                                                &.more_btn {
+                                                    margin: 30px auto 0;
+                                                    font-size: 14px;
+                                                    width: 100px; height: 30px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                            
+                                #table_footer {
+                                    @include marginTop-100();
+                                    .num_box {
+                                        a { 
+                                            margin: 0 10px;
+                                        }
+                                    }
+
+                              
+                                }
+                            }
+                        }
+                    }
+
+
+                    &#product_detail {
+                        .sub_section {
+                            
+                            // product_header
+                            &.section_01 { 
+                                @include marginTop-100();
+                                .product_header {
+                                    .product_wrap {
+                                        .product_img {
+                                            .product_thum_wrap {
+                                                margin: 0 auto;
+                                                .product_thum {
+                                                    max-height: 250px; height: 250px; width: 250px;
+                                                    margin: 0 auto;
+                                                    .thum {
+                                                        img {}
+                                                    }
+                                                }
+                                                .product_small_wrap {
+                                                    overflow: auto;
+                                                    .product_small {
+                                                        justify-content: space-around;
+                                                        min-width: 500px;
+                                                        .small {
+                                                            max-width: 100px; max-height: 100px;
+                                                            width: 100px; height: 100px;
+                                                            img {}
+                                                        }
+                                                    }
+                                                }
+                                                
+                                            }
+                                        }
+                
+                                        .product_info {
+                                            margin-left: 0; 
+                                            .text_wrap {
+                                                &.wrap_01 {
+                                                    padding-bottom: 30px;
+                                                    > span {
+                                                        &.text_01 { 
+                                                            margin-top: 30px;
+                                                            font-size: 16px;
+                                                        }
+                                                        &.text_02 { 
+                                                            margin-top: 15px;
+                                                            font-size: 24px; line-height: 1.3;
+                                                        }
+                                                        &.text_03 { 
+                                                            margin-top: 5px;
+                                                            font-size: 16px;
+                                                        }
+                                                    } 
+                                                }
+    
+                                                &.wrap_02 {
+                                                    > span {
+                                                        &.text_01 {
+                                                            @include font-18(); 
+                                                            margin-top: 30px;
+                                                        }
+                                                    }
+                                                }
+    
+                                                &.wrap_03 {
+                                                    width: 100%; 
+                                                    margin-top: 20px;
+                                                    a {
+                                                        @include font-18(); height: 50px;
+                                                    }
+                                                }
+                                            }
+                            
+                                        }
+                                    }
+                
+                                }
+                            }
+    
+    
+                            // product_table
+                            &.section_02 {
+                                @include marginTop-100();
+                                .product_table_title { font-size: 20px; }
+
+                                .product_table_wrap {
+                                    margin-top: 20px;
+                                    padding: 30px;
+                                    overflow: auto;
+                                    .product_table {
+                                        min-width: 700px;
+                                        tbody {
+                                            > tr {
+                                                font-size: 14px;
+                                                th { max-width: 200px; }
+                                                td { padding: 7px 0;}
+                                            }
+                                        }
+                                    }
+    
+                                    .table_state_btn {
+                                        @include font-18();
+                                        &.active {margin-top: 30px;}
+                                        ion-icon {
+                                            width: 20px; height: 20px;
+                                        }
+                                    }
+    
+                                }
+    
+                                .product_more {
+                                    margin-top: 20px;
+                                }
+                            }
+    
+                        }
+            
+    
+                    }
+                }
+                
 
 
 
