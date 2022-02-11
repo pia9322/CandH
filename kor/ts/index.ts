@@ -135,11 +135,10 @@ $(function () {
         },
         
         breakpoints: {
-            700: {
-                touchRatio: 0,
+            800: {
+                allowTouchMove: false	
             },
         },
-
     });
 
     

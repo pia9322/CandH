@@ -2057,18 +2057,15 @@ $color-100 : #f5821f;
                                                     .img_wrap {}
 
                                                     .table_wrap {
-                                                        // margin-top: 60px;
+                                                        margin-top:10px;
+                                                        // -webkit-overflow-scrolling: touch;
                                                         overflow: auto;
-                                                        -webkit-overflow-scrolling: touch;
 
                                                         table {
-                                                            min-width: 700px;
-                                                            tr {
-                                                                // @include font-18();
-                                                            }
-                                                            th { }
-                                                            td { padding: 20px; }
-
+                                                            min-width: 800px;
+                                                            tr { font-size: 14px; }
+                                                            th {border-top: none; }
+                                                            td { padding: 15px; }
                                                             thead { height: 50px;}
                                                         }
                                                     }
@@ -2078,7 +2075,6 @@ $color-100 : #f5821f;
                                     }
                                 }
                             }
-                            // 보류
 
                             &.section_06 {
                                 @include marginTop-100();
@@ -2087,26 +2083,17 @@ $color-100 : #f5821f;
                                         overflow: hidden;
                                         .swiper-wrapper {
                                             .swiper-slide {
-                                                
-                                                &::after { display: none; }
-                                                .dots { display: none; }
-                                                
                                                 .inline_box {
-                                                    width: 300px; height: 300px;
-                                                    margin: 0 auto;
-                                                    &:hover { border: 2px dotted $color-100; }
-                                                    
+                                                    width: auto; height: auto; border: none;
+                                                    &:hover { border: none;}
+
                                                     figure {
 
-                                                        img {
-                                                            height: 55px;
-                                                        }
+                                                        img { height: 45px; }
                                                         figcaption {
-                                                            // @include font-18();
-                                                            .text_01 {
-                                                                margin-top: 18px;
-                                                            }
-                                                            .text_02 { margin-top: 15px; }
+                                                            @include font-18();
+                                                            .text_01 { margin-top: 15px; }
+                                                            .text_02 { margin-top: 5px; text-align: left; }
                                                         }
                                                     }
                                                 }

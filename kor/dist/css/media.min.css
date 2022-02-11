@@ -337,19 +337,20 @@
   body main.sub_page.about#person .sub_section.section_03 .team.swiper-container .swiper-wrapper .swiper-slide.big p { margin-top: 10px; }
   body main.sub_page.about#person .sub_section.section_04 { margin-top: 70px; }
   body main.sub_page.about#person .sub_section.section_05 { margin-top: 20px; }
-  body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap { overflow: auto; -webkit-overflow-scrolling: touch; }
-  body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table { min-width: 700px; }
-  body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table td { padding: 20px; }
+  body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap { margin-top: 10px; overflow: auto; }
+  body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table { min-width: 800px; }
+  body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table tr { font-size: 14px; }
+  body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table th { border-top: none; }
+  body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table td { padding: 15px; }
   body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table thead { height: 50px; }
   body main.sub_page.about#person .sub_section.section_06 { margin-top: 70px; }
   body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container { overflow: hidden; }
-  body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide::after { display: none; }
-  body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .dots { display: none; }
-  body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box { width: 300px; height: 300px; margin: 0 auto; }
-  body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box:hover { border: 2px dotted #f5821f; }
-  body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box figure img { height: 55px; }
-  body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box figure figcaption .text_01 { margin-top: 18px; }
-  body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box figure figcaption .text_02 { margin-top: 15px; } }
+  body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box { width: auto; height: auto; border: none; }
+  body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box:hover { border: none; }
+  body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box figure img { height: 45px; }
+  body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box figure figcaption { font-size: 16px; }
+  body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box figure figcaption .text_01 { margin-top: 15px; }
+  body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box figure figcaption .text_02 { margin-top: 5px; text-align: left; } }
 
 @media (max-width: 479px) { #table_default .table_header .table_text_search .search_form fieldset .form_02_selectbox input[type=text] { margin-right: 0 !important; }
   #table_default .table_header .table_text_search .search_form fieldset .form_02_selectbox input[type=submit] { margin: 10px 0 0 0; width: 100%; }

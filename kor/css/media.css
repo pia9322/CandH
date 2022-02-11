@@ -1422,14 +1422,20 @@
     margin-top: 20px;
   }
   body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap {
+    margin-top: 10px;
     overflow: auto;
-    -webkit-overflow-scrolling: touch;
   }
   body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table {
-    min-width: 700px;
+    min-width: 800px;
+  }
+  body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table tr {
+    font-size: 14px;
+  }
+  body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table th {
+    border-top: none;
   }
   body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table td {
-    padding: 20px;
+    padding: 15px;
   }
   body main.sub_page.about#person .sub_section.section_05 .team_info.swiper-container .swiper-wrapper .swiper-slide figure .table_wrap table thead {
     height: 50px;
@@ -1440,28 +1446,26 @@
   body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container {
     overflow: hidden;
   }
-  body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide::after {
-    display: none;
-  }
-  body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .dots {
-    display: none;
-  }
   body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box {
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
+    width: auto;
+    height: auto;
+    border: none;
   }
   body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box:hover {
-    border: 2px dotted #f5821f;
+    border: none;
   }
   body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box figure img {
-    height: 55px;
+    height: 45px;
+  }
+  body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box figure figcaption {
+    font-size: 16px;
   }
   body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box figure figcaption .text_01 {
-    margin-top: 18px;
+    margin-top: 15px;
   }
   body main.sub_page.about#person .sub_section.section_06 .person_info.swiper-container .swiper-wrapper .swiper-slide .inline_box figure figcaption .text_02 {
-    margin-top: 15px;
+    margin-top: 5px;
+    text-align: left;
   }
 }
 
