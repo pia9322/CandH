@@ -1,8 +1,7 @@
 
+
 $(function () {
 
-
-    // ts 이전 
     console.log('common_js_start')
 
     // common_js_start
