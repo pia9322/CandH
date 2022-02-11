@@ -124,6 +124,7 @@ $(function () {
     let teamTab = new Swiper(".team_info.swiper-container", {
         autoHeight: true,
         effect: "fade",
+        
 
         pagination: {
             el: ".swiper-pagination.tab_02_list",
@@ -132,7 +133,19 @@ $(function () {
                 return '<span class="' + className + '">' + (name[index]) + '</span>';
             },
         },
+        
+        breakpoints: {
+            700: {
+                // touchRatio: 0,
+                simulateTouch:false
+            },
+        },
+
     });
+
+    
+
+
 
     let teamSlide = new Swiper('.team.swiper-container', {
         slidesPerView: 'auto',
@@ -238,7 +251,6 @@ $(function () {
     let delta, loop, num = 0, pos = [],
         mainLen = ($(".fullpage_wrap > section").length),
         y = { sy: 0, ey: 0 }
-
 
 
     function mainWrap() {

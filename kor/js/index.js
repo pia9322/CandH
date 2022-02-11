@@ -114,6 +114,12 @@ $(function () {
                 return '<span class="' + className + '">' + (name[index]) + '</span>';
             },
         },
+        breakpoints: {
+            700: {
+                // touchRatio: 0,
+                simulateTouch: false
+            },
+        },
     });
     var teamSlide = new Swiper('.team.swiper-container', {
         slidesPerView: 'auto',
