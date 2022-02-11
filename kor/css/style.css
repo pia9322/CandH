@@ -378,12 +378,37 @@ body .submit_box.box_01 button:hover, body .submit_box.box_01 button:active {
   border-color: transparent;
 }
 
+body #search_box_popup {
+  z-index: 99999;
+  width: 90vw;
+  height: 90vh;
+  overflow: auto;
+  padding: 100px;
+  background: #fff;
+}
+
+body #search_box_popup button[type=submit] {
+  background-color: #f5821f;
+  border: none;
+}
+
+body #search_box_popup .product-inner img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .lity-close {
+  color: #f5821f !important;
+}
+
 body #header {
   height: 110px;
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 9999;
+  z-index: 9990;
   width: 100%;
   background: rgba(255, 255, 255, 0);
   transition: 0.3s;

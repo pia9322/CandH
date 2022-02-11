@@ -37,6 +37,8 @@
     <link rel="stylesheet" href="../css/aos.css">
     <link rel="stylesheet" href="../css/fullpage.min.css">
     <link rel="stylesheet" href="../css/lity.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
 
 
     <!-- --------------------CSS-------------------- -->
@@ -53,6 +55,8 @@
     <script src="../js/lity.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
 
     <!-- --------------------Script-------------------- -->
 </head>
@@ -302,7 +306,7 @@
                     <p class="input_box margin">
                         <label for="" class="text_02">제품명</label>
                         <input type="text" name="" id="" placeholder="제품명을 입력해주세요">
-                        <a href="#none" class="search_box" id="search_box" data-lity>
+                        <a href="#search_box_popup" class="search_box" id="search_box" data-lity>
                             <ion-icon name="search-outline"></ion-icon>
                             검색
                         </a>
@@ -341,6 +345,173 @@
             ($(this).hasClass('active')) ? $(this).children('.slide_body').toggleClass('active'): $(this).children('.slide_body').removeClass('active');
         });
     </script>
+
+
+
+    <!-- search_box -->
+    <div class="search_box_popup" id="search_box_popup">
+        <div class="row" id="search">
+            <form id="search-form" action="" method="POST" enctype="multipart/form-data">
+                <div class="form-group col-xs-9">
+                    <input class="form-control" type="text" placeholder="검색" />
+                </div>
+                <div class="form-group col-xs-3">
+                    <button type="submit" class="btn btn-block btn-primary">검색하기</button>
+                </div>
+            </form>
+        </div>
+        <div class="row" id="filter">
+            <form>
+                <div class="form-group col-sm-3 col-xs-6">
+                    <select data-filter="make" class="filter-make filter form-control">
+                        <option value="">선택1</option>
+                        <option value="">선택2</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-3 col-xs-6">
+                    <select data-filter="model" class="filter-model filter form-control">
+                        <option value="">선택1</option>
+                        <option value="">선택2</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-3 col-xs-6">
+                    <select data-filter="type" class="filter-type filter form-control">
+                        <option value="">선택1</option>
+                        <option value="">선택2</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-3 col-xs-6">
+                    <select data-filter="price" class="filter-price filter form-control">
+                        <option value="">선택2</option>
+                        <option value="">선택2</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="row" id="products">
+
+        </div>
+    </div>
+
+
+    
+    <script>
+        var data = [
+            {
+                "make": "제품_01",
+                "model": "모델",
+                "type": "타입",
+                "price": "가격",
+                "image": "../images/product/product_01.png"
+            },
+            {
+                "make": "제품_01",
+                "model": "모델",
+                "type": "타입",
+                "price": "가격",
+                "image": "../images/product/product_02.png"
+            },
+            {
+                "make": "제품_01",
+                "model": "모델",
+                "type": "타입",
+                "price": "가격",
+                "image": "../images/product/product_detail_01.png"
+            },
+            {
+                "make": "품제",
+                "model": "모델",
+                "type": "타입",
+                "price": "가격",
+                "image": "../images/product/product_01.png"
+            }
+        ];
+
+        var products = "",
+            makes = "",
+            models = "",
+            types = "";
+
+        for (var i = 0; i < data.length; i++) {
+            var make = data[i].make,
+                model = data[i].model,
+                type = data[i].type,
+                price = data[i].price,
+                rawPrice = price.replace("$", ""),
+                rawPrice = parseInt(rawPrice.replace(",", "")),
+                image = data[i].image;
+
+            //create product cards
+            products += "<div class='col-sm-4 product' data-make='" + make + "' data-model='" + model + "' data-type='" + type + "' data-price='" + rawPrice + "'><div class='product-inner text-center'><img src='" + image + "'><br />Make: " + make + "<br />Model: " + model + "<br />Type: " + type + "<br />Price: " + price + "</div></div>";
+
+            //create dropdown of makes
+            if (makes.indexOf("<option value='" + make + "'>" + make + "</option>") == -1) {
+                makes += "<option value='" + make + "'>" + make + "</option>";
+            }
+
+            //create dropdown of models
+            if (models.indexOf("<option value='" + model + "'>" + model + "</option>") == -1) {
+                models += "<option value='" + model + "'>" + model + "</option>";
+            }
+
+            //create dropdown of types
+            if (types.indexOf("<option value='" + type + "'>" + type + "</option>") == -1) {
+                types += "<option value='" + type + "'>" + type + "</option>";
+            }
+        }
+
+        $("#products").html(products);
+        $(".filter-make").append(makes);
+        $(".filter-model").append(models);
+        $(".filter-type").append(types);
+
+        var filtersObject = {};
+
+        //on filter change
+        $(".filter").on("change", function() {
+            var filterName = $(this).data("filter"),
+                filterVal = $(this).val();
+
+            if (filterVal == "") {
+                delete filtersObject[filterName];
+            } else {
+                filtersObject[filterName] = filterVal;
+            }
+
+            var filters = "";
+
+            for (var key in filtersObject) {
+                if (filtersObject.hasOwnProperty(key)) {
+                    filters += "[data-" + key + "='" + filtersObject[key] + "']";
+                }
+            }
+
+            if (filters == "") {
+                $(".product").show();
+            } else {
+                $(".product").hide();
+                $(".product").hide().filter(filters).show();
+            }
+        });
+
+        //on search form submit
+        $("#search-form").submit(function(e) {
+            e.preventDefault();
+            var query = $("#search-form input").val().toLowerCase();
+
+            $(".product").hide();
+            $(".product").each(function() {
+                var make = $(this).data("make").toLowerCase(),
+                    model = $(this).data("model").toLowerCase(),
+                    type = $(this).data("type").toLowerCase();
+
+                if (make.indexOf(query) > -1 || model.indexOf(query) > -1 || type.indexOf(query) > -1) {
+                    $(this).show();
+                }
+            });
+        });
+    </script>
+
 
     <!-- --------------------------- main --------------------------- -->
 

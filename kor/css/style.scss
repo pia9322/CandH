@@ -46,7 +46,6 @@ $border-hegith : 185px;
 
 
 
-
 // ====================================default css====================================
 body {
     i{
@@ -321,6 +320,24 @@ body {
 
     }
 
+    #search_box_popup {
+        z-index: 99999;
+        width: 90vw; height: 90vh;
+        overflow: auto;
+        padding: 100px; background: #fff;
+        button[type=submit] {
+            background-color: $color-100;
+            border: none
+        }
+        .product-inner {
+            img {width: 200px; height: 200px; object-fit: cover;}
+        }
+    }
+    .lity-close {
+        color: $color-100 !important; 
+    }
+
+
 }
 // ====================================default css====================================
 
@@ -331,7 +348,10 @@ body {
 
     #header {
         @include header-height();
-        position: fixed; left: 0;top: 0; z-index: 9999;
+        position: fixed; left: 0;top: 0; 
+        // z-index: 9999;
+        z-index: 9990;
+
         width: 100%;
         background: rgba($color: #fff, $alpha: 0);
         @include transition(.3s);
