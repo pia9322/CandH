@@ -283,7 +283,7 @@
   body main.sub_page .sub_section.section_title .text_wrap .text_01 { font-size: 30px; }
   body main.sub_page .sub_section.section_title .text_wrap .text_02 { font-size: 16px; }
   body main.sub_page.about#company .sub_section.section_01 { margin-top: 50px; }
-  body main.sub_page.about#company .sub_section.section_01 .content_wrap > figure .img_wrap { height: 250px; }
+  body main.sub_page.about#company .sub_section.section_01 .content_wrap > figure .img_wrap { height: 200px; }
   body main.sub_page.about#company .sub_section.section_01 .content_wrap > figure figcaption { width: 100%; margin: 20px 0 0 0; }
   body main.sub_page.about#company .sub_section.section_01 .content_wrap > figure figcaption .text_01 { font-size: 26px; }
   body main.sub_page.about#company .sub_section.section_01 .content_wrap > figure figcaption .text_02 { font-size: 16px; margin-top: 30px; }
