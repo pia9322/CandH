@@ -266,18 +266,36 @@
                     <figure class="product_wrap">
 
                         <div class="product_img">
-
                             <!--
                                 thumb swiper 
                                 size - 605x605 
                             -->
-                            <div class="product_thum swiper-container">
+                            <!-- <div class="product_thum swiper-container">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide"> <img src="../images/product/product_detail_01.png" alt=""> </div>
-                                    <div class="swiper-slide"> <img src="../images/product/product_detail_01.png" alt=""> </div>
-                                    <div class="swiper-slide"> <img src="../images/product/product_detail_01.png" alt=""> </div>
-                                    <div class="swiper-slide"> <img src="../images/product/product_detail_01.png" alt=""> </div>
+                                    <div class="swiper-slide"><img src="../images/product/product_detail_01.png" alt=""></div>
+                                    <div class="swiper-slide"><img src="../images/product/product_detail_01.png" alt=""></div>
+                                    <div class="swiper-slide"><img src="../images/product/product_detail_01.png" alt=""></div>
+                                    <div class="swiper-slide"><img src="../images/product/product_detail_01.png" alt=""></div>
                                 </div>
+                                
+                                <div class="product_thum_more swiper-pagination">
+                                    asd
+                                </div>
+                            </div> -->
+                            <div class="product_thum_wrap">
+                                <!-- 썸네일 size - 605x605 -->
+                                <div class="product_thum">
+                                    <div class="thum"><img src="../images/product/product_detail_01.png" alt=""></div>
+                                </div>
+
+                                <!-- 썸네일 size - 605x605 -->
+                                <div class="product_small">
+                                    <div class="small"><img src="../images/product/product_detail_01.png" alt=""></div>
+                                    <div class="small"><img src="../images/product/product_02.png" alt=""></div>
+                                    <div class="small"><img src="../images/product/product_03.png" alt=""></div>
+                                    <div class="small"><img src="../images/product/product_01.png" alt=""></div>
+                                </div>
+
                             </div>
 
                         </div>
@@ -285,10 +303,15 @@
                         <figcaption class="product_info">
 
                             <p class="text_wrap wrap_01">
+                                <span class="text_01">Dipper-PTEC</span>
+                                <span class="text_02">토양시료채취기(Edelman)-일체형</span>
+                                <span class="text_03">Single Edelman auger</span>
+
+                            </p>
+
+                            <p class="text_wrap wrap_02">
+
                                 <span class="text_01">
-                                    기압센서 61402
-                                </span>
-                                <span class="text_02">
                                     · 쉬운설치
                                     <br>
                                     · 움직이는 부품 없음
@@ -301,31 +324,13 @@
                                 </span>
                             </p>
 
-                            <p class="text_wrap wrap_02">
-
-                                <span class="text_01">Parameter</span>
-
-                                <span class="text_02">
-                                    Air temperature, relative huminity, vapor pressure, barometric pressure, wind speed,
-                                    <br class="pc_only">
-                                    gust and direction, solar radiation, precipitation, lighting strike counter and distance
-                                </span>
-
-                                <span class="text_01">
-                                    Communications Interface
-                                </span>
-
-                                <span class="text_02">
-                                    Digital SDI-12 coummunication
-                                </span>
-                            </p>
-
                             <p class="text_wrap wrap_03">
                                 <a href="" class="">Brochure Download
                                     <ion-icon name="download-outline"></ion-icon>
                                 </a>
                             </p>
                         </figcaption>
+
                     </figure>
                 </div>
             </div>
@@ -404,9 +409,6 @@
     </main>
 
     <script>
-   
-
-
         function tableChange() {
             $('.product_table').children().hide();
 
@@ -415,10 +417,16 @@
                 $(this).hasClass('active') ? $(this).children().text('접기') : $(this).children().text('펼치기');
                 $('.table_state_btn').hasClass('active') ? $('.product_table').children().show() : $('.product_table').children().hide()
             })
-
-
         }
         tableChange()
+
+        
+        $(".product_small .small img").hover(function() {
+            let img = $(this).attr("src");
+            $(".product_thum .thum img").attr("src", img);
+        });
+
+        
     </script>
 
     <!-- --------------------------- main --------------------------- -->
@@ -535,7 +543,7 @@
     <!-- ---------------------------footer--------------------------- -->
 
 
-    <script src="../js/common.js"></script>
+    <script src="../js/index.js"></script>
 
 
 </body>

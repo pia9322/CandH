@@ -85,10 +85,8 @@ body {
         }
     }
 
-    // table 공통
+    // table_공통 게시판
     #table_default {
-        margin-top: 30px;
-
         #table_header {
             margin: 0 auto 2rem;
             display: flex; justify-content: space-between;
@@ -104,7 +102,7 @@ body {
                         .form_02_selectbox {
                             flex-wrap: wrap;
 
-                            select {
+                            select, .nice-select {
                                 border: 1px solid #ddd;
                                 width: 90px; height: 40px;
                                 margin-right: 6px; padding-left: 14px;
@@ -169,7 +167,7 @@ body {
                             .type {
                                 @include flexCenter();
                                 width: 120px; height: 50px; margin: 0 auto;
-                                border-radius: 25px; color: 333;
+                                border-radius: 25px; color: #333;
                                 &.type_01 { background-color: $color-100; color: #fff}
                                 &.type_02 { background-color: #1a3968; color: #fff}
                             }
@@ -222,7 +220,7 @@ body {
 
     }
 
-    // 상세보기
+    // table_공통 상세보기
     .table_wrap_more {
         margin-top: 50px;
 
@@ -241,7 +239,7 @@ body {
 
                 tr {
                     th {
-                        padding: 20px
+                        padding: 20px;
                     }
 
                     td {
@@ -280,11 +278,7 @@ body {
                     }
                 }
             }
-
-
-
-
-
+            
         }
 
         .table_notice_more {
@@ -1414,10 +1408,9 @@ body {
                         @include font-18();
                         position: relative; text-align: left;
                         a, span {
-                            width: auto; height: auto;
-                            background: transparent;
-                            border: none;
                             position: relative;
+                            width: auto; height: auto;
+                            background: transparent; border: none;
                             margin-right: 35px;
                             color: #666;
                             @include transition(.15s);
@@ -2090,6 +2083,15 @@ body {
                     }
                 }
 
+                &#person_table {
+                    .sub_section {
+                        &.section_01{
+                            @include marginTop-70();
+                        }
+                    }
+                }
+
+
             }
 
             // CS CENTER
@@ -2171,7 +2173,6 @@ body {
                         &.section_02 {
                             .product_wrap {
                                 display: none;
-
                                 // active
                                 &.active { display: flex; flex-wrap: wrap; }
 
@@ -2277,30 +2278,60 @@ body {
                             .product_header {
                                 .product_wrap {
                                     display: flex;
-
                                     .product_img {
-                                        max-width: 605px; max-height: 605px;
-                                        .product_thum {
-                                            width: 100%; height : 100%;
+                                        .product_thum_wrap {
+                                            max-width: 600px;
                                             text-align: center; 
-                                            img { object-fit: cover; }
+                                            .product_thum {
+                                                max-width: 600px; max-height: 600px;
+                                                width: 600px; height: 600px;
+                                                .thum {
+                                                    width: 100%; height: 100%;
+                                                    img { 
+                                                        width: 100%; height: 100%;
+                                                        object-fit: cover;
+                                                    }
+                                                }
+                                            }
+                                            .product_small {
+                                                width: 100%;
+                                                margin-top: 20px;
+                                                display: flex; justify-content: space-between;
+                                                .small {
+                                                    max-width: 134px; max-height: 167px;
+                                                    width: 134px; height: 167px;
+                                                    width: calc( 25% - 11px);
+                                                    background-color: #f5f5f5;
+                                                    img {
+                                                        width: 100%; height: 100%;
+                                                        object-fit: contain;
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
             
                                     .product_info {
-                                        margin-left: 80px; width: 100%;
+                                        display: inline-block;
+                                        margin-left: 80px; 
                                         .text_wrap {
                                             &.wrap_01 {
                                                 padding-bottom: 50px; border-bottom: 1px solid #ddd;
 
                                                 > span {
                                                     display: block;
-                                                    &.text_01 {
-                                                        font-size: 3.6rem; font-weight: bold; line-height: 1; letter-spacing: -1.44px; 
+                                                    &.text_01 { 
+                                                        @include font-M(); 
+                                                        margin-top: 80px;
+                                                        font-size: 20px; font-weight: 600; line-height: 1.2;
                                                     }
-                                                    &.text_02 {
-                                                        @include font-18(); 
-                                                        margin-top: 40px; color: #666;
+                                                    &.text_02 { 
+                                                        margin-top: 30px;
+                                                        font-size: 36px; font-weight: bold; line-height: 1.53; letter-spacing: -1.44px; color: #f68c31; 
+                                                    }
+                                                    &.text_03 { 
+                                                        margin-top: 10px;
+                                                        @include font-M(); font-size: 20px; font-weight: 500; line-height: 1.2; color: #666;
                                                     }
                                                 } 
                                             }
@@ -2308,15 +2339,9 @@ body {
                                             &.wrap_02 {
                                                 > span {
                                                     display: block;
-                                                    @include font-M();
-                                                    
                                                     &.text_01 {
-                                                        margin-top: 40px;
-                                                        font-size: 24px; font-weight: 500; line-height: 1; color: #f68c31;
-                                                    }
-                                                    &.text_02 {
-                                                        margin-top: 20px; 
-                                                        @include font-18(); color: #666;
+                                                        @include font-18(); 
+                                                        margin-top: 40px; color: #666;
                                                     }
                                                 }
                                             }

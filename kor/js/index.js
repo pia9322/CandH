@@ -1,6 +1,6 @@
 $(function () {
-    console.log('common_js_start');
     // common_js_start
+    console.log('common_js_start');
     AOS.init();
     // ============= swiper ============= 
     // main_visual
@@ -63,19 +63,21 @@ $(function () {
             }
         }
     });
-    // productThumb
-    var productThumb = new Swiper('.product_thum.swiper-container', {
-        slidesPerView: 1,
-        autoHeight: true,
-        // autoplay: {
-        //     delay: 5000,
-        //     disableOnInteraction: false,
-        // },
-        lazy: {
-            loadPrevNext: true
-        },
-        touchMoveStopPropagation: true,
-    });
+    // // productThumb
+    // let productThumb = new Swiper('.product_thum.swiper-container', {
+    //     slidesPerView: 1,
+    //     autoHeight: true,
+    //     // autoplay: {
+    //     //     delay: 5000,
+    //     //     disableOnInteraction: false,
+    //     // },
+    //     lazy: { loadPrevNext: true },
+    //     touchMoveStopPropagation: true,
+    //     pagination: {
+    //         el: '.product_thum_more.swiper-pagination',
+    //         type: 'bullets',
+    //     },
+    // });
     // productMore
     var productMore = new Swiper('.product_more.swiper-container', {
         slidesPerView: 5,

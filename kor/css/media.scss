@@ -1,5 +1,5 @@
 
-// ====================================default var====================================
+// ****************************************default var****************************************
 $search-time: 800ms;
 $reset-time: 150ms;
 $header-heght : 80px;
@@ -7,18 +7,18 @@ $header-height_767: 60px;
 $business_height_767 : 200px;
 
 $color-100 : #f5821f;
-// ====================================default var====================================
+// ****************************************default var****************************************
 
 
-// ====================================default mixin====================================
+// ****************************************default mixin****************************************
 @mixin absolute-center {position: absolute;left: -50%;top: -50%;transform: translate(-50%, -50%);}
 @mixin absolute-x($left, $top) {position: absolute;left: $left;top: $top;transform: translateX(-$left);}
 @mixin absolute-y($left, $top) {position: absolute;left: $left;top: $top;transform: translateY(-$top);}
 @mixin board_text {white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 @mixin transition($x) {transition: $x;-webkit-transition: $x;-moz-transition: $x;-ms-transition: $x;-o-transition: $x;}
-// ====================================default mixin====================================
+// ****************************************default mixin****************************************
 
-// ====================================jj mixin====================================
+// ****************************************jj mixin****************************************
 @mixin fixed-layout {max-width: 1480px; margin: 0 auto;width: 100%;}
 @mixin layoutBoxColor {border: 2px solid #f00;}
 @mixin header-height {height: 80px;}
@@ -49,25 +49,77 @@ $color-100 : #f5821f;
 @mixin section-Title-02 { font-size: 18px; line-height: 1.33; letter-spacing: -0.72px; color: #666; }
 
 @mixin padding_1480 {padding: 0 5%;}
-// ====================================jj mixin====================================
+// ****************************************jj mixin****************************************
 
 
 
 
 
-// ====================================4K====================================
+// ****************************************4K****************************************
 @media (min-width:2560px) {}
 
 
 
 
-// ====================================1480px====================================
+// ****************************************1480px****************************************
 @media (max-width: 1480px) {
 
+    // ****************************************default css****************************************
+    body {
+        // table_공통 게시판
+        #table_default {
+            #table_header {
+                // search
+                .table_text_search {
+                    .search_form {
+                        fieldset {
+                            // form
+                            .form_02_selectbox {
+                                select, .nice-select { width: auto;  }
+                            }
+                        }
+                    }
+                }
 
-    
+            }
 
-    // ========================== header, footer ==========================
+            #table_body {
+
+                tbody {
+
+                    tr {
+                        td {
+
+                            &.table_num {
+                                .type {
+                                    @include flexCenter();
+                                    width: auto; height: auto; margin: 0 auto;
+                                }
+                            } 
+                        }
+                    }
+                }
+            }
+
+            #table_footer {
+                .num_box {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+
+                .btn_box {
+                    a {width: 15px; height: 15px;}
+                }
+            }
+
+        }
+    }
+    // ****************************************default css****************************************
+        
+
+
+    // **************************************** header, footer ****************************************
     body {
         #header {
             height: $header-heght;
@@ -168,10 +220,10 @@ $color-100 : #f5821f;
             }
         }
     }
-    // ========================== header, footer ==========================
+    // **************************************** header, footer ****************************************
 
 
-    // ====================================padge css====================================
+    // ****************************************padge css****************************************
     body {
     
         main {
@@ -406,6 +458,19 @@ $color-100 : #f5821f;
                         }
 
                     }
+                }
+
+                // product_tab
+                #product_tab {
+                    .product_tab {
+                        .text_wrap {
+                            > a {
+                                // @include font-18();
+                                width: auto; padding: 10px 20px;
+                            }
+                        }
+                    }
+
                 }
 
                 // ABOUT sub_page
@@ -785,6 +850,9 @@ $color-100 : #f5821f;
                         }
                     }
 
+
+                    
+
                 }
 
                 // CS CENTER
@@ -792,63 +860,39 @@ $color-100 : #f5821f;
                     &#as {
                         .sub_section {
                             &.section_01 {
-                                @include marginTop-70();
+                                // @include marginTop-70();
                                 .content_wrap {
                                     .input_wrap  {
-                                        display: flex; flex-wrap: wrap;
-                                        border-top: 1px solid #333;
                                         .input_box {
-                                            position: relative;
-                                            display: flex; align-items: center;
-                                            width: 100%; max-width: 720px;
-                                            padding: 28px 0 20px;
-                                            border-bottom: 1px solid #ddd;
-                                            &.margin {margin-right: 40px;}
-                                            &.margin:nth-child(2n) {margin-right: 0;}
-                                            &.full_size {width: 100%; max-width:100%; margin-left: 0;}
-                                            &:nth-child(odd) {margin-left: 0;}
-                                            &.textarea_box {
-                                                align-items: flex-start; height: 300px;
-                                            }
+                                            padding: 15px 0;
+                                            width: calc( 50% - 10px ); max-width: 100%;
+                                            &.margin {margin-right: 20px;}
+                                            // &.full_size {width: 100%; max-width:100%; margin-left: 0;}
+                                            // &:nth-child(odd) {margin-left: 0;}
+                                            &.textarea_box {  height: 250px; }
 
                                             #search_box {
-                                                cursor: pointer;
-                                                @include flexCenter();
-                                                width: 85px; height: 40px;
-                                                position: absolute; top: 50%; right: 0; transform: translateY(-50%);
-                                                background-color: #000;
-                                                color: #fff;
-                                                font-size: 18px; letter-spacing: -0.72px;
-                                                ion-icon {
-                                                    width: 20px; height: 20px;
-                                                    margin-right: 8px;
-                                                    color: #fff;
-                                                }
+                                                width: auto; height: auto; padding: 5px 7px;
+                                                font-size: 14px;
+                                                ion-icon { width: 15px; height: 15px; margin-right: 5px; }
                                             }
 
                                             label {
-                                                &.text_02 {font-size: 18px;line-height: 1.33;letter-spacing: -0.72px; color: #666;}
-                                                vertical-align: top;
-                                                display: inline-block; width: 50px;
-
+                                                &.text_02 {font-size: 16px;}
+                                                // width: 50px;
                                             }
                                             input, textarea {
                                                 width: 100%;
-                                                margin-left: 40px;
-                                                border: none;
-                                                &::placeholder {color: #aaa;}
+                                                margin-left: 20px;
                                             }
-                                            textarea {width: 100%; height: 100%}
                                         }
 
                                         .submit_box {
                                             &.box_01 {
-                                                @include marginTop-70();
+                                                // @include marginTop-70();
                                             }
                                         }
                                     }
-
-
                                 }
                             }
                         }
@@ -856,66 +900,35 @@ $color-100 : #f5821f;
                     }
                 }
 
+                // Product
                 &.product {
+
                     &#product_list {
                         .sub_section {
-                            &.section_01 {
-                                margin: 120px auto 60px;
-                            }
+                            &.section_01 { margin: 100px auto 50px; }
 
                             &.section_02 {
                                 .product_wrap {
-                                    display: none;
-
-                                    // active
-                                    &.active { display: flex; flex-wrap: wrap; }
-
                                     .product_item {
-                                        width: 420px;
-                                        border: 1px solid #ddd;
-                                        margin: 0 100px 80px 0;
-                                        &:nth-child(3n) { margin: 0 0 80px 0;}
+                                        width: calc( 33% - 11px );
+                                        margin: 0 20px 60px 0;
+                                        &:nth-child(3n) { margin: 0 0 60px 0;}
 
                                         .thumb {
-                                            @include flexCenter();
-                                            background-color: #f5f5f5;
-                                            height: 350px;
-                                            img {}
+                                            height: 250px;
+                                            img { height: 100%; object-fit: contain; }
                                         }
                                         .info {
-                                            padding: 40px 50px 60px;
+                                            padding: 20px;
                                             p {
                                                 font-size: 16px;
-                                                &.text_01 {
-                                                    font-size: 24px; font-weight: bold;
-                                                }
-                                                &.text_02 {
-                                                    margin-top: 10px;
-                                                }
-                                                &.text_03 {
-                                                    margin-top: 20px;
-                                                    em {
-                                                        &.point_01 {
-                                                            color: #54656c; font-weight: bold
-                                                        }
-                                                    }
-                                                }
+                                                &.text_01 { font-size: 20px; }
+                                                &.text_02 { margin-top: 5px; }
+                                                &.text_03 { margin-top: 20px; }
                                                 &.more_btn {
-                                                    @include transition(.15s);
-                                                    @include font-18(); letter-spacing: normal;
-                                                    margin: 50px auto 0;
-                                                    width: 160px; height: 43px;
-                                                    border: 1px solid #ddd; border-radius: 20px;
-                                                    a {
-                                                        @include flexCenter();
-                                                        width: 100%; height: 100%;
-                                                    }
-                                                    &:hover {
-                                                        background-color: $color-100; 
-                                                        a {
-                                                            color: #fff;
-                                                        }
-                                                    }
+                                                    // @include font-18();
+                                                    margin: 40px auto 0;
+                                                    width: 140px; height: 40px;
                                                 }
                                             }
                                         }
@@ -923,120 +936,73 @@ $color-100 : #f5821f;
                                 }
                                             
                                 #table_footer {
-                                    margin-top: 100px;
-                                    @include flexCenter();
-
+                                    // margin-top: 100px;
                                     .num_box {
-                                        a {
-                                            @include font-M();
-                                            position: relative;
-                                            font-size: 16px; font-weight: 300; color: #333;
-                                            margin: 0 20px;
-                                            &::after {
-                                                content: '';
-                                                @include transition(.15s);
-                                                position: absolute; left: 50%; top: -10px; transform: translateX(-50%);
-                                                width: 5px; height: 5px; background-color: $color-100; border-radius: 100%;
-                                                opacity: 0;
-                                            }
-
-                                            // active
-                                            &.active {
-                                                color: $color-100; font-weight: bold;
-                                                &::after { opacity: 1; }
-                                            }
-                                        }
+                                        a { font-size: 14px; }
                                     }
 
                                     .btn_box {
-                                        display: flex;
-                                        a {
-                                            display: flex; align-items: center; justify-content: center;
-                                            width: 20px; height: 20px;
-                                            margin: 0 5px; color: #666;
-                                        }
-
+                                        a { width: 15px; height: 15px; }
                                     }
                                 }
                             }
                         }
                     }
 
-                    &#product_detail {
 
+                    &#product_detail {
                         .sub_section {
-                            
                             // product_header
                             &.section_01 { 
-                                @include marginTop-100();
+                                // @include marginTop-100();
                                 .product_header {
                                     .product_wrap {
-                                        display: flex;
-
+                                        flex-direction: column; text-align: center; align-items: center;
                                         .product_img {
-                                            max-width: 605px; max-height: 605px;
+                                            max-height: 400px;
                                             .product_thum {
-                                                width: 100%; height : 100%;
-                                                text-align: center; 
-                                                img { object-fit: cover; }
+                                               max-height: 400px;
+                                                img { max-height: 400px; }
                                             }
                                         }
                 
                                         .product_info {
-                                            margin-left: 80px; width: 100%;
+                                            margin: 40px 0 0 0;
                                             .text_wrap {
                                                 &.wrap_01 {
-                                                    padding-bottom: 50px; border-bottom: 1px solid #ddd;
-
+                                                    padding-bottom: 40px;
                                                     > span {
-                                                        display: block;
                                                         &.text_01 {
-                                                            font-size: 3.6rem; font-weight: bold; line-height: 1; letter-spacing: -1.44px; 
+                                                            // font-size: 3.6rem;
                                                         }
                                                         &.text_02 {
-                                                            @include font-18(); 
-                                                            margin-top: 40px; color: #666;
+                                                            // @include font-18(); 
+                                                            // margin-top: 40px;
                                                         }
                                                     } 
                                                 }
 
                                                 &.wrap_02 {
                                                     > span {
-                                                        display: block;
-                                                        @include font-M();
-                                                        
                                                         &.text_01 {
-                                                            margin-top: 40px;
-                                                            font-size: 24px; font-weight: 500; line-height: 1; color: #f68c31;
+                                                            // margin-top: 40px;
+                                                            // font-size: 24px;
                                                         }
                                                         &.text_02 {
-                                                            margin-top: 20px; 
-                                                            @include font-18(); color: #666;
+                                                            margin-top: 10px; 
+                                                            // @include font-18();
                                                         }
                                                     }
                                                 }
 
                                                 &.wrap_03 {
-                                                    display: flex;
-                                                    width: 290px; height: 61px;
-                                                    margin-top: 60px;
+                                                    width: 100%;
+                                                    justify-content: center;
+                                                    margin-top: 40px;
                                                     a {
-                                                        @include font-M();
-                                                        @include flexCenter();
-                                                        @include font-18();
-                                                        @include transition(.15s);
-                                                        font-weight: 500; color: #666;
-                                                        width: 100%; height: 100%;
-                                                        border: 1px solid #ddd;
-                                                        &:hover {
-                                                            background-color: $color-100;
-                                                            color: #333;
-                                                            ion-icon {color: #333;}
-                                                        }
-                                                        ion-icon {
-                                                            width: 20px; height: 20px;
-                                                            margin-left: 20px;
-                                                        }
+                                                        // @include font-18();
+                                                        width: 290px; height: 60px;
+                                                        ion-icon { margin-left: 10px;}
                                                     }
                                                 }
                                             }
@@ -1049,6 +1015,10 @@ $color-100 : #f5821f;
 
 
                             // product_table
+                            // 대기대기대기대기
+                            // 대기대기대기대기
+                            // 대기대기대기대기
+                            // 대기대기대기대기
                             &.section_02 {
                                 margin-top: 130px;
                                 .product_table_title {
@@ -1124,7 +1094,7 @@ $color-100 : #f5821f;
             
         }
     }
-    // ====================================padge css====================================
+    // ****************************************padge css****************************************
 
     
         
@@ -1133,10 +1103,10 @@ $color-100 : #f5821f;
 
 
 
-// ====================================1100====================================
+// ****************************************1100****************************************
 @media (max-width: 1100px) {
 
-    // ====================================default css====================================
+    // ****************************************default css****************************************
     body {
         .view_more {
 
@@ -1256,9 +1226,10 @@ $color-100 : #f5821f;
             #table_footer {}
         }
     }
-    // ====================================default css====================================
+    // ****************************************default css****************************************
     
-    // ========================== header, footer ==========================
+    
+    // **************************************** header, footer ****************************************
     body {
         #header {
     
@@ -1442,16 +1413,13 @@ $color-100 : #f5821f;
     
         }
     }
-    // ========================== header, footer ==========================
-
-
-
+    // **************************************** header, footer ****************************************
 
 
 }
 
 
-// ====================================767====================================
+// ****************************************767****************************************
 @media (max-width: 767px) {
 
 // Margin
@@ -1477,7 +1445,7 @@ $color-100 : #f5821f;
 @mixin section-Title-02 { font-size: 16px;}
 
 
-    // ========================== header, footer ==========================
+    // **************************************** header, footer ****************************************
     body {
         #header {
             height: $header-height_767;
@@ -1557,12 +1525,12 @@ $color-100 : #f5821f;
             }
         }
     }
-    // ========================== header, footer ==========================
+    // **************************************** header, footer ****************************************
 
 
 
 
-    // ====================================padge css====================================
+    // ****************************************padge css****************************************
     body {
     
         main {
@@ -1762,9 +1730,6 @@ $color-100 : #f5821f;
                         .text_wrap { @include font-18(); }
                     }
                 }
-
-
-                // tab_navi_section
 
 
 
@@ -2030,7 +1995,7 @@ $color-100 : #f5821f;
                                                 font-size: 18px;  margin: 0 10px 0 0;
                                                 &.margin_0 {margin: 0;}
                                                 &.big {
-                                                    width: 300px; height: 300px; border: 20px solid transparent; margin: 0 20px 0;
+                                                    width: 250px !important; height: 250px !important; border: 20px solid transparent; margin: 0 20px 0;
                                                     font-size: 24px; 
                                                     .logo_svg { }
                                                     p {
@@ -2107,6 +2072,37 @@ $color-100 : #f5821f;
 
                 }
 
+                
+                // CS CENTER
+                &.cscenter {
+                    &#as {
+                        .sub_section {
+                            &.section_01 {
+                                @include marginTop-70();
+                                .content_wrap {
+                                    .input_wrap  {
+                                        .input_box {
+                                            width: 100%; 
+                                            &.margin {margin-right: 0;}
+                                            // &.full_size {width: 100%; max-width:100%; margin-left: 0;}
+                                            // &:nth-child(odd) {margin-left: 0;}
+                                            &.textarea_box {  height: 200px; }
+
+                                        }
+
+                                        .submit_box {
+                                            &.box_01 { @include marginTop-70(); }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+
+
 
 
             }
@@ -2115,94 +2111,52 @@ $color-100 : #f5821f;
             
         }
     }
-    // ====================================padge css====================================
+    // ****************************************padge css****************************************
 
     
 
 }
 
 
-// ====================================479====================================
+// ****************************************479****************************************
 @media (max-width: 479px) {
 
-    // ====================================default css====================================
 
-    #table_default {
-
-        .table_header {
-            .table_company_select {
-                .search_form {
-                    fieldset {
-                        legend {}
-
-                        .form_01_title {}
-
-                        .form_01_selectbox {
-                            select {}
+    
+    // ****************************************default css****************************************
+    body {
+        // table_공통 게시판
+        #table_default {
+            #table_header {
+                // search
+                .table_text_search {
+                    .search_form {
+                        fieldset {
+                            // form
+                            .form_02_selectbox {
+                                select, .nice-select { width: auto;  }
+                                input[type=text] {margin: 0;}
+                            }
                         }
                     }
                 }
             }
 
-            .table_text_search {
-                .search_form {
-                    fieldset {
-                        .form_02_selectbox {
-
-                            select {}
-                            input[type=text] { margin-right: 0 !important; }
-                            input[type=submit] { margin: 10px 0 0 0; width: 100%;}
-                        }
-                    }
-                }
+            #table_body {
+                .table_num {display: none;}
+                .table_state {display: none;}
+                .table_data {width: 20% !important;}
             }
+
+            #table_footer {margin-top: 60px;}
 
         }
-
-        #table_body {
-            table-layout: auto;
-
-            thead {
-                tr {
-                    th {
-                        padding: 2rem;
-
-                        &:nth-of-type(1),
-                        &:nth-of-type(3),
-                        &:nth-of-type(4) {}
-
-                        &:nth-of-type(2) {
-                            width: auto;
-                        }
-                    }
-
-                }
-            }
-
-            tbody {
-                tr {
-                    td {
-                        padding: 20px;
-                    }
-
-                    .notice_download {
-                        a {}
-                    }
-                }
-
-                &.active {}
-            }
-
-
-
-
-        }
-
     }
-    // ====================================default css====================================
+    // ****************************************default css****************************************
+        
+    
 
-
-    // ========================== header, footer ==========================
+    // **************************************** header, footer ****************************************
     body {
         main {
             &#main_page {
@@ -2236,15 +2190,16 @@ $color-100 : #f5821f;
             }
         }
     }
-
-    // ========================== header, footer ==========================
+    // **************************************** header, footer ****************************************
 
 }
 
 
 
 
-// ==================================== media-height ====================================
+// **************************************** Media-height ****************************************
+// **************************************** Media-height ****************************************
+// **************************************** Media-height ****************************************
 @media (max-height: 800px) {
     body {
     
