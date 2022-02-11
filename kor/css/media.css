@@ -23,6 +23,10 @@
     width: 15px;
     height: 15px;
   }
+  body .submit_box.box_01 button {
+    height: 50px;
+    font-size: 16px;
+  }
   body #header {
     height: 80px;
   }

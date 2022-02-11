@@ -2,6 +2,7 @@
   body #table_default #table_body tbody tr td.table_num .type { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: auto; height: auto; margin: 0 auto; }
   body #table_default #table_footer .num_box a { font-size: 14px; }
   body #table_default #table_footer .btn_box a { width: 15px; height: 15px; }
+  body .submit_box.box_01 button { height: 50px; font-size: 16px; }
   body #header { height: 80px; }
   body #header > .header_wrap { padding: 0 5%; }
   body #header > .header_wrap .header_left { max-width: 90px; margin-top: 0; }

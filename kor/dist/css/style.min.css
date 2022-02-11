@@ -904,7 +904,7 @@ body main.sub_page.product#product_detail .sub_section.section_02 .product_table
 
 body main.sub_page.product#product_detail .sub_section.section_02 .product_table_wrap .product_table tbody > tr td { color: #666; border: 1px solid #e0e0e0; padding: 12px 0; text-align: center; }
 
-body main.sub_page.product#product_detail .sub_section.section_02 .product_table_wrap .table_state_btn { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-size: 18px; letter-spacing: -0.72px; }
+body main.sub_page.product#product_detail .sub_section.section_02 .product_table_wrap .table_state_btn { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-size: 18px; letter-spacing: -0.72px; cursor: pointer; }
 
 body main.sub_page.product#product_detail .sub_section.section_02 .product_table_wrap .table_state_btn.active { margin-top: 60px; }
 

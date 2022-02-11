@@ -3298,6 +3298,7 @@ body main.sub_page.product#product_detail .sub_section.section_02 .product_table
           align-items: center;
   font-size: 18px;
   letter-spacing: -0.72px;
+  cursor: pointer;
 }
 
 body main.sub_page.product#product_detail .sub_section.section_02 .product_table_wrap .table_state_btn.active {

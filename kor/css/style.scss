@@ -302,7 +302,6 @@ body {
         }
     }
 
-    // ???
     .submit_box {
         &.box_01  {
             width: 100%; text-align: center;
@@ -2419,6 +2418,7 @@ body {
                                 .table_state_btn {
                                     @include flexCenter();
                                     @include font-18();
+                                    cursor: pointer;
                                     // active, hover
                                     &.active {
                                         margin-top: 60px;
