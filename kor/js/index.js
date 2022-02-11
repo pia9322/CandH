@@ -116,8 +116,7 @@ $(function () {
         },
         breakpoints: {
             700: {
-                // touchRatio: 0,
-                simulateTouch: false
+                touchRatio: 0,
             },
         },
     });
