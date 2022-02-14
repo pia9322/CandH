@@ -7,6 +7,7 @@ $header-height_767: 60px;
 $business_height_767 : 200px;
 
 $color-100 : #f5821f;
+
 // ****************************************default var****************************************
 
 
@@ -18,11 +19,13 @@ $color-100 : #f5821f;
 @mixin transition($x) {transition: $x;-webkit-transition: $x;-moz-transition: $x;-ms-transition: $x;-o-transition: $x;}
 // ****************************************default mixin****************************************
 
+
 // ****************************************jj mixin****************************************
 @mixin fixed-layout {max-width: 1480px; margin: 0 auto;width: 100%;}
 @mixin layoutBoxColor {border: 2px solid #f00;}
 @mixin header-height {height: 80px;}
 @mixin flexCenter { display: flex; justify-content: center; align-items: center; }
+// ****************************************jj mixin****************************************
 
 
 
@@ -1533,8 +1536,6 @@ $color-100 : #f5821f;
     // **************************************** header, footer ****************************************
 
 
-
-
     // ****************************************padge css****************************************
     body {
     
@@ -2382,6 +2383,36 @@ $color-100 : #f5821f;
         }
     }
     // **************************************** header, footer ****************************************
+
+
+    
+    body {
+    
+        main {
+            // SUB_PAGE
+            &.sub_page {
+    
+                // ABOUT sub_page
+                &.about {
+
+                    // 회사소개
+                    &#company {
+                        .sub_section {
+                            &.section_01 {
+                                .content_wrap {
+                                    > figure {
+                                        .img_wrap { display: none; }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+
 
 }
 

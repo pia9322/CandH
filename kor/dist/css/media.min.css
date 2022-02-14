@@ -377,7 +377,8 @@
   body #table_default #table_footer { margin-top: 60px; }
   body main#main_page .main_section.main_visual .mv_wrap .mv figcaption .mv_text .text_01 { font-size: 36px; }
   body main#main_page .main_section.main_visual .mv_wrap .mv figcaption .mv_text .btn_white_border { margin-top: 40px; }
-  body main#main_page .main_section.main_visual .mv_wrap .mv figcaption .mv_text .swiper-pagination .swiper-pagination-bullet { margin: 0 0 20px 10px; } }
+  body main#main_page .main_section.main_visual .mv_wrap .mv figcaption .mv_text .swiper-pagination .swiper-pagination-bullet { margin: 0 0 20px 10px; }
+  body main.sub_page.about#company .sub_section.section_01 .content_wrap > figure .img_wrap { display: none; } }
 
 @media (max-height: 800px) { body main#main_page .main_section .section_title { padding-top: 75px; }
   body main#main_page .main_section .section_title .text_02 { margin-top: 30px; }
